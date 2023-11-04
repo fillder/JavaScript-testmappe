@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto+Slab:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap");
+* {
+   box-sizing: border-box;
+   margin: 0;
+}
+:root {
+   --clr-main: #14151f;
+   --clr-section: #262738;
+   --clr-body: #07070b;
+   --clr-text: #a8a8a8;
+   --clr-border: #57637a;
+   --clr-button: #0b0c13;
+   --clr-code: #1a1c29;
+
+   --clr-safir: #1fa6e2;
+   --clr-akvamarin: #33c9c4;
+   --clr-amazonitt: #35b06f;
+   --clr-smaragd: #839e53;
+   --clr-citrin: #e6ce2f;
+   --clr-spessartin: #e68d2f;
+   --clr-rubin: #ec4f28;
+   --clr-thulitt: #c973af;
+   --clr-kunzitt: #b18bf4;
+   --clr-ametyst: #7b77ff;
+}
+body {
+   background-color: var(--clr-body);
+   font-family: "Roboto", sans-serif;
+   color: var(--clr-text);
+}
+main {
+   background-color: var(--clr-main);
+}
+section {
+   background-color: var(--clr-section);
+}
+code {
+   font-family: "Roboto Mono", monospace;
+   display: inline-block;
+   background-color: var(--clr-code);
+   border: 1px solid var(--clr-border);
+   padding: 0.5rem;
+}
+h1,
+h2,
+h3 {
+   font-family: "Roboto Slab", serif;
+}

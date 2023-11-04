@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Variabler</h1>
-    <ul>
-        <li id="var"></li>
-        <li id="let"></li>
-        <li id="const"></li>
-    </ul>
-    <script src="script.js"></script>
-</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Document</title>
+   </head>
+   <body>
+      <main>
+         <section>
+            <h1>Variabler</h1>
+            <ul>
+               <li id="var"></li>
+               <li id="let"></li>
+               <li id="const"></li>
+            </ul>
+            <br />
+            <h2>Operasjoner</h2>
+            <p>Verdien til en variabel kan hente og refere til andre variabler. Eksempel:</p>
+            <code id="codeBlock">
+               const varA = 6<br />
+               const varB = varA<br />
+            </code>
+
+            <br />
+            <h3>Datasett</h3>
+            <p id="string">String/Streng</p>
+            <p id="number">Number/Nummer</p>
+            <p id="bigint">BigInt</p>
+            <p id="boolean">Boolean</p>
+            <p id="object">Objekt</p>
+            <p id="symbol">Symbol</p>
+            <p id="null">Null</p>
+            <p id="undefined">Undefined</p>
+         </section>
+      </main>
+      <script src="script.js"></script>
+      <script src="scriptStyle.js"></script>
+   </body>
 </html>
