@@ -10,7 +10,8 @@
    --clr-text: #a8a8a8;
    --clr-border: #57637a;
    --clr-button: #0b0c13;
-   --clr-code: #1a1c29;
+   --clr-aside: #1a1c29;
+   --clr-code: #1f1f1f;
 
    --clr-safir: #1fa6e2;
    --clr-akvamarin: #33c9c4;
@@ -22,6 +23,19 @@
    --clr-thulitt: #c973af;
    --clr-kunzitt: #b18bf4;
    --clr-ametyst: #7b77ff;
+}
+h1,
+h2,
+h3 {
+   font-family: "Roboto Slab", serif;
+   margin-block-start: 1rem;
+}
+p,
+ul {
+   margin-block: 0.5rem;
+}
+hr {
+   margin-block-start: 2rem;
 }
 body {
    background-color: var(--clr-body);
@@ -41,33 +55,30 @@ section {
    border: 1px solid var(--clr-border);
    max-width: 1000px;
    margin-inline: auto;
+   margin-block: 1rem;
    padding-block: 1rem;
    padding-inline: 2rem;
 }
 code {
    font-family: "Roboto Mono", monospace;
    display: inline-block;
-   background-color: #1f1f1f;
+   background-color: var(--clr-code);
    border: 1px solid var(--clr-border);
    border-radius: 0.5rem;
    padding-block: 0.5rem;
    padding-inline: 1rem;
 }
-h1,
-h2,
-h3 {
-   font-family: "Roboto Slab", serif;
-   margin-block-start: 1rem;
-}
-p,
-ul {
-   margin-block: 0.5rem;
-}
 .eksVar {
    color: #569cd6;
 }
 .eksNavn {
+   color: #4fc1db;
+}
+.eksDoc {
    color: #9cdcfe;
+}
+.eksReg {
+   color: #4ec9b0;
 }
 .eksNum {
    color: #b5cea8;
@@ -75,6 +86,6 @@ ul {
 .eksStr {
    color: #ce9178;
 }
-.eksFct {
+.eksQue {
    color: #dcdcaa;
 }

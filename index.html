@@ -9,38 +9,64 @@
    <body>
       <main>
          <section>
-            <div>
-               <h1>Variabler</h1>
-               <p>Det finnes tre måter å deklarere/lage en variabel; var, let, const:</p>
-               <ul>
-                  <li>"var" er en utdatert metode for variabler, som kan overskrive og endres fritt. For webutvikling unngår vi å bruke "var"</li>
-                  <li>"let" kan tilegnes en verdi som kan manipuleres og muteres fritt etter deklarering. Nyttig for tellere og verdier</li>
-                  <li>"const" tilegnes en verdi som ikke kan overskrives. Den må tilegnes en verdi fra starten, men kan ikke få en ny verdi senere</li>
-               </ul>
-               <code class="kodeEksempel">
-                  var navnA;<br />
-                  let navnB;<br />
-                  const navnC = 'Vi bruker likhetstegn (=) for å gi variabelen en verdi' <br />
-               </code>
-               <br />
-               <h2>Operasjoner</h2>
-               <p>Verdien til en variabel kan hente og refere til andre variabler. Eksempel:</p>
-               <code class="kodeEksempel">
-                  const verdiA = 6<br />
-                  const verdiB = verdiA<br />
-               </code>
-            </div>
+            <h1>Variabler</h1>
+            <p>Det finnes tre måter å deklarere/lage en variabel; var, let, const:</p>
+            <ul>
+               <li>"var" er en utdatert metode for variabler, som kan overskrive og endres fritt. For webutvikling unngår vi å bruke "var"</li>
+               <li>"let" kan tilegnes en verdi som kan manipuleres og muteres fritt etter deklarering. Nyttig for tellere og verdier</li>
+               <li>"const" tilegnes en verdi som ikke kan overskrives. Den må tilegnes en verdi fra starten, men kan ikke få en ny verdi senere</li>
+            </ul>
+            <code class="kodeEksempel">
+               var navnA;<br />
+               let navnB;<br />
+               const navnC = <span class="eksStr">"Vi bruker likhetstegn (=) for å gi variabelen en verdi"</span><br />
+            </code>
+         </section>
+         <section>
+            <h1>Datatyper</h1>
+            <p>Det finnes tre måter å deklarere/lage en variabel; var, let, const:</p>
+            <ul>
+               <li id="string">String/Streng</li>
+               <li id="number">Number/Nummer</li>
+               <li id="bigint">BigInt</li>
+               <li id="boolean">Boolean</li>
+               <li id="object">Objekt</li>
+               <li id="symbol">Symbol</li>
+               <li id="null">Null</li>
+               <li id="undefined">Undefined</li>
+            </ul>
+            <ul>
+               <li>"var" er en utdatert metode for variabler, som kan overskrive og endres fritt. For webutvikling unngår vi å bruke "var"</li>
+               <li>"let" kan tilegnes en verdi som kan manipuleres og muteres fritt etter deklarering. Nyttig for tellere og verdier</li>
+               <li>"const" tilegnes en verdi som ikke kan overskrives. Den må tilegnes en verdi fra starten, men kan ikke få en ny verdi senere</li>
+            </ul>
+            <code class="kodeEksempel">
+               var navnA;<br />
+               let navnB;<br />
+               const navnC = <span class="eksStr">"Vi bruker likhetstegn (=) for å gi variabelen en verdi"</span><br />
+            </code>
+         </section>
+         <section>
+            <h1>Operasjoner</h1>
+            <h3>Referere</h3>
+            <p>Verdien til en variabel kan hente og refere til andre variabler. Eksempel:</p>
+            <code class="kodeEksempel">
+               const navnA = 6<br />
+               const navnB = navnA<br />
+            </code>
+            <hr />
+            <h3>Utregning</h3>
+            <p>Vi kan legge sammen verdien til variabler ved hjelp and pluss (+) og (-). Eksempel:</p>
+            <code class="kodeEksempel">
+               const tallA = 6<br />
+               const tallB = 3<br />
+               const svar = tallA + tallB<br />
+            </code>
+         </section>
 
             <br />
-            <h3>Datasett</h3>
-            <p id="string">String/Streng</p>
-            <p id="number">Number/Nummer</p>
-            <p id="bigint">BigInt</p>
-            <p id="boolean">Boolean</p>
-            <p id="object">Objekt</p>
-            <p id="symbol">Symbol</p>
-            <p id="null">Null</p>
-            <p id="undefined">Undefined</p>
+            <h2>Datasett</h2>
+
          </section>
       </main>
       <script src="script.js"></script>

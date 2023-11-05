@@ -7,9 +7,10 @@ function fargeleggOrd(prefix, className) {
       kodeBoks.innerHTML = fargetTekst;
    });
 }
-fargeleggOrd("const", "eksVar");
-fargeleggOrd("let", "eksVar");
 fargeleggOrd("navn", "eksNavn");
+fargeleggOrd("tall", "eksNavn");
+fargeleggOrd("svar", "eksNavn");
+fargeleggOrd("query", "eksQue");
 /* 1. Funksjon for å fargelegge bestemte ord i HTML-tekst
    2. Først henter den alle eksemplarene av HTML-elementer med klassen "kodeEksempel" til variabelen "kodeBiksList"
    3. Deretter kjører den gjennom hvert eksemplar og henter tekstinnholdet til variabelen "kodeTekst" med innerHTML
@@ -24,6 +25,22 @@ fargeleggOrd("navn", "eksNavn");
    7. Til slutt skriver innformasjonen fra fargetTekst tilbake til tekstinnholdet i kodeBoksen ved hjelp av innerHTML.
    8. Ord defineres separat ved å kjøre fargeleggOrd for hvert ord i mønsteret "fargeleggOrd(prefix, color)". 
 */
+
+function fargeleggHeleOrd(word, className) {
+   const kodeBoksList = document.querySelectorAll(".kodeEksempel");
+   kodeBoksList.forEach((kodeBoks) => {
+      const kodeTekst = kodeBoks.innerHTML;
+      const regex = new RegExp(`\\b${word}\\b`, "g");
+      const fargetTekst = kodeTekst.replace(regex, `<span class="${className}">${word}</span>`);
+      kodeBoks.innerHTML = fargetTekst;
+   });
+}
+fargeleggHeleOrd("var", "eksVar");
+fargeleggHeleOrd("const", "eksVar");
+fargeleggHeleOrd("let", "eksVar");
+fargeleggHeleOrd("RegExp", "eksReg");
+fargeleggHeleOrd("document", "eksDoc");
+fargeleggHeleOrd("forEach", "eksQue");
 
 function fargeleggTall() {
    const kodeBoksList = document.querySelectorAll(".kodeEksempel");
@@ -44,14 +61,3 @@ fargeleggTall();
    “\b”     =  Et annet word boundary-anker som indikerer at uttrykket skal slutte på en ordgrense.
    “g”      =  Et flagg som indikerer at søket etter mønsteret skal gjentas globalt over hele teksten, ikke bare stoppe ved den første forekomsten.
    */
-
-function fargeleggStreng() {
-   const kodeBoksList = document.querySelectorAll(".kodeEksempel");
-   kodeBoksList.forEach((kodeBoks) => {
-      const kodeTekst = kodeBoks.innerHTML;
-      const regex = /('([^']*)')/g;
-      const fargetTekst = kodeTekst.replace(regex, `<span class="eksStr">$1</span>`);
-      kodeBoks.innerHTML = fargetTekst;
-   });
-}
-fargeleggStreng();
