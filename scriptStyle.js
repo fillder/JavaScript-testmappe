@@ -39,8 +39,26 @@ fargeleggHeleOrd("var", "eksVar");
 fargeleggHeleOrd("const", "eksVar");
 fargeleggHeleOrd("let", "eksVar");
 fargeleggHeleOrd("RegExp", "eksReg");
+fargeleggHeleOrd("BigInt", "eksQue");
+fargeleggHeleOrd("symbol", "eksQue");
 fargeleggHeleOrd("document", "eksDoc");
 fargeleggHeleOrd("forEach", "eksQue");
+fargeleggHeleOrd("eksString", "eksNavn");
+fargeleggHeleOrd("eksSymbol", "eksNavn");
+fargeleggHeleOrd("eksNumber", "eksNavn");
+fargeleggHeleOrd("eksBigInt", "eksNavn");
+fargeleggHeleOrd("eksBoolTrue", "eksNavn");
+fargeleggHeleOrd("eksBoolFalse", "eksNavn");
+fargeleggHeleOrd("eksObject", "eksNavn");
+fargeleggHeleOrd("eksUndefined", "eksNavn");
+fargeleggHeleOrd("eksNull", "eksNavn");
+fargeleggHeleOrd("name", "eksNavn");
+fargeleggHeleOrd("surname", "eksNavn");
+fargeleggHeleOrd("age", "eksNavn");
+fargeleggHeleOrd("True", "eksVar");
+fargeleggHeleOrd("False", "eksVar");
+fargeleggHeleOrd("null", "eksVar");
+fargeleggHeleOrd("undefined", "eksVar");
 
 function fargeleggTall() {
    const kodeBoksList = document.querySelectorAll(".kodeEksempel");

@@ -34,9 +34,10 @@ let eksBooleanFalse = false;
 // function ()
 
 //Symboler er et ES6 datasett med en unik verdi som kan brukes for identifisering eller som en "nøkkel" til et objekt.
-// const eksSymbol = symbol("key");
+const eksSymbol = symbol("key");
 
 //Ett objekt er at datasett som består av flere nøkkelverdier. Objekter initialiseres med krøllparentes og nøklene separeres med komma
+
 const Spice0 = {
    type: "spice",
    level: 0,

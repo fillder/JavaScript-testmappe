@@ -25,25 +25,38 @@
          <section>
             <h1>Datatyper</h1>
             <p>Det finnes tre måter å deklarere/lage en variabel; var, let, const:</p>
-            <ul>
-               <li id="string">String/Streng</li>
-               <li id="number">Number/Nummer</li>
-               <li id="bigint">BigInt</li>
-               <li id="boolean">Boolean</li>
-               <li id="object">Objekt</li>
-               <li id="symbol">Symbol</li>
-               <li id="null">Null</li>
-               <li id="undefined">Undefined</li>
-            </ul>
-            <ul>
-               <li>"var" er en utdatert metode for variabler, som kan overskrive og endres fritt. For webutvikling unngår vi å bruke "var"</li>
-               <li>"let" kan tilegnes en verdi som kan manipuleres og muteres fritt etter deklarering. Nyttig for tellere og verdier</li>
-               <li>"const" tilegnes en verdi som ikke kan overskrives. Den må tilegnes en verdi fra starten, men kan ikke få en ny verdi senere</li>
-            </ul>
+            <h3>String/Streng:</h3>
+            <p>En Streng er en kombinasjon av tall og bokstaver og initialiseres med to anførselstegn</p>
+            <code class="kodeEksempel"> const eksString = <span class="eksStr">"Eksempel på en streng"</span><br /> </code>
+            <hr />
+            <h3>Number/Nummer:</h3>
+            <p>Et nummer er et heltall og trenger ingen ekstra tegn for initialisering</p>
+            <code class="kodeEksempel"> const eksNumber = 1<br /> </code>
+            <hr />
+            <h3>BigInt</h3>
+            <p>BigInt er nemmeriske verdier som er for stor til å bli representert av vanlige nummer. BigInt verdier kan ikke utregnes som mattematisk med andre tall uten konvertering</p>
+            <code class="kodeEksempel"> const eksBigInt = = BigInt(<span class="eksStr">"0x1fffffffffffff"</span>);<br /> </code>
+            <hr />
+            <h3>Boolean</h3>
+            <p>En Boolean er en datatype for om noe som har to tilstander; sant/aktivt eller usant/ikke aktivt. Dette er ofte brukt til å aktivere eller deaktivere funskjoner, enten direkte i koden eller via knapper</p>
             <code class="kodeEksempel">
-               var navnA;<br />
-               let navnB;<br />
-               const navnC = <span class="eksStr">"Vi bruker likhetstegn (=) for å gi variabelen en verdi"</span><br />
+               const eksBoolTrue = False <br />
+               const eksBoolTrue = True<br />
+            </code>
+            <hr />
+            <h3>Objekt</h3>
+            <p>Ett objekt er at datasett som består av flere nøkkelverdier. Objekter initialiseres med krøllparentes og nøklene separeres med komma</p>
+            <code class="kodeEksempel"> const eksObject = {name: <span class="eksStr">"Bob"</span>, surname: <span class="eksStr">"Kåre"</span>, age: 19,}<br /> </code>
+            <hr />
+            <h3>Symbol</h3>
+            <p>Symboler er et ES6 datasett med en unik verdi som kan brukes for identifisering eller som en "nøkkel" til et objekt.</p>
+            <code class="kodeEksempel"> const eksSymbol = symbol(<span class="eksStr">"key"</span>); </code>
+            <hr />
+            <h3>Null/Undefined</h3>
+            <p></p>
+            <code class="kodeEksempel">
+               const eksUndefined = undefined<br />
+               const eksNull = null
             </code>
          </section>
          <section>
@@ -62,11 +75,6 @@
                const tallB = 3<br />
                const svar = tallA + tallB<br />
             </code>
-         </section>
-
-            <br />
-            <h2>Datasett</h2>
-
          </section>
       </main>
       <script src="script.js"></script>
