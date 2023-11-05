@@ -39,9 +39,17 @@
             <h1>3. Variabler</h1>
             <p>Det finnes tre måter å deklarere/lage en variabel; var, let, const:</p>
             <ul>
-               <li>"var" er en utdatert metode for variabler, som kan overskrive og endres fritt. For webutvikling unngår vi å bruke "var"</li>
-               <li>"let" kan tilegnes en verdi som kan manipuleres og muteres fritt etter deklarering. Nyttig for tellere og verdier</li>
-               <li>"const" tilegnes en verdi som ikke kan overskrives. Den må tilegnes en verdi fra starten, men kan ikke få en ny verdi senere</li>
+               <li>
+                  <code class="kodeFarge">var</code> er en utdatert metode for variabler, som kan overskrive og endres fritt. For webutvikling unngår vi å bruke
+                  "var"
+               </li>
+               <li>
+                  <code class="kodeFarge">let</code> kan tilegnes en verdi som kan manipuleres og muteres fritt etter deklarering. Nyttig for tellere og verdier
+               </li>
+               <li>
+                  <code class="kodeFarge">const</code> tilegnes en verdi som ikke kan overskrives. Den må tilegnes en verdi fra starten, men kan ikke få en ny
+                  verdi senere
+               </li>
             </ul>
             <div class="kodeBlokk kodeFarge">
                var navnA;<br />
@@ -145,10 +153,13 @@
                <code class="kodeFarge">i = i + 1</code>.
             </p>
             <div class="kodeBlokk kodeFarge">
-               let tallA = 0<br />
-               function onClick<br />
+               let tallA = 0;<br />
+               <br />
+               function teller() {<br />
+               tallA++;<br />
+               document.getElementById(<span class="eksStr">"inkrementKnapp"</span>).textContent = tallA;}
             </div>
-            <button onclick=""></button>
+            <button onclick="teller()" id="inkrementKnapp">0</button>
             <hr />
          </section>
          <section>

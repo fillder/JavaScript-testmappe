@@ -65,6 +65,7 @@ code {
    background-color: var(--clr-code);
    border: 1px solid var(--clr-border);
    padding-inline: 0.25rem;
+   border-radius: 0.25rem;
 }
 .kodeBlokk {
    display: block;

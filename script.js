@@ -10,3 +10,7 @@ const seksKant = "Et heksagon er en " + tallA + "-" + navnA;
 document.getElementById("seksKant").textContent = seksKant;
 
 let inkrement = 0;
+function teller() {
+   inkrement++;
+   document.getElementById("inkrementKnapp").textContent = inkrement;
+}

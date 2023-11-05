@@ -47,12 +47,14 @@ fargeleggHeleOrd("False", "eksVar");
 fargeleggHeleOrd("null", "eksVar");
 fargeleggHeleOrd("undefined", "eksVar");
 fargeleggHeleOrd("p", "eksVar");
+fargeleggHeleOrd("function", "eksVar");
 
 fargeleggHeleOrd("RegExp", "eksReg");
 
 fargeleggHeleOrd("BigInt", "eksQue");
 fargeleggHeleOrd("Symbol", "eksQue");
 fargeleggHeleOrd("forEach", "eksQue");
+fargeleggHeleOrd("teller", "eksQue");
 
 fargeleggHeleOrd("document", "eksDoc");
 fargeleggHeleOrd("textContent", "eksDoc");
