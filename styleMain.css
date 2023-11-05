@@ -61,6 +61,12 @@ section {
    padding-inline: 2rem;
 }
 code {
+   font-family: "Roboto Mono", monospace;
+   background-color: var(--clr-code);
+   border: 1px solid var(--clr-border);
+   padding-inline: 0.25rem;
+}
+.kodeBlokk {
    display: block;
    font-family: "Roboto Mono", monospace;
    background-color: var(--clr-code);

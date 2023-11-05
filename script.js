@@ -8,3 +8,5 @@ document.getElementById("dele").textContent = tallA / tallB;
 const navnA = "kant";
 const seksKant = "Et heksagon er en " + tallA + "-" + navnA;
 document.getElementById("seksKant").textContent = seksKant;
+
+let inkrement = 0;

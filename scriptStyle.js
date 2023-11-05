@@ -1,5 +1,5 @@
 function fargeleggOrd(prefix, className) {
-   const kodeBoksList = document.querySelectorAll(".kodeEksempel");
+   const kodeBoksList = document.querySelectorAll(".kodeFarge");
    kodeBoksList.forEach((kodeBoks) => {
       const kodeTekst = kodeBoks.innerHTML;
       const regex = new RegExp(`\\b(${prefix}\\w*)\\b`, "g");
@@ -16,7 +16,7 @@ fargeleggOrd("get", "eksQue");
 
 fargeleggOrd("eksBool", "eksNavn");
 /* 1. Funksjon for å fargelegge bestemte ord i HTML-tekst
-   2. Først henter den alle eksemplarene av HTML-elementer med klassen "kodeEksempel" til variabelen "kodeBiksList"
+   2. Først henter den alle eksemplarene av HTML-elementer med klassen "kodeFarge" til variabelen "kodeBiksList"
    3. Deretter kjører den gjennom hvert eksemplar og henter tekstinnholdet til variabelen "kodeTekst" med innerHTML
    4. Med informasjonen kjøres en "new RegExp" som er et "regulært inntrykk" designet for å finne alle forekomster av ord.
    5. RegExp-funskjonen er satt opp med ett sett regler:
@@ -31,7 +31,7 @@ fargeleggOrd("eksBool", "eksNavn");
 */
 
 function fargeleggHeleOrd(word, className) {
-   const kodeBoksList = document.querySelectorAll(".kodeEksempel");
+   const kodeBoksList = document.querySelectorAll(".kodeFarge");
    kodeBoksList.forEach((kodeBoks) => {
       const kodeTekst = kodeBoks.innerHTML;
       const regex = new RegExp(`\\b${word}\\b`, "g");
@@ -72,7 +72,7 @@ fargeleggHeleOrd("id", "eksNavn");
 fargeleggHeleOrd("seksKant", "eksNavn");
 
 function fargeleggTall() {
-   const kodeBoksList = document.querySelectorAll(".kodeEksempel");
+   const kodeBoksList = document.querySelectorAll(".kodeFarge");
    kodeBoksList.forEach((kodeBoks) => {
       const kodeTekst = kodeBoks.innerHTML;
       const regex = /\b(\d+(\.\d+)?)\b/g;

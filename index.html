@@ -18,19 +18,19 @@
                derfor nyttig som en forklaring til seg selv og andre for hva koden gjør. Gode kommentarer gjør det både lettere å samarbeide med andre og
                feilsøke problemer.
             </p>
-            <code class="kommentarEksempel">
+            <div class="kommentarEksempel">
                // to skråstrek kommenterer ut tegn på samme linje. <br />
                <br />
                /* Skråstek pluss astersisk Kommentere ut alle tegn og<br />
                linjer til den lukkses med en asterisk og skråstrek */<br />
-            </code>
+            </div>
             <h3>camelCase-navn</h3>
             <p>
                En god skrivemåte innen programmering hvor første bokstav er liten, men alle følgende ord får stor bokstav. camelCase-metoden er integrert i
                JavaScript, det er derfor lurt å bruke samme metode for navngiving av ID, klasser og variabler. Dette gjør koden enklere å lese, og hindrer at vi
                med uhell legger til mellomrom som ødelegger koden. Elsempler på camelCase Javascript:
             </p>
-            <code class="kodeEksempel"> document.getElementById(<span class="eksStr">"idNavn"</span>).textContent += </code>
+            <div class="kodeBlokk kodeFarge">document.getElementById(<span class="eksStr">"idNavn"</span>).textContent +=</div>
          </section>
          <section>
             <h1>2. DOM og consol.log</h1>
@@ -43,11 +43,11 @@
                <li>"let" kan tilegnes en verdi som kan manipuleres og muteres fritt etter deklarering. Nyttig for tellere og verdier</li>
                <li>"const" tilegnes en verdi som ikke kan overskrives. Den må tilegnes en verdi fra starten, men kan ikke få en ny verdi senere</li>
             </ul>
-            <code class="kodeEksempel">
+            <div class="kodeBlokk kodeFarge">
                var navnA;<br />
                let navnB;<br />
                const navnC = <span class="eksStr">"Vi bruker likhetstegn (=) for å gi variabelen en verdi"</span><br />
-            </code>
+            </div>
          </section>
          <section>
             <h1>4. Grunnleggende datatyper</h1>
@@ -57,29 +57,29 @@
             </p>
             <h3>4.1. String/Streng:</h3>
             <p>En Streng er en kombinasjon av tall og bokstaver og initialiseres med to anførselstegn</p>
-            <code class="kodeEksempel"> const eksString = <span class="eksStr">"Eksempel på en streng"</span><br /> </code>
+            <div class="kodeBlokk kodeFarge">const eksString = <span class="eksStr">"Eksempel på en streng"</span><br /></div>
             <hr />
             <h3>4.2. Number/Nummer:</h3>
             <p>Et nummer er et heltall og trenger ingen ekstra tegn for initialisering</p>
-            <code class="kodeEksempel"> const eksNumber = 1<br /> </code>
+            <div class="kodeBlokk kodeFarge">const eksNumber = 1<br /></div>
             <hr />
             <h3>4.4. Boolean</h3>
             <p>
                En Boolean er en datatype for om noe som har to tilstander; sant/aktivt eller usant/ikke aktivt. Dette er ofte brukt til å aktivere eller
                deaktivere funskjoner, enten direkte i koden eller via knapper
             </p>
-            <code class="kodeEksempel">
+            <div class="kodeBlokk kodeFarge">
                const eksBoolTrue = False <br />
                const eksBoolFalse = True<br />
-            </code>
+            </div>
             <hr />
             <h3>4.7. Undefined</h3>
             <p>Variabler som ikke har en definert verdi får verdien "undefined", fordi den ikke har fått en tilegnet verdi enda.</p>
-            <code class="kodeEksempel"> const eksUndefined = undefined</code>
+            <div class="kodeBlokk kodeFarge">const eksUndefined = undefined</div>
             <hr />
             <h3>4.8. Null</h3>
             <p>Variabler som har verdien "null" har ingen objektiv verdi og kan heller ikke brukes som identifikasjon.</p>
-            <code class="kodeEksempel"> const eksNull = null</code>
+            <div class="kodeBlokk kodeFarge">const eksNull = null</div>
          </section>
          <section>
             <h1>Operasjoner</h1>
@@ -87,10 +87,10 @@
             <p>
                Verdien til en variabel kan hente og refere til andre variabler. I eksempelet under sier vi at variabel navnB har samme verdi som variabel navnA:
             </p>
-            <code class="kodeEksempel">
+            <div class="kodeBlokk kodeFarge">
                const navnA = 6<br />
                const navnB = navnA<br />
-            </code>
+            </div>
             <hr />
             <h3>Sette sammen tall-verdier</h3>
             <p>Vi kan legge sammen verdien av variabler ved hjelp and pluss (+) og (-). Eksempel:</p>
@@ -99,7 +99,7 @@
                <button class="faneKnapp" onclick="openTab(event, 'HTML')">HTML/CSS</button>
                <button class="faneKnapp" onclick="openTab(event, 'Nettleser')">Nettleser</button>
             </div>
-            <div id="JavaScript" class="faneInnhold kodeEksempel">
+            <div id="JavaScript" class="faneInnhold kodeFarge">
                const tallA = 6<br />
                const tallB = 3<br />
                document.getElementById(<span class="eksStr">"pluss"</span>).textContent = tallA + tallB;<br />
@@ -107,7 +107,7 @@
                document.getElementById(<span class="eksStr">"gange"</span>).textContent = tallA * tallB;<br />
                document.getElementById(<span class="eksStr">"dele"</span>).textContent = tallA / tallB;<br />
             </div>
-            <div id="HTML" class="faneInnhold kodeEksempel">
+            <div id="HTML" class="faneInnhold kodeFarge">
                &lt;p id=<span class="eksStr">"pluss"</span>&gt;&lt;/p&gt;<br />
                &lt;p id=<span class="eksStr">"minus"</span>&gt;&lt;/p&gt;<br />
                &lt;p id=<span class="eksStr">"gange"</span>&gt;&lt;/p&gt;<br />
@@ -122,20 +122,33 @@
             <hr />
             <h3>Sette sammen streng-verdi</h3>
             <p>
-               I likhet med tall kan vi bruke + og minus til å legge til eller fjerne verdier, men dersom vi prøver å bruke gang (*) eller dele (/) verdiene,
-               får vi en NaN feilmedling. Vi kan introdusere selvstendige tall og streng-verdier i psudo-regnestykket vårt uten problem, det er en måte å legge
-               til mellomrom og spesialtegn der vi ønsker:
+               Så lenge vi kun holder oss til addisjon, altså pluss (+), kan vi legge sammen verdier og selvstendige streng-beskrivelser i form av et
+               psudo-mattestykke. Vi kan derimot ikke bruke substraksjon, multiplikasjon eller divisijon i denne sammenhengen. Da får vi bare feilmeldingen
+               "NaN", som betyr "Not a Number".
             </p>
-            <code class="kodeEksempel">
+            <div class="kodeBlokk kodeFarge">
                const tallA = 6<br />
                const navnA = <span class="eksStr">"kant"</span><br />
                const seksKant = <span class="eksStr">"Et heksagon er en "</span> + tallA + <span class="eksStr">"-"</span> + navnA<br />
                document.getElementById("seksKant").textContent = seksKant
-            </code>
-            Resultat:
-            <code>
+            </div>
+            <p>Resultat:</p>
+            <div class="kodeBlokk">
                <p id="seksKant"></p>
-            </code>
+            </div>
+            <hr />
+            <h3>Inkrementer av tall/Tellere</h3>
+            <p>
+               <code class="kodeFarge">++</code> er en operatøren som kan brukes til å legge til en verdi eller inkrementere en eksisterende verdi. Her er et
+               konkret eksempel hvor vi må bruke variabelen-typen <code class="kodeFarge">let</code>, fordi vi skal endre variabelens verdi etter at den er
+               deklerert. Kombinert med en variabel, kan vi skrive opperatøren som <code class="kodeFarge">i++</code>, som er det samme som om vi skulle skrevet
+               <code class="kodeFarge">i = i + 1</code>.
+            </p>
+            <div class="kodeBlokk kodeFarge">
+               let tallA = 0<br />
+               const navnB = navnA<br />
+            </div>
+            <hr />
          </section>
          <section>
             <h1>X. Avanserte datatyper</h1>
@@ -144,13 +157,13 @@
                BigInt er nemmeriske verdier som er for stor til å bli representert av vanlige nummer. BigInt verdier kan ikke utregnes som mattematisk med andre
                tall uten konvertering
             </p>
-            <code class="kodeEksempel"> const eksBigInt = = BigInt(<span class="eksStr">"0x1fffffffffffff"</span>);<br /> </code>
+            <div class="kodeBlokk kodeFarge">const eksBigInt = = BigInt(<span class="eksStr">"0x1fffffffffffff"</span>);<br /></div>
             <hr />
             <h3>X.2. Objekt</h3>
             <p>Ett objekt er at datasett som består av flere nøkkelverdier. Objekter initialiseres med krøllparentes og nøklene separeres med komma</p>
-            <code class="kodeEksempel">
+            <div class="kodeBlokk kodeFarge">
                const eksObject = {name: <span class="eksStr">"Bob"</span>, surname: <span class="eksStr">"Kåre"</span>, age: 19,}<br />
-            </code>
+            </div>
             <hr />
             <h3>X.3. Symbol</h3>
             <p>
@@ -159,11 +172,11 @@
                valgfritt om vi vil legge til en streng-beskrivelse i parentesen, eksempel Symbol("Nøkkel") Beskrivelsen har ingen innvirkning på symbolets
                unikhet, men kan refereres til i et objekt.
             </p>
-            <code class="kodeEksempel">
+            <div class="kodeBlokk kodeFarge">
                const eksSymbol = Symbol(<span class="eksStr">"nøkkel"</span>); <br />
                const eksObject = {name: <span class="eksStr">"Bob"</span>, surname: <span class="eksStr">"Kåre"</span>, [Nøkkel]:
                <span class="eksStr">"Dette er en unik egenskap for objektet"</span>}
-            </code>
+            </div>
          </section>
       </main>
       <script src="script.js"></script>
