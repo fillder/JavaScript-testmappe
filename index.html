@@ -9,7 +9,30 @@
    <body>
       <main>
          <section>
-            <h1>Variabler</h1>
+            <h1>1. God Praksis</h1>
+            <h3>Kommentering</h3>
+            <p>
+               En god praksis i hvert programmeringsspråk er å kommenter egen kode. I praksis er en kommentar et stykke tekst som ignoreres av
+               nettleseren/programmet og kan trygt plasseres gjennom hele dokumentet. I JavaScript er det mange måter å løse samme problem, kommentarer er
+               derfor nyttig som en forklaring til seg selv og andre for hva koden gjør. Gode kommentarer gjør det både lettere å samarbeide med andre og
+               feilsøke problemer.
+            </p>
+            <code class="kommentarEksempel">
+               // to skråstrek kommenterer ut tegn på samme linje. <br />
+               <br />
+               /* Skråstek pluss astersisk Kommentere ut alle tegn og<br />
+               linjer til den lukkses med en asterisk og skråstrek */<br />
+            </code>
+            <h3>camelCase-navn</h3>
+            <p>
+               En god skrivemåte innen programmering hvor første bokstav er liten, men alle følgende ord får stor bokstav. camelCase-metoden er integrert i
+               JavaScript, det er derfor lurt å bruke samme metode for navngiving av ID, klasser og variabler. Dette gjør koden enklere å lese, og hindrer at vi
+               med uhell legger til mellomrom som ødelegger koden. Elsempler på camelCase Javascript:
+            </p>
+            <code class="kodeEksempel"> document.getElementById(<span class="eksStr">"idNavn"</span>).textContent += </code>
+         </section>
+         <section>
+            <h1>2. Variabler</h1>
             <p>Det finnes tre måter å deklarere/lage en variabel; var, let, const:</p>
             <ul>
                <li>"var" er en utdatert metode for variabler, som kan overskrive og endres fritt. For webutvikling unngår vi å bruke "var"</li>
@@ -23,41 +46,50 @@
             </code>
          </section>
          <section>
-            <h1>Datatyper</h1>
+            <h1>3. Datatyper</h1>
             <p>Det finnes tre måter å deklarere/lage en variabel; var, let, const:</p>
-            <h3>String/Streng:</h3>
+            <h3>3.1. String/Streng:</h3>
             <p>En Streng er en kombinasjon av tall og bokstaver og initialiseres med to anførselstegn</p>
             <code class="kodeEksempel"> const eksString = <span class="eksStr">"Eksempel på en streng"</span><br /> </code>
             <hr />
-            <h3>Number/Nummer:</h3>
+            <h3>3.2. Number/Nummer:</h3>
             <p>Et nummer er et heltall og trenger ingen ekstra tegn for initialisering</p>
             <code class="kodeEksempel"> const eksNumber = 1<br /> </code>
             <hr />
-            <h3>BigInt</h3>
-            <p>BigInt er nemmeriske verdier som er for stor til å bli representert av vanlige nummer. BigInt verdier kan ikke utregnes som mattematisk med andre tall uten konvertering</p>
+            <h3>3.3. BigInt</h3>
+            <p>
+               BigInt er nemmeriske verdier som er for stor til å bli representert av vanlige nummer. BigInt verdier kan ikke utregnes som mattematisk med andre
+               tall uten konvertering
+            </p>
             <code class="kodeEksempel"> const eksBigInt = = BigInt(<span class="eksStr">"0x1fffffffffffff"</span>);<br /> </code>
             <hr />
-            <h3>Boolean</h3>
-            <p>En Boolean er en datatype for om noe som har to tilstander; sant/aktivt eller usant/ikke aktivt. Dette er ofte brukt til å aktivere eller deaktivere funskjoner, enten direkte i koden eller via knapper</p>
+            <h3>3.4. Boolean</h3>
+            <p>
+               En Boolean er en datatype for om noe som har to tilstander; sant/aktivt eller usant/ikke aktivt. Dette er ofte brukt til å aktivere eller
+               deaktivere funskjoner, enten direkte i koden eller via knapper
+            </p>
             <code class="kodeEksempel">
                const eksBoolTrue = False <br />
-               const eksBoolTrue = True<br />
+               const eksBoolFalse = True<br />
             </code>
             <hr />
-            <h3>Objekt</h3>
+            <h3>3.5. Objekt</h3>
             <p>Ett objekt er at datasett som består av flere nøkkelverdier. Objekter initialiseres med krøllparentes og nøklene separeres med komma</p>
-            <code class="kodeEksempel"> const eksObject = {name: <span class="eksStr">"Bob"</span>, surname: <span class="eksStr">"Kåre"</span>, age: 19,}<br /> </code>
+            <code class="kodeEksempel">
+               const eksObject = {name: <span class="eksStr">"Bob"</span>, surname: <span class="eksStr">"Kåre"</span>, age: 19,}<br />
+            </code>
             <hr />
-            <h3>Symbol</h3>
+            <h3>3.6. Symbol</h3>
             <p>Symboler er et ES6 datasett med en unik verdi som kan brukes for identifisering eller som en "nøkkel" til et objekt.</p>
             <code class="kodeEksempel"> const eksSymbol = symbol(<span class="eksStr">"key"</span>); </code>
             <hr />
-            <h3>Null/Undefined</h3>
-            <p></p>
-            <code class="kodeEksempel">
-               const eksUndefined = undefined<br />
-               const eksNull = null
-            </code>
+            <h3>3.7. Undefined</h3>
+            <p>Variabler som ikke har en definert verdi får verdien "undefined", fordi den ikke har fått en tilegnet verdi enda.</p>
+            <code class="kodeEksempel"> const eksUndefined = undefined</code>
+            <hr />
+            <h3>3.8. Null</h3>
+            <p>Variabler som har verdien "null" har ingen objektiv verdi og kan heller ikke brukes som identifikasjon.</p>
+            <code class="kodeEksempel"> const eksNull = null</code>
          </section>
          <section>
             <h1>Operasjoner</h1>

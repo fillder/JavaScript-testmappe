@@ -10,7 +10,11 @@ function fargeleggOrd(prefix, className) {
 fargeleggOrd("navn", "eksNavn");
 fargeleggOrd("tall", "eksNavn");
 fargeleggOrd("svar", "eksNavn");
+
 fargeleggOrd("query", "eksQue");
+fargeleggOrd("get", "eksQue");
+
+fargeleggOrd("eksBool", "eksNavn");
 /* 1. Funksjon for å fargelegge bestemte ord i HTML-tekst
    2. Først henter den alle eksemplarene av HTML-elementer med klassen "kodeEksempel" til variabelen "kodeBiksList"
    3. Deretter kjører den gjennom hvert eksemplar og henter tekstinnholdet til variabelen "kodeTekst" med innerHTML
@@ -38,27 +42,30 @@ function fargeleggHeleOrd(word, className) {
 fargeleggHeleOrd("var", "eksVar");
 fargeleggHeleOrd("const", "eksVar");
 fargeleggHeleOrd("let", "eksVar");
+fargeleggHeleOrd("True", "eksVar");
+fargeleggHeleOrd("False", "eksVar");
+fargeleggHeleOrd("null", "eksVar");
+fargeleggHeleOrd("undefined", "eksVar");
+
 fargeleggHeleOrd("RegExp", "eksReg");
+
 fargeleggHeleOrd("BigInt", "eksQue");
 fargeleggHeleOrd("symbol", "eksQue");
-fargeleggHeleOrd("document", "eksDoc");
 fargeleggHeleOrd("forEach", "eksQue");
+
+fargeleggHeleOrd("document", "eksDoc");
+fargeleggHeleOrd("textContent", "eksDoc");
+
 fargeleggHeleOrd("eksString", "eksNavn");
 fargeleggHeleOrd("eksSymbol", "eksNavn");
 fargeleggHeleOrd("eksNumber", "eksNavn");
 fargeleggHeleOrd("eksBigInt", "eksNavn");
-fargeleggHeleOrd("eksBoolTrue", "eksNavn");
-fargeleggHeleOrd("eksBoolFalse", "eksNavn");
 fargeleggHeleOrd("eksObject", "eksNavn");
 fargeleggHeleOrd("eksUndefined", "eksNavn");
 fargeleggHeleOrd("eksNull", "eksNavn");
 fargeleggHeleOrd("name", "eksNavn");
 fargeleggHeleOrd("surname", "eksNavn");
 fargeleggHeleOrd("age", "eksNavn");
-fargeleggHeleOrd("True", "eksVar");
-fargeleggHeleOrd("False", "eksVar");
-fargeleggHeleOrd("null", "eksVar");
-fargeleggHeleOrd("undefined", "eksVar");
 
 function fargeleggTall() {
    const kodeBoksList = document.querySelectorAll(".kodeEksempel");
