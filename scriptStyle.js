@@ -13,6 +13,7 @@ fargeleggOrd("svar", "eksNavn");
 
 fargeleggOrd("query", "eksQue");
 fargeleggOrd("get", "eksQue");
+fargeleggOrd("teller", "eksQue");
 
 fargeleggOrd("eksBool", "eksNavn");
 /* 1. Funksjon for å fargelegge bestemte ord i HTML-tekst
@@ -60,8 +61,9 @@ fargeleggHeleOrd("document", "eksDoc");
 fargeleggHeleOrd("textContent", "eksDoc");
 
 fargeleggHeleOrd("eksString", "eksNavn");
-fargeleggHeleOrd("eksSymbol", "eksNavn");
-fargeleggHeleOrd("eksNumber", "eksNavn");
+fargeleggHeleOrd("eksNSymbol", "eksNavn");
+fargeleggHeleOrd("eksInteger", "eksNavn");
+fargeleggHeleOrd("eksFloat", "eksNavn");
 fargeleggHeleOrd("eksBigInt", "eksNavn");
 fargeleggHeleOrd("eksObject", "eksNavn");
 fargeleggHeleOrd("eksUndefined", "eksNavn");
@@ -72,6 +74,9 @@ fargeleggHeleOrd("age", "eksNavn");
 fargeleggHeleOrd("Nøkkel", "eksNavn");
 fargeleggHeleOrd("id", "eksNavn");
 fargeleggHeleOrd("seksKant", "eksNavn");
+fargeleggHeleOrd("leggTil", "eksNavn");
+fargeleggHeleOrd("trekkFra", "eksNavn");
+fargeleggHeleOrd("i", "eksNavn");
 
 function fargeleggTall() {
    const kodeBoksList = document.querySelectorAll(".kodeFarge");

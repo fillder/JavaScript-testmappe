@@ -67,6 +67,9 @@ code {
    padding-inline: 0.25rem;
    border-radius: 0.25rem;
 }
+.innrykk {
+   margin-inline-start: 2rem;
+}
 .kodeBlokk {
    display: block;
    font-family: "Roboto Mono", monospace;
@@ -75,6 +78,16 @@ code {
    border-radius: 0.5rem;
    padding-block: 0.5rem;
    padding-inline: 1rem;
+}
+.testKnapp {
+   font: inherit;
+   background-color: var(--clr-button);
+   border: 1px solid var(--clr-border);
+   color: var(--clr-text);
+   border-radius: 0.5rem;
+   padding-block: 0.25rem;
+   padding-inline: 1rem;
+   margin-block: 1rem;
 }
 .eksVar {
    color: #569cd6;

@@ -67,9 +67,15 @@
             <p>En Streng er en kombinasjon av tall og bokstaver og initialiseres med to anførselstegn</p>
             <div class="kodeBlokk kodeFarge">const eksString = <span class="eksStr">"Eksempel på en streng"</span><br /></div>
             <hr />
-            <h3>4.2. Number/Nummer:</h3>
-            <p>Et nummer er et heltall og trenger ingen ekstra tegn for initialisering</p>
-            <div class="kodeBlokk kodeFarge">const eksNumber = 1<br /></div>
+            <h3>4.2. Integer/heltall og Floats/desimaltall:</h3>
+            <p>
+               I JavaScript er et heltall definert Et nummer uten fraksjoner, mens et desimaltall er definert som floats. For å tilegne en variabel verdien av
+               et tall skriver vi det rett frem. Selv om Integer og Floats begge bruker tall, behandles de som to separate datatyper
+            </p>
+            <div class="kodeBlokk kodeFarge">
+               const eksInteger = 1<br />
+               const eksFloat = 6.12<br />
+            </div>
             <hr />
             <h3>4.4. Boolean</h3>
             <p>
@@ -89,6 +95,7 @@
             <p>Variabler som har verdien "null" har ingen objektiv verdi og kan heller ikke brukes som identifikasjon.</p>
             <div class="kodeBlokk kodeFarge">const eksNull = null</div>
          </section>
+
          <section>
             <h1>Operasjoner</h1>
             <h3>Referere verdi</h3>
@@ -100,8 +107,12 @@
                const navnB = navnA<br />
             </div>
             <hr />
-            <h3>Sette sammen tall-verdier</h3>
-            <p>Vi kan legge sammen verdien av variabler ved hjelp and pluss (+) og (-). Eksempel:</p>
+            <h3>Mattematiske operasjoner av tall</h3>
+            <p>
+               JavaScript kan brukes til gjøre nøyaktige utregninger med Integer/heltall og Floats/desimaltall opp til 15 sifrer. Vi skriver mattestykker rett
+               frem eller i kombinasjon med nimeriske varibler, med addisjon<code>+</code>, substraksjon<code>-</code>, multiplikasjon<code>*</code> eller
+               divisjon<code>/</code>. Eksempel:
+            </p>
             <div class="faneBoks">
                <button class="faneKnapp" id="startFane" onclick="openTab(event, 'JavaScript')">JavaScript</button>
                <button class="faneKnapp" onclick="openTab(event, 'HTML')">HTML/CSS</button>
@@ -109,7 +120,7 @@
             </div>
             <div id="JavaScript" class="faneInnhold kodeFarge">
                const tallA = 6<br />
-               const tallB = 3<br />
+               const tallB = 3.5<br />
                document.getElementById(<span class="eksStr">"pluss"</span>).textContent = tallA + tallB;<br />
                document.getElementById(<span class="eksStr">"minus"</span>).textContent = tallA - tallB;<br />
                document.getElementById(<span class="eksStr">"gange"</span>).textContent = tallA * tallB;<br />
@@ -126,13 +137,13 @@
                <p id="minus"></p>
                <p id="gange"></p>
                <p id="dele"></p>
+               <p id="modul"></p>
             </div>
             <hr />
             <h3>Sette sammen streng-verdi</h3>
             <p>
-               Så lenge vi kun holder oss til addisjon, altså pluss (+), kan vi legge sammen verdier og selvstendige streng-beskrivelser i form av et
-               psudo-mattestykke. Vi kan derimot ikke bruke substraksjon, multiplikasjon eller divisijon i denne sammenhengen. Da får vi bare feilmeldingen
-               "NaN", som betyr "Not a Number".
+               Så lenge vi kun holder oss til addisjon, altså pluss<code>+</code>, kan vi legge sammen verdier og selvstendige streng-beskrivelser i form av et
+               psudo-mattestykke. Bruker vi noe annet enn addisjon, får vi bare feilmeldingen "NaN", som betyr "Not a Number".
             </p>
             <div class="kodeBlokk kodeFarge">
                const tallA = 6<br />
@@ -145,7 +156,7 @@
                <p id="seksKant"></p>
             </div>
             <hr />
-            <h3>Inkrementer av tall/Tellere</h3>
+            <h3>Legg til inkrement/tall</h3>
             <p>
                <code class="kodeFarge">++</code> er en operatøren som kan brukes til å legge til en verdi eller inkrementere en eksisterende verdi. Her er et
                konkret eksempel hvor vi må bruke variabelen-typen <code class="kodeFarge">let</code>, fordi vi skal endre variabelens verdi etter at den er
@@ -153,15 +164,62 @@
                <code class="kodeFarge">i = i + 1</code>.
             </p>
             <div class="kodeBlokk kodeFarge">
-               let tallA = 0;<br />
-               <br />
-               function teller() {<br />
-               tallA++;<br />
-               document.getElementById(<span class="eksStr">"inkrementKnapp"</span>).textContent = tallA;}
+               let leggTil = 5;<br />
+               function tellerPos() {<br />
+               <span class="innrykk">leggTil++;<br /></span>
+               <span class="innrykk">document.getElementById(<span class="eksStr">"posTeller"</span>).textContent = leggTil;</span><br />
+               }
             </div>
-            <button onclick="teller()" id="inkrementKnapp">0</button>
+            <button class="testKnapp" onclick="tellerPos()" id="posTeller">5</button>
+            <h3>Trekk fra inkrement/tall</h3>
+            <p>
+               <code class="kodeFarge">--</code> operatøren fungerer på akkurat samme måte. <code class="kodeFarge">i--</code>, er det samme som
+               <code class="kodeFarge">i = i + 1</code>, og kan brukes til å trekke fra inkrement fra en verdi.
+            </p>
+            <div class="kodeBlokk kodeFarge">
+               let trekkFra = 5;<br />
+               function tellerNeg() {<br />
+               <span class="innrykk">trekkFra++;<br /></span>
+               <span class="innrykk">document.getElementById(<span class="eksStr">"negTeller"</span>).textContent = trekkFra;</span><br />
+               }
+            </div>
+            <button class="testKnapp" onclick="tellerNeg()" id="negTeller">5</button>
             <hr />
+            <h3>!!! Tilleggsargumet (adisjon)</h3>
+            <p>
+               I JavaScript er det ikke unormalt å definere verdien på en variabel, og like etterpå endre verdien eller legge til ytterligere verdi.
+               Operatøren<code class="kodeFarge">+=</code> gjør nettopp dette.
+            </p>
+            <div class="kodeBlokk kodeFarge">
+               let myVar = 1;<br />
+               myVar += 5;<br />
+               console.log(myVar);<br />
+
+               resultat = 6
+            </div>
+            <h3>!!! Tilleggsargumet (substraksjon)</h3>
+            <p>Like the += operator, <code class="kodeFarge">-=</code> subtracts a number from a variable.</p>
+            <div class="kodeBlokk kodeFarge">
+               let myVar = 5;<br />
+               myVar -= 5;<br />
+               resultat = 0
+            </div>
+            <h3>!!! Tilleggsargumet (multiplikasjon)</h3>
+            <p>The <code class="kodeFarge">*=</code> operator multiplies a variable by a number.</p>
+            <div class="kodeBlokk kodeFarge">
+               let myVar = 5;<br />
+               myVar *= 5;<br />
+               resultat = 25
+            </div>
+            <h3>!!! Tilleggsargumet (Divisjon)</h3>
+            <p>The <code class="kodeFarge">/=</code> operator divides a variable by another number..</p>
+            <div class="kodeBlokk kodeFarge">
+               let myVar = 25;<br />
+               myVar /= 5;<br />
+               resultat = 5
+            </div>
          </section>
+
          <section>
             <h1>X. Avanserte datatyper</h1>
             <h3>X.1. BigInt</h3>
@@ -169,7 +227,7 @@
                BigInt er nemmeriske verdier som er for stor til å bli representert av vanlige nummer. BigInt verdier kan ikke utregnes som mattematisk med andre
                tall uten konvertering
             </p>
-            <div class="kodeBlokk kodeFarge">const eksBigInt = = BigInt(<span class="eksStr">"0x1fffffffffffff"</span>);<br /></div>
+            <div class="kodeBlokk kodeFarge">const eksBigInt = BigInt(<span class="eksStr">"0x1fffffffffffff"</span>);<br /></div>
             <hr />
             <h3>X.2. Objekt</h3>
             <p>Ett objekt er at datasett som består av flere nøkkelverdier. Objekter initialiseres med krøllparentes og nøklene separeres med komma</p>
