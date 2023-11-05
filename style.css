@@ -27,22 +27,54 @@ body {
    background-color: var(--clr-body);
    font-family: "Roboto", sans-serif;
    color: var(--clr-text);
+   line-height: 150%;
 }
 main {
    background-color: var(--clr-main);
+   max-width: 1200px;
+   margin-inline: auto;
+   margin-block: 2rem;
+   padding: 1rem;
 }
 section {
    background-color: var(--clr-section);
+   border: 1px solid var(--clr-border);
+   max-width: 1000px;
+   margin-inline: auto;
+   padding-block: 1rem;
+   padding-inline: 2rem;
 }
 code {
    font-family: "Roboto Mono", monospace;
    display: inline-block;
-   background-color: var(--clr-code);
+   background-color: #1f1f1f;
    border: 1px solid var(--clr-border);
-   padding: 0.5rem;
+   border-radius: 0.5rem;
+   padding-block: 0.5rem;
+   padding-inline: 1rem;
 }
 h1,
 h2,
 h3 {
    font-family: "Roboto Slab", serif;
+   margin-block-start: 1rem;
+}
+p,
+ul {
+   margin-block: 0.5rem;
+}
+.eksVar {
+   color: #569cd6;
+}
+.eksNavn {
+   color: #9cdcfe;
+}
+.eksNum {
+   color: #b5cea8;
+}
+.eksStr {
+   color: #ce9178;
+}
+.eksFct {
+   color: #dcdcaa;
 }

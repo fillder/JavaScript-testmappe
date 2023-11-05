@@ -9,19 +9,27 @@
    <body>
       <main>
          <section>
-            <h1>Variabler</h1>
-            <ul>
-               <li id="var"></li>
-               <li id="let"></li>
-               <li id="const"></li>
-            </ul>
-            <br />
-            <h2>Operasjoner</h2>
-            <p>Verdien til en variabel kan hente og refere til andre variabler. Eksempel:</p>
-            <code id="codeBlock">
-               const varA = 6<br />
-               const varB = varA<br />
-            </code>
+            <div>
+               <h1>Variabler</h1>
+               <p>Det finnes tre måter å deklarere/lage en variabel; var, let, const:</p>
+               <ul>
+                  <li>"var" er en utdatert metode for variabler, som kan overskrive og endres fritt. For webutvikling unngår vi å bruke "var"</li>
+                  <li>"let" kan tilegnes en verdi som kan manipuleres og muteres fritt etter deklarering. Nyttig for tellere og verdier</li>
+                  <li>"const" tilegnes en verdi som ikke kan overskrives. Den må tilegnes en verdi fra starten, men kan ikke få en ny verdi senere</li>
+               </ul>
+               <code class="kodeEksempel">
+                  var navnA;<br />
+                  let navnB;<br />
+                  const navnC = 'Vi bruker likhetstegn (=) for å gi variabelen en verdi' <br />
+               </code>
+               <br />
+               <h2>Operasjoner</h2>
+               <p>Verdien til en variabel kan hente og refere til andre variabler. Eksempel:</p>
+               <code class="kodeEksempel">
+                  const verdiA = 6<br />
+                  const verdiB = verdiA<br />
+               </code>
+            </div>
 
             <br />
             <h3>Datasett</h3>

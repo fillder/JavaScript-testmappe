@@ -4,9 +4,9 @@
 kan vi innlemme innholdet mellom en skråstrek og et asterisk-symbol */
 
 //Ulike type variabler
-var varVariabel = "En var variabel er en utdatert metode som kan overskrive seg selv, og bør derfor ikke brukes";
-let letVariable = "En let variabel kan tilegnes en verdi som kan manipuleres og muteres fritt";
-const constVariabel = "En const variabel tilegnes konstant data som ikke endres etter deklarering. den er altså “read-only”";
+var varVariabel = "var variabel er en utdatert metode som kan overskrive seg selv, og bør derfor ikke brukes";
+let letVariable = "let variabel kan tilegnes en verdi som kan manipuleres og muteres fritt";
+const constVariabel = "const variabel tilegnes konstant data som ikke endres etter deklarering. den er altså “read-only”";
 document.getElementById("var").textContent = varVariabel;
 document.getElementById("let").textContent = letVariable;
 document.getElementById("const").textContent = constVariabel;
@@ -34,7 +34,7 @@ let eksBooleanFalse = false;
 // function ()
 
 //Symboler er et ES6 datasett med en unik verdi som kan brukes for identifisering eller som en "nøkkel" til et objekt.
-const eksSymbol = symbol("key");
+// const eksSymbol = symbol("key");
 
 //Ett objekt er at datasett som består av flere nøkkelverdier. Objekter initialiseres med krøllparentes og nøklene separeres med komma
 const Spice0 = {
