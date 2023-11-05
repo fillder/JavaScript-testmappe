@@ -69,9 +69,6 @@ code {
    padding-block: 0.5rem;
    padding-inline: 1rem;
 }
-code p {
-   margin: 0;
-}
 .eksVar {
    color: #569cd6;
 }
