@@ -32,7 +32,10 @@
             <code class="kodeEksempel"> document.getElementById(<span class="eksStr">"idNavn"</span>).textContent += </code>
          </section>
          <section>
-            <h1>2. Variabler</h1>
+            <h1>2. DOM og consol.log</h1>
+         </section>
+         <section>
+            <h1>3. Variabler</h1>
             <p>Det finnes tre måter å deklarere/lage en variabel; var, let, const:</p>
             <ul>
                <li>"var" er en utdatert metode for variabler, som kan overskrive og endres fritt. For webutvikling unngår vi å bruke "var"</li>
@@ -46,24 +49,20 @@
             </code>
          </section>
          <section>
-            <h1>3. Datatyper</h1>
-            <p>Det finnes tre måter å deklarere/lage en variabel; var, let, const:</p>
-            <h3>3.1. String/Streng:</h3>
+            <h1>4. Grunnleggende datatyper</h1>
+            <p>
+               Det finnes totalt åtte datatyper i JavaScript; Streng, nummer, boolean, undefined, null, object, symbol og bigint. Vi avventer med de tre siste
+               typene til et senere nivå.
+            </p>
+            <h3>4.1. String/Streng:</h3>
             <p>En Streng er en kombinasjon av tall og bokstaver og initialiseres med to anførselstegn</p>
             <code class="kodeEksempel"> const eksString = <span class="eksStr">"Eksempel på en streng"</span><br /> </code>
             <hr />
-            <h3>3.2. Number/Nummer:</h3>
+            <h3>4.2. Number/Nummer:</h3>
             <p>Et nummer er et heltall og trenger ingen ekstra tegn for initialisering</p>
             <code class="kodeEksempel"> const eksNumber = 1<br /> </code>
             <hr />
-            <h3>3.3. BigInt</h3>
-            <p>
-               BigInt er nemmeriske verdier som er for stor til å bli representert av vanlige nummer. BigInt verdier kan ikke utregnes som mattematisk med andre
-               tall uten konvertering
-            </p>
-            <code class="kodeEksempel"> const eksBigInt = = BigInt(<span class="eksStr">"0x1fffffffffffff"</span>);<br /> </code>
-            <hr />
-            <h3>3.4. Boolean</h3>
+            <h3>4.4. Boolean</h3>
             <p>
                En Boolean er en datatype for om noe som har to tilstander; sant/aktivt eller usant/ikke aktivt. Dette er ofte brukt til å aktivere eller
                deaktivere funskjoner, enten direkte i koden eller via knapper
@@ -73,39 +72,63 @@
                const eksBoolFalse = True<br />
             </code>
             <hr />
-            <h3>3.5. Objekt</h3>
-            <p>Ett objekt er at datasett som består av flere nøkkelverdier. Objekter initialiseres med krøllparentes og nøklene separeres med komma</p>
-            <code class="kodeEksempel">
-               const eksObject = {name: <span class="eksStr">"Bob"</span>, surname: <span class="eksStr">"Kåre"</span>, age: 19,}<br />
-            </code>
-            <hr />
-            <h3>3.6. Symbol</h3>
-            <p>Symboler er et ES6 datasett med en unik verdi som kan brukes for identifisering eller som en "nøkkel" til et objekt.</p>
-            <code class="kodeEksempel"> const eksSymbol = symbol(<span class="eksStr">"key"</span>); </code>
-            <hr />
-            <h3>3.7. Undefined</h3>
+            <h3>4.7. Undefined</h3>
             <p>Variabler som ikke har en definert verdi får verdien "undefined", fordi den ikke har fått en tilegnet verdi enda.</p>
             <code class="kodeEksempel"> const eksUndefined = undefined</code>
             <hr />
-            <h3>3.8. Null</h3>
+            <h3>4.8. Null</h3>
             <p>Variabler som har verdien "null" har ingen objektiv verdi og kan heller ikke brukes som identifikasjon.</p>
             <code class="kodeEksempel"> const eksNull = null</code>
          </section>
          <section>
             <h1>Operasjoner</h1>
-            <h3>Referere</h3>
-            <p>Verdien til en variabel kan hente og refere til andre variabler. Eksempel:</p>
+            <h3>Referere verdi</h3>
+            <p>
+               Verdien til en variabel kan hente og refere til andre variabler. I eksempelet under sier vi at variabel navnB har samme verdi som variabel navnA:
+            </p>
             <code class="kodeEksempel">
                const navnA = 6<br />
                const navnB = navnA<br />
             </code>
             <hr />
-            <h3>Utregning</h3>
-            <p>Vi kan legge sammen verdien til variabler ved hjelp and pluss (+) og (-). Eksempel:</p>
+            <h3>Sette sammen verdier</h3>
+            <p>Vi kan legge sammen verdien av variabler ved hjelp and pluss (+) og (-). Eksempel:</p>
             <code class="kodeEksempel">
                const tallA = 6<br />
                const tallB = 3<br />
-               const svar = tallA + tallB<br />
+               const svar = tallA * tallB<br />
+            </code>
+            <p id="pluss"></p>
+            <p id="minus"></p>
+            <p id="gange"></p>
+            <p id="dele"></p>
+         </section>
+         <section>
+            <h1>X. Avanserte datatyper</h1>
+            <h3>X.1. BigInt</h3>
+            <p>
+               BigInt er nemmeriske verdier som er for stor til å bli representert av vanlige nummer. BigInt verdier kan ikke utregnes som mattematisk med andre
+               tall uten konvertering
+            </p>
+            <code class="kodeEksempel"> const eksBigInt = = BigInt(<span class="eksStr">"0x1fffffffffffff"</span>);<br /> </code>
+            <hr />
+            <h3>X.2. Objekt</h3>
+            <p>Ett objekt er at datasett som består av flere nøkkelverdier. Objekter initialiseres med krøllparentes og nøklene separeres med komma</p>
+            <code class="kodeEksempel">
+               const eksObject = {name: <span class="eksStr">"Bob"</span>, surname: <span class="eksStr">"Kåre"</span>, age: 19,}<br />
+            </code>
+            <hr />
+            <h3>X.3. Symbol</h3>
+            <p>
+               Symboler er et ES6 datasett med en unik verdi som kan brukes som "nøkler" i objekter, slik at de ikke risikerer å overskrive eller kollidere med
+               andre koder i et større datasett. Det kan også brukes for å definere skjulte egenskaper på objekter. Symbol() skrives med stor "S", og det er
+               valgfritt om vi vil legge til en streng-beskrivelse i parentesen, eksempel Symbol("Nøkkel") Beskrivelsen har ingen innvirkning på symbolets
+               unikhet, men kan refereres til i et objekt.
+            </p>
+            <code class="kodeEksempel">
+               const eksSymbol = Symbol(<span class="eksStr">"nøkkel"</span>); <br />
+               const eksObject = {name: <span class="eksStr">"Bob"</span>, surname: <span class="eksStr">"Kåre"</span>, [Nøkkel]:
+               <span class="eksStr">"Dette er en unik egenskap for objektet"</span>}
             </code>
          </section>
       </main>
