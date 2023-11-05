@@ -1,4 +1,4 @@
-function openTab(faneNavn) {
+function openTab(evt, faneNavn) {
    // Declare all variables
    let i, faneInnhold, faneKnapp;
 
@@ -19,3 +19,5 @@ function openTab(faneNavn) {
    evt.currentTarget.className += " active";
 }
 document.getElementById("startFane").click();
+
+//https://www.w3schools.com/howto/howto_js_tabs.asp
