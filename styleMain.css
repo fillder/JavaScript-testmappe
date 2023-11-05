@@ -56,18 +56,21 @@ section {
    border: 1px solid var(--clr-border);
    max-width: 1000px;
    margin-inline: auto;
-   margin-block: 1rem;
+   margin-block: 2rem;
    padding-block: 1rem;
    padding-inline: 2rem;
 }
 code {
+   display: block;
    font-family: "Roboto Mono", monospace;
-   display: inline-block;
    background-color: var(--clr-code);
    border: 1px solid var(--clr-border);
    border-radius: 0.5rem;
    padding-block: 0.5rem;
    padding-inline: 1rem;
+}
+code p {
+   margin: 0;
 }
 .eksVar {
    color: #569cd6;

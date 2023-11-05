@@ -4,3 +4,7 @@ document.getElementById("pluss").textContent = tallA + tallB;
 document.getElementById("minus").textContent = tallA - tallB;
 document.getElementById("gange").textContent = tallA * tallB;
 document.getElementById("dele").textContent = tallA / tallB;
+
+const navnA = "kant";
+const seksKant = "Et heksagon er en " + tallA + "-" + navnA;
+document.getElementById("seksKant").textContent = seksKant;

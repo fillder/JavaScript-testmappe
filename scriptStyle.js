@@ -46,6 +46,7 @@ fargeleggHeleOrd("True", "eksVar");
 fargeleggHeleOrd("False", "eksVar");
 fargeleggHeleOrd("null", "eksVar");
 fargeleggHeleOrd("undefined", "eksVar");
+fargeleggHeleOrd("p", "eksVar");
 
 fargeleggHeleOrd("RegExp", "eksReg");
 
@@ -67,6 +68,8 @@ fargeleggHeleOrd("name", "eksNavn");
 fargeleggHeleOrd("surname", "eksNavn");
 fargeleggHeleOrd("age", "eksNavn");
 fargeleggHeleOrd("Nøkkel", "eksNavn");
+fargeleggHeleOrd("id", "eksNavn");
+fargeleggHeleOrd("seksKant", "eksNavn");
 
 function fargeleggTall() {
    const kodeBoksList = document.querySelectorAll(".kodeEksempel");

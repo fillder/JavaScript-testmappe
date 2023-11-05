@@ -3,7 +3,8 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="styleMain.css" />
+      <link rel="stylesheet" href="styleTab.css" />
       <title>Document</title>
    </head>
    <body>
@@ -91,17 +92,56 @@
                const navnB = navnA<br />
             </code>
             <hr />
-            <h3>Sette sammen verdier</h3>
+            <h3>Sette sammen tall-verdier</h3>
             <p>Vi kan legge sammen verdien av variabler ved hjelp and pluss (+) og (-). Eksempel:</p>
+            <div class="faneBoks">
+               <button class="faneKnapp" id="startFane" onclick="openTab('JavaScript')">JavaScript</button>
+               <button class="faneKnapp" onclick="openTab('HTML')">HTML/CSS</button>
+               <button class="faneKnapp" onclick="openTab('Nettleser')">Nettleser</button>
+            </div>
+            <div id="JavaScript" class="faneInnhold">
+               <code class="kodeEksempel">
+                  const tallA = 6<br />
+                  const tallB = 3<br />
+                  document.getElementById(<span class="eksStr">"pluss"</span>).textContent = tallA + tallB;<br />
+                  document.getElementById(<span class="eksStr">"minus"</span>).textContent = tallA - tallB;<br />
+                  document.getElementById(<span class="eksStr">"gange"</span>).textContent = tallA * tallB;<br />
+                  document.getElementById(<span class="eksStr">"dele"</span>).textContent = tallA / tallB;<br />
+               </code>
+            </div>
+            <div id="HTML" class="faneInnhold">
+               <code class="kodeEksempel">
+                  &lt;p id=<span class="eksStr">"pluss"</span>&gt;&lt;/p&gt;<br />
+                  &lt;p id=<span class="eksStr">"minus"</span>&gt;&lt;/p&gt;<br />
+                  &lt;p id=<span class="eksStr">"gange"</span>&gt;&lt;/p&gt;<br />
+                  &lt;p id=<span class="eksStr">"dele"</span>&gt;&lt;/p&gt;<br />
+               </code>
+            </div>
+            <div id="Nettleser" class="faneInnhold">
+               <code>
+                  <p id="pluss"></p>
+                  <p id="minus"></p>
+                  <p id="gange"></p>
+                  <p id="dele"></p>
+               </code>
+            </div>
+            <hr />
+            <h3>Sette sammen streng-verdi</h3>
+            <p>
+               I likhet med tall kan vi bruke + og minus til å legge til eller fjerne verdier, men dersom vi prøver å bruke gang (*) eller dele (/) verdiene,
+               får vi en NaN feilmedling. Vi kan introdusere selvstendige tall og streng-verdier i psudo-regnestykket vårt uten problem, det er en måte å legge
+               til mellomrom og spesialtegn der vi ønsker:
+            </p>
             <code class="kodeEksempel">
                const tallA = 6<br />
-               const tallB = 3<br />
-               const svar = tallA * tallB<br />
+               const navnA = <span class="eksStr">"kant"</span><br />
+               const seksKant = <span class="eksStr">"Et heksagon er en "</span> + tallA + <span class="eksStr">"-"</span> + navnA<br />
+               document.getElementById("seksKant").textContent = seksKant
             </code>
-            <p id="pluss"></p>
-            <p id="minus"></p>
-            <p id="gange"></p>
-            <p id="dele"></p>
+            Resultat:
+            <code>
+               <p id="seksKant"></p>
+            </code>
          </section>
          <section>
             <h1>X. Avanserte datatyper</h1>
@@ -134,5 +174,6 @@
       </main>
       <script src="script.js"></script>
       <script src="scriptStyle.js"></script>
+      <script src="scriptTab.js"></script>
    </body>
 </html>
