@@ -1,0 +1,1 @@
+function svar(riktig, feil) {}
