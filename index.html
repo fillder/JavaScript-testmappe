@@ -250,14 +250,16 @@
          </section>
       </main>
       <footer>
-         <button onclick="feil()">svar 1</button>
-         <button onclick="feil()">svar 2</button>
-         <button id="riktig" onclick="riktig()">svar 3</button>
-         <button onclick="feil()">svar 4</button>
-         <button onclick="feil()">svar 5</button>
+         <div class="flex">
+            <button onclick="Spm1('feil', this)">svar 2</button>
+            <button onclick="Spm1('feil', this)">svar 1</button>
+            <button onclick="Spm1('riktig', this)">svar 3</button>
+            <button onclick="Spm1('feil', this)">svar 4</button>
+            <button onclick="Spm1('feil', this)">svar 5</button>
+         </div>
          <div id="videre">
             <h3>Gratulerer, riktig svar!</h3>
-            <a href="">gå videre</a>
+            <a href="test.html">gå videre</a>
          </div>
       </footer>
       <script src="script.js"></script>

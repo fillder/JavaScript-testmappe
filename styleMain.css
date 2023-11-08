@@ -113,3 +113,20 @@ code {
 .kommentarEksempel {
    color: #6a9955;
 }
+.flex {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   width: max-content;
+   margin-inline: auto;
+   gap: 1rem;
+}
+#videre {
+   display: none;
+}
+.feil {
+   background-color: red;
+}
+.riktig {
+   background-color: green;
+}
