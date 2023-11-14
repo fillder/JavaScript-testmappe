@@ -11,6 +11,12 @@ function Spm1(svar, button) {
    if (svar === "riktig") {
       button.classList.add("riktig");
       button.disabled = true;
+      // Disable all other buttons
+      buttons.forEach(function (btn) {
+         if (btn !== button) {
+            btn.disabled = true;
+         }
+      });
       document.getElementById("videre").style.display = "block";
    } else {
       button.classList.add("feil");
@@ -18,8 +24,7 @@ function Spm1(svar, button) {
       document.getElementById("liv").textContent = liv;
    }
 }
-
-function Spm1(svar, button) {
+/*function Spm1(svar, button) {
    const buttons = document.querySelectorAll(".flex button");
 
    if (liv > 0) {
@@ -37,4 +42,4 @@ function Spm1(svar, button) {
          document.getElementById("liv").textContent = liv;
       }
    }
-}
+}*/
