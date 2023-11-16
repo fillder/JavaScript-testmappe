@@ -47,7 +47,6 @@ fargeleggHeleOrd("True", "eksVar");
 fargeleggHeleOrd("False", "eksVar");
 fargeleggHeleOrd("null", "eksVar");
 fargeleggHeleOrd("undefined", "eksVar");
-fargeleggHeleOrd("p", "eksVar");
 fargeleggHeleOrd("function", "eksVar");
 
 fargeleggHeleOrd("RegExp", "eksReg");

@@ -179,45 +179,34 @@
             <div class="kodeBlokk kodeFarge">
                let trekkFra = 5;<br />
                function tellerNeg() {<br />
-               <span class="innrykk">trekkFra++;<br /></span>
+               <span class="innrykk">trekkFra--;<br /></span>
                <span class="innrykk">document.getElementById(<span class="eksStr">"negTeller"</span>).textContent = trekkFra;</span><br />
                }
             </div>
             <button class="testKnapp" onclick="tellerNeg()" id="negTeller">5</button>
             <hr />
-            <h3>!!! Tilleggsargumet (adisjon)</h3>
+            <h3>Utregning med Tilleggsargumet</h3>
             <p>
                I JavaScript er det ikke unormalt å definere verdien på en variabel, og like etterpå endre verdien eller legge til ytterligere verdi.
-               Operatøren<code class="kodeFarge">+=</code> gjør nettopp dette.
+               Operatørenene <code class="kodeFarge">+=</code>, <code class="kodeFarge">-=</code>, <code class="kodeFarge">*=</code>, og
+               <code class="kodeFarge">/=</code> er en snarvei for nettopp dette. <code class="kodeFarge">tallA += 1</code> henter verdien til tallA og plusser
+               på 1, som om vi hadde skrevet <code class="kodeFarge">tallA = tallA + 1</code>
             </p>
             <div class="kodeBlokk kodeFarge">
-               let myVar = 1;<br />
-               myVar += 5;<br />
-               console.log(myVar);<br />
-
-               resultat = 6
+               let tallPluss = 5;<br />
+               let tallMinus = 5;<br />
+               let tallGange = 5;<br />
+               let tallDele = 5;<br />
+               tallPluss += 5;<br />
+               tallMinus -= 5;<br />
+               tallGange *= 5;<br />
+               tallDele /= 5;<br />
             </div>
-            <h3>!!! Tilleggsargumet (substraksjon)</h3>
-            <p>Like the += operator, <code class="kodeFarge">-=</code> subtracts a number from a variable.</p>
-            <div class="kodeBlokk kodeFarge">
-               let myVar = 5;<br />
-               myVar -= 5;<br />
-               resultat = 0
-            </div>
-            <h3>!!! Tilleggsargumet (multiplikasjon)</h3>
-            <p>The <code class="kodeFarge">*=</code> operator multiplies a variable by a number.</p>
-            <div class="kodeBlokk kodeFarge">
-               let myVar = 5;<br />
-               myVar *= 5;<br />
-               resultat = 25
-            </div>
-            <h3>!!! Tilleggsargumet (Divisjon)</h3>
-            <p>The <code class="kodeFarge">/=</code> operator divides a variable by another number..</p>
-            <div class="kodeBlokk kodeFarge">
-               let myVar = 25;<br />
-               myVar /= 5;<br />
-               resultat = 5
-            </div>
+            <p>Sjekk utregning: <span id="TilleggsargumetSvar">?</span></p>
+            <button onclick="tallPlussKnapp()">Pluss</button>
+            <button onclick="tallMinusKnapp()">Minus</button>
+            <button onclick="tallGangeKnapp()">Gange</button>
+            <button onclick="tallDeleKnapp()">Dele</button>
          </section>
 
          <section>

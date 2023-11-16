@@ -20,3 +20,24 @@ function tellerNeg() {
    trekkFra--;
    document.getElementById("negTeller").textContent = trekkFra;
 }
+
+let tallPluss = 5;
+let tallMinus = 5;
+let tallGange = 5;
+let tallDele = 5;
+tallPluss += 5;
+tallMinus -= 5;
+tallGange *= 5;
+tallDele /= 5;
+function tallPlussKnapp() {
+   document.getElementById("TilleggsargumetSvar").textContent = tallPluss;
+}
+function tallMinusKnapp() {
+   document.getElementById("TilleggsargumetSvar").textContent = tallMinus;
+}
+function tallGangeKnapp() {
+   document.getElementById("TilleggsargumetSvar").textContent = tallGange;
+}
+function tallDeleKnapp() {
+   document.getElementById("TilleggsargumetSvar").textContent = tallDele;
+}
