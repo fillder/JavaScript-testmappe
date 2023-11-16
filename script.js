@@ -41,3 +41,10 @@ function tallGangeKnapp() {
 function tallDeleKnapp() {
    document.getElementById("TilleggsargumetSvar").textContent = tallDele;
 }
+// Sammenkoblinsoperasjon pluss tilleggsargument
+let navnB = "Etter første del, ";
+navnB += "kommer del to.";
+function tilleggsAddisjon() {
+   console.log(navnB);
+   document.getElementById("tilleggsAddisjon").textContent = navnB;
+}

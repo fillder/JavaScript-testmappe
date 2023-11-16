@@ -18,19 +18,19 @@
                derfor nyttig som en forklaring til seg selv og andre for hva koden gjør. Gode kommentarer gjør det både lettere å samarbeide med andre og
                feilsøke problemer.
             </p>
-            <div class="kommentarEksempel">
+            <code class="kommentarEksempel">
                // to skråstrek kommenterer ut tegn på samme linje. <br />
                <br />
                /* Skråstek pluss astersisk Kommentere ut alle tegn og<br />
                linjer til den lukkses med en asterisk og skråstrek */<br />
-            </div>
+            </code>
             <h3>camelCase-navn</h3>
             <p>
                En god skrivemåte innen programmering hvor første bokstav er liten, men alle følgende ord får stor bokstav. camelCase-metoden er integrert i
                JavaScript, det er derfor lurt å bruke samme metode for navngiving av ID, klasser og variabler. Dette gjør koden enklere å lese, og hindrer at vi
                med uhell legger til mellomrom som ødelegger koden. Elsempler på camelCase Javascript:
             </p>
-            <div class="kodeBlokk kodeFarge">document.getElementById(<span class="eksStr">"idNavn"</span>).textContent +=</div>
+            <code>document.getElementById(<span class="eksStr">"idNavn"</span>).textContent +=</code>
          </section>
          <section>
             <h1>2. DOM og consol.log</h1>
@@ -39,23 +39,15 @@
             <h1>3. Variabler</h1>
             <p>Det finnes tre måter å deklarere/lage en variabel; var, let, const:</p>
             <ul>
-               <li>
-                  <code class="kodeFarge">var</code> er en utdatert metode for variabler, som kan overskrive og endres fritt. For webutvikling unngår vi å bruke
-                  "var"
-               </li>
-               <li>
-                  <code class="kodeFarge">let</code> kan tilegnes en verdi som kan manipuleres og muteres fritt etter deklarering. Nyttig for tellere og verdier
-               </li>
-               <li>
-                  <code class="kodeFarge">const</code> tilegnes en verdi som ikke kan overskrives. Den må tilegnes en verdi fra starten, men kan ikke få en ny
-                  verdi senere
-               </li>
+               <li><code>var</code> er en utdatert metode for variabler, som kan overskrive og endres fritt. For webutvikling unngår vi å bruke "var"</li>
+               <li><code>let</code> kan tilegnes en verdi som kan manipuleres og muteres fritt etter deklarering. Nyttig for tellere og verdier</li>
+               <li><code>const</code> tilegnes en verdi som ikke kan overskrives. Den må tilegnes en verdi fra starten, men kan ikke få en ny verdi senere</li>
             </ul>
-            <div class="kodeBlokk kodeFarge">
+            <code class="kodeBlokk">
                var navnA;<br />
                let navnB;<br />
                const navnC = <span class="eksStr">"Vi bruker likhetstegn (=) for å gi variabelen en verdi"</span><br />
-            </div>
+            </code>
          </section>
          <section>
             <h1>4. Grunnleggende datatyper</h1>
@@ -64,36 +56,39 @@
                typene til et senere nivå.
             </p>
             <h3>4.1. String/Streng:</h3>
-            <p>En Streng er en kombinasjon av tall og bokstaver og initialiseres med to anførselstegn</p>
-            <div class="kodeBlokk kodeFarge">const eksString = <span class="eksStr">"Eksempel på en streng"</span><br /></div>
+            <p>
+               En Streng er en kombinasjon av tall og bokstaver og initialiseres med to anførselstegn. Det har ingenting å si om vi bruke enkel
+               <code>'</code> eller dobbel <code>"</code> anførselstegn, men vi kan ikke kombinere de for å starte og lukke samme streng.
+            </p>
+            <code>const eksString = <span class="eksStr">"Eksempel på en streng"</span></code>
             <hr />
             <h3>4.2. Integer/heltall og Floats/desimaltall:</h3>
             <p>
                I JavaScript er et heltall definert Et nummer uten fraksjoner, mens et desimaltall er definert som floats. For å tilegne en variabel verdien av
                et tall skriver vi det rett frem. Selv om Integer og Floats begge bruker tall, behandles de som to separate datatyper
             </p>
-            <div class="kodeBlokk kodeFarge">
+            <code>
                const eksInteger = 1<br />
                const eksFloat = 6.12<br />
-            </div>
+            </code>
             <hr />
             <h3>4.4. Boolean</h3>
             <p>
                En Boolean er en datatype for om noe som har to tilstander; sant/aktivt eller usant/ikke aktivt. Dette er ofte brukt til å aktivere eller
                deaktivere funskjoner, enten direkte i koden eller via knapper
             </p>
-            <div class="kodeBlokk kodeFarge">
+            <code>
                const eksBoolTrue = False <br />
                const eksBoolFalse = True<br />
-            </div>
+            </code>
             <hr />
             <h3>4.7. Undefined</h3>
             <p>Variabler som ikke har en definert verdi får verdien "undefined", fordi den ikke har fått en tilegnet verdi enda.</p>
-            <div class="kodeBlokk kodeFarge">const eksUndefined = undefined</div>
+            <code>const eksUndefined = undefined</code>
             <hr />
             <h3>4.8. Null</h3>
             <p>Variabler som har verdien "null" har ingen objektiv verdi og kan heller ikke brukes som identifikasjon.</p>
-            <div class="kodeBlokk kodeFarge">const eksNull = null</div>
+            <code>const eksNull = null</code>
          </section>
 
          <section>
@@ -102,10 +97,10 @@
             <p>
                Verdien til en variabel kan hente og refere til andre variabler. I eksempelet under sier vi at variabel navnB har samme verdi som variabel navnA:
             </p>
-            <div class="kodeBlokk kodeFarge">
+            <code>
                const navnA = 6<br />
                const navnB = navnA<br />
-            </div>
+            </code>
             <hr />
             <h3>Mattematiske operasjoner av tall</h3>
             <p>
@@ -118,20 +113,20 @@
                <button class="faneKnapp" onclick="openTab(event, 'HTML')">HTML/CSS</button>
                <button class="faneKnapp" onclick="openTab(event, 'Nettleser')">Nettleser</button>
             </div>
-            <div id="JavaScript" class="faneInnhold kodeFarge">
+            <code id="JavaScript" class="faneInnhold">
                const tallA = 6<br />
                const tallB = 3.5<br />
                document.getElementById(<span class="eksStr">"pluss"</span>).textContent = tallA + tallB;<br />
                document.getElementById(<span class="eksStr">"minus"</span>).textContent = tallA - tallB;<br />
                document.getElementById(<span class="eksStr">"gange"</span>).textContent = tallA * tallB;<br />
                document.getElementById(<span class="eksStr">"dele"</span>).textContent = tallA / tallB;<br />
-            </div>
-            <div id="HTML" class="faneInnhold kodeFarge">
+            </code>
+            <code id="HTML" class="faneInnhold">
                &lt;p id=<span class="eksStr">"pluss"</span>&gt;&lt;/p&gt;<br />
                &lt;p id=<span class="eksStr">"minus"</span>&gt;&lt;/p&gt;<br />
                &lt;p id=<span class="eksStr">"gange"</span>&gt;&lt;/p&gt;<br />
                &lt;p id=<span class="eksStr">"dele"</span>&gt;&lt;/p&gt;<br />
-            </div>
+            </code>
             <div id="Nettleser" class="faneInnhold">
                <p id="pluss"></p>
                <p id="minus"></p>
@@ -140,59 +135,56 @@
                <p id="modul"></p>
             </div>
             <hr />
-            <h3>Sette sammen streng-verdi</h3>
+            <h3>Sammenkoblingsoperatør / Sette sammen streng-verdi</h3>
             <p>
                Så lenge vi kun holder oss til addisjon, altså pluss<code>+</code>, kan vi legge sammen verdier og selvstendige streng-beskrivelser i form av et
                psudo-mattestykke. Bruker vi noe annet enn addisjon, får vi bare feilmeldingen "NaN", som betyr "Not a Number".
             </p>
-            <div class="kodeBlokk kodeFarge">
+            <code>
                const tallA = 6<br />
                const navnA = <span class="eksStr">"kant"</span><br />
                const seksKant = <span class="eksStr">"Et heksagon er en "</span> + tallA + <span class="eksStr">"-"</span> + navnA<br />
                document.getElementById("seksKant").textContent = seksKant
-            </div>
+            </code>
             <p>Resultat:</p>
-            <div class="kodeBlokk">
-               <p id="seksKant"></p>
-            </div>
+            <code id="seksKant"></code>
             <hr />
             <h3>Legg til inkrement/tall</h3>
             <p>
-               <code class="kodeFarge">++</code> er en operatøren som kan brukes til å legge til en verdi eller inkrementere en eksisterende verdi. Her er et
-               konkret eksempel hvor vi må bruke variabelen-typen <code class="kodeFarge">let</code>, fordi vi skal endre variabelens verdi etter at den er
-               deklerert. Kombinert med en variabel, kan vi skrive opperatøren som <code class="kodeFarge">i++</code>, som er det samme som om vi skulle skrevet
-               <code class="kodeFarge">i = i + 1</code>.
+               <code>++</code> er en operatøren som kan brukes til å legge til en verdi eller inkrementere en eksisterende verdi. Her er et konkret eksempel
+               hvor vi må bruke variabelen-typen <code>let</code>, fordi vi skal endre variabelens verdi etter at den er deklerert. Kombinert med en variabel,
+               kan vi skrive opperatøren som <code>i++</code>, som er det samme som om vi skulle skrevet <code>i = i + 1</code>.
             </p>
-            <div class="kodeBlokk kodeFarge">
+            <code>
                let leggTil = 5;<br />
                function tellerPos() {<br />
                <span class="innrykk">leggTil++;<br /></span>
                <span class="innrykk">document.getElementById(<span class="eksStr">"posTeller"</span>).textContent = leggTil;</span><br />
                }
-            </div>
+            </code>
             <button class="testKnapp" onclick="tellerPos()" id="posTeller">5</button>
             <h3>Trekk fra inkrement/tall</h3>
             <p>
-               <code class="kodeFarge">--</code> operatøren fungerer på akkurat samme måte. <code class="kodeFarge">i--</code>, er det samme som
-               <code class="kodeFarge">i = i + 1</code>, og kan brukes til å trekke fra inkrement fra en verdi.
+               <code>--</code> operatøren fungerer på akkurat samme måte. <code>i--</code>, er det samme som <code>i = i + 1</code>, og kan brukes til å trekke
+               fra inkrement fra en verdi.
             </p>
-            <div class="kodeBlokk kodeFarge">
+            <code>
                let trekkFra = 5;<br />
                function tellerNeg() {<br />
                <span class="innrykk">trekkFra--;<br /></span>
                <span class="innrykk">document.getElementById(<span class="eksStr">"negTeller"</span>).textContent = trekkFra;</span><br />
                }
-            </div>
+            </code>
             <button class="testKnapp" onclick="tellerNeg()" id="negTeller">5</button>
             <hr />
             <h3>Utregning med Tilleggsargumet</h3>
             <p>
                I JavaScript er det ikke unormalt å definere verdien på en variabel, og like etterpå endre verdien eller legge til ytterligere verdi.
                Operatørenene <code>+=</code>, <code>-=</code>, <code>*=</code>, og <code>/=</code> er en snarvei for nettopp dette.
-               <code class="kodeFarge">tallA += 1</code> henter verdien til tallA og plusser på 1, som om vi hadde skrevet
-               <code class="kodeFarge">tallA = tallA + 1</code>
+               <code>tallA += 1</code> henter verdien til tallA og plusser på 1, som om vi hadde skrevet
+               <code>tallA = tallA + 1</code>
             </p>
-            <div class="kodeBlokk kodeFarge">
+            <code>
                let tallPluss = 5;<br />
                let tallMinus = 5;<br />
                let tallGange = 5;<br />
@@ -201,12 +193,28 @@
                tallMinus -= 5;<br />
                tallGange *= 5;<br />
                tallDele /= 5;<br />
-            </div>
-            <p>Sjekk utregning: <span id="TilleggsargumetSvar">?</span></p>
+            </code>
+            <p>Sjekk utregning: <span id="TilleggsargumetSvar"></span></p>
             <button onclick="tallPlussKnapp()">Pluss</button>
             <button onclick="tallMinusKnapp()">Minus</button>
             <button onclick="tallGangeKnapp()">Gange</button>
             <button onclick="tallDeleKnapp()">Dele</button>
+            <hr />
+            <h3>Tillegsargument + sammenkoblingsoperatør</h3>
+            <p>
+               Ettersom vi kan gjøre en sammenkoblingsoperasjon med <code>+</code>, kan vi kombinere det med tilleggsargumentet <code>+=</code>for en ryddigere
+               kode. Eksempel:
+            </p>
+            <div class="kodeEksempel">
+               <div class="kodeHeader">hei</div>
+               <div class="outputHeader">hei</div>
+               <code class="kodeBoks">
+                  let navnB = "Etter første del, ";<br />
+                  navnB += "kommer del to.";
+               </code>
+               <div class="outputBoks">hei</div>
+            </div>
+            <p><button onclick="tilleggsAddisjon()">NavnB:</button><span id="tilleggsAddisjon"></span></p>
          </section>
          <section>
             <h1>6. Escape-symboler</h1>
@@ -220,6 +228,34 @@
             <i>Ola ropte "Nordmann!"</i> <br />
             Må vi skrives <br />
             <code>"Ola ropte \"Nordmann!\""</code> = <code><span class="eksStr">Ola ropte "Nordmann!"</span></code>
+            <hr />
+            <h3>Spesialtegn og operasjoner i streng</h3>
+            <table>
+               <tr>
+                  <th>Kode</th>
+                  <th>Resultat</th>
+               </tr>
+               <tr>
+                  <td><code>\'</code></td>
+                  <td>Enkelt anførselstegn</td>
+               </tr>
+               <tr>
+                  <td><code>\"</code></td>
+                  <td>dobbelt anførselstegn</td>
+               </tr>
+               <tr>
+                  <td><code>\\</code></td>
+                  <td>Bakover skråstrek</td>
+               </tr>
+               <tr>
+                  <td><code>\n</code></td>
+                  <td>Linjehopp</td>
+               </tr>
+               <tr>
+                  <td><code>\t</code></td>
+                  <td>Innrykk</td>
+               </tr>
+            </table>
          </section>
          <section>
             <h1>X. Avanserte datatyper</h1>
@@ -228,11 +264,11 @@
                BigInt er nemmeriske verdier som er for stor til å bli representert av vanlige nummer. BigInt verdier kan ikke utregnes som mattematisk med andre
                tall uten konvertering
             </p>
-            <div class="kodeBlokk kodeFarge">const eksBigInt = BigInt(<span class="eksStr">"0x1fffffffffffff"</span>);<br /></div>
+            <div class="kodeBlokk">const eksBigInt = BigInt(<span class="eksStr">"0x1fffffffffffff"</span>);<br /></div>
             <hr />
             <h3>X.2. Objekt</h3>
             <p>Ett objekt er at datasett som består av flere nøkkelverdier. Objekter initialiseres med krøllparentes og nøklene separeres med komma</p>
-            <div class="kodeBlokk kodeFarge">
+            <div class="kodeBlokk">
                const eksObject = {name: <span class="eksStr">"Bob"</span>, surname: <span class="eksStr">"Kåre"</span>, age: 19,}<br />
             </div>
             <hr />
@@ -243,7 +279,7 @@
                valgfritt om vi vil legge til en streng-beskrivelse i parentesen, eksempel Symbol("Nøkkel") Beskrivelsen har ingen innvirkning på symbolets
                unikhet, men kan refereres til i et objekt.
             </p>
-            <div class="kodeBlokk kodeFarge">
+            <div class="kodeBlokk">
                const eksSymbol = Symbol(<span class="eksStr">"nøkkel"</span>); <br />
                const eksObject = {name: <span class="eksStr">"Bob"</span>, surname: <span class="eksStr">"Kåre"</span>, [Nøkkel]:
                <span class="eksStr">"Dette er en unik egenskap for objektet"</span>}

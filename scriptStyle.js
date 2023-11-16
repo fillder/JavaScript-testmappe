@@ -1,5 +1,5 @@
 function fargeleggOrd(prefix, className) {
-   const kodeBoksList = document.querySelectorAll(".kodeFarge");
+   const kodeBoksList = document.querySelectorAll("code");
    kodeBoksList.forEach((kodeBoks) => {
       const kodeTekst = kodeBoks.innerHTML;
       const regex = new RegExp(`\\b(${prefix}\\w*)\\b`, "g");
@@ -32,7 +32,7 @@ fargeleggOrd("eksBool", "eksNavn");
 */
 
 function fargeleggHeleOrd(word, className) {
-   const kodeBoksList = document.querySelectorAll(".kodeFarge");
+   const kodeBoksList = document.querySelectorAll("code");
    kodeBoksList.forEach((kodeBoks) => {
       const kodeTekst = kodeBoks.innerHTML;
       const regex = new RegExp(`\\b${word}\\b`, "g");
@@ -78,7 +78,7 @@ fargeleggHeleOrd("trekkFra", "eksNavn");
 fargeleggHeleOrd("i", "eksNavn");
 
 function fargeleggTall() {
-   const kodeBoksList = document.querySelectorAll(".kodeFarge");
+   const kodeBoksList = document.querySelectorAll("code");
    kodeBoksList.forEach((kodeBoks) => {
       const kodeTekst = kodeBoks.innerHTML;
       const regex = /\b(\d+(\.\d+)?)\b/g;

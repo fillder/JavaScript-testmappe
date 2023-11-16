@@ -60,7 +60,31 @@ section {
    padding-block: 1rem;
    padding-inline: 2rem;
 }
+.kodeEksempel {
+   display: grid;
+   grid-area: "kH kH oH" 1fr, "kB kB oB" 1fr, 1fr 1fr 1fr;
+
+   grid-template-rows: auto 1fr;
+   font-family: "Roboto Mono", monospace;
+   background-color: var(--clr-code);
+   border-radius: 0.5rem;
+}
+.kodeHeader {
+   grid-column: span 2;
+   background-color: red;
+   height: 20px;
+}
+
+.kodeBoks {
+   grid-column: span 2;
+   background-color: green;
+}
+.outputBoks {
+   grid-column: span 1;
+   background-color: yellow;
+}
 code {
+   display: inline-block;
    font-family: "Roboto Mono", monospace;
    background-color: var(--clr-code);
    border: 1px solid var(--clr-border);
@@ -70,15 +94,7 @@ code {
 .innrykk {
    margin-inline-start: 2rem;
 }
-.kodeBlokk {
-   display: block;
-   font-family: "Roboto Mono", monospace;
-   background-color: var(--clr-code);
-   border: 1px solid var(--clr-border);
-   border-radius: 0.5rem;
-   padding-block: 0.5rem;
-   padding-inline: 1rem;
-}
+
 .testKnapp {
    font: inherit;
    background-color: var(--clr-button);
