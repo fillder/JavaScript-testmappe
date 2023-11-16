@@ -97,7 +97,7 @@
          </section>
 
          <section>
-            <h1>Operasjoner</h1>
+            <h1>5. Operasjoner</h1>
             <h3>Referere verdi</h3>
             <p>
                Verdien til en variabel kan hente og refere til andre variabler. I eksempelet under sier vi at variabel navnB har samme verdi som variabel navnA:
@@ -188,9 +188,9 @@
             <h3>Utregning med Tilleggsargumet</h3>
             <p>
                I JavaScript er det ikke unormalt å definere verdien på en variabel, og like etterpå endre verdien eller legge til ytterligere verdi.
-               Operatørenene <code class="kodeFarge">+=</code>, <code class="kodeFarge">-=</code>, <code class="kodeFarge">*=</code>, og
-               <code class="kodeFarge">/=</code> er en snarvei for nettopp dette. <code class="kodeFarge">tallA += 1</code> henter verdien til tallA og plusser
-               på 1, som om vi hadde skrevet <code class="kodeFarge">tallA = tallA + 1</code>
+               Operatørenene <code>+=</code>, <code>-=</code>, <code>*=</code>, og <code>/=</code> er en snarvei for nettopp dette.
+               <code class="kodeFarge">tallA += 1</code> henter verdien til tallA og plusser på 1, som om vi hadde skrevet
+               <code class="kodeFarge">tallA = tallA + 1</code>
             </p>
             <div class="kodeBlokk kodeFarge">
                let tallPluss = 5;<br />
@@ -208,7 +208,19 @@
             <button onclick="tallGangeKnapp()">Gange</button>
             <button onclick="tallDeleKnapp()">Dele</button>
          </section>
-
+         <section>
+            <h1>6. Escape-symboler</h1>
+            <p>
+               Når vi koder har mange av tegnene vi bruker en tilknyttet funksjon. Hvis vi ønsker å bruke disse tegnene uten at de skal utløse tilknyttet
+               funksjon bruker vi et såkalt "escape-tegn". I JavaScript er dette bakoverlent skråstrek <code>\</code>
+            </p>
+            <h3>Anførselstegn i streng</h3>
+            Normalt startes og lukkes vi en streng med enkel <code>'</code> eller dobbel <code>"</code> anførselstegn. Skal vi skrive en streng som har tekst
+            verdien <br />
+            <i>Ola ropte "Nordmann!"</i> <br />
+            Må vi skrives <br />
+            <code>"Ola ropte \"Nordmann!\""</code> = <code><span class="eksStr">Ola ropte "Nordmann!"</span></code>
+         </section>
          <section>
             <h1>X. Avanserte datatyper</h1>
             <h3>X.1. BigInt</h3>
