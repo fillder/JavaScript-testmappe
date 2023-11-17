@@ -55,6 +55,8 @@ fargeleggHeleOrd("BigInt", "eksQue");
 fargeleggHeleOrd("Symbol", "eksQue");
 fargeleggHeleOrd("forEach", "eksQue");
 fargeleggHeleOrd("teller", "eksQue");
+fargeleggHeleOrd("leggTil", "eksQue");
+fargeleggHeleOrd("trekkFra", "eksQue");
 
 fargeleggHeleOrd("document", "eksDoc");
 fargeleggHeleOrd("textContent", "eksDoc");
@@ -73,8 +75,6 @@ fargeleggHeleOrd("age", "eksNavn");
 fargeleggHeleOrd("Nøkkel", "eksNavn");
 fargeleggHeleOrd("id", "eksNavn");
 fargeleggHeleOrd("seksKant", "eksNavn");
-fargeleggHeleOrd("leggTil", "eksNavn");
-fargeleggHeleOrd("trekkFra", "eksNavn");
 fargeleggHeleOrd("i", "eksNavn");
 
 function fargeleggTall() {

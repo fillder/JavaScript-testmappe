@@ -135,7 +135,7 @@
                <p id="modul"></p>
             </div>
             <hr />
-            <h3>Sammenkoblingsoperatør / Sette sammen streng-verdi</h3>
+            <h3>Sammenkoblingsoperatør / Sette sammen streng-verdier</h3>
             <p>
                Så lenge vi kun holder oss til addisjon, altså pluss<code>+</code>, kan vi legge sammen verdier og selvstendige streng-beskrivelser i form av et
                psudo-mattestykke. Bruker vi noe annet enn addisjon, får vi bare feilmeldingen "NaN", som betyr "Not a Number".
@@ -149,72 +149,87 @@
             <p>Resultat:</p>
             <code id="seksKant"></code>
             <hr />
-            <h3>Legg til inkrement/tall</h3>
+            <h3>Inkrement av tall</h3>
             <p>
                <code>++</code> er en operatøren som kan brukes til å legge til en verdi eller inkrementere en eksisterende verdi. Her er et konkret eksempel
                hvor vi må bruke variabelen-typen <code>let</code>, fordi vi skal endre variabelens verdi etter at den er deklerert. Kombinert med en variabel,
                kan vi skrive opperatøren som <code>i++</code>, som er det samme som om vi skulle skrevet <code>i = i + 1</code>.
             </p>
-            <code>
-               let leggTil = 5;<br />
-               function tellerPos() {<br />
-               <span class="innrykk">leggTil++;<br /></span>
-               <span class="innrykk">document.getElementById(<span class="eksStr">"posTeller"</span>).textContent = leggTil;</span><br />
-               }
-            </code>
-            <button class="testKnapp" onclick="tellerPos()" id="posTeller">5</button>
-            <h3>Trekk fra inkrement/tall</h3>
             <p>
-               <code>--</code> operatøren fungerer på akkurat samme måte. <code>i--</code>, er det samme som <code>i = i + 1</code>, og kan brukes til å trekke
+               <code>--</code> operatøren fungerer på akkurat samme måte. <code>i--</code>, er det samme som <code>i = i - 1</code>, og kan brukes til å trekke
                fra inkrement fra en verdi.
             </p>
-            <code>
-               let trekkFra = 5;<br />
-               function tellerNeg() {<br />
-               <span class="innrykk">trekkFra--;<br /></span>
-               <span class="innrykk">document.getElementById(<span class="eksStr">"negTeller"</span>).textContent = trekkFra;</span><br />
-               }
-            </code>
-            <button class="testKnapp" onclick="tellerNeg()" id="negTeller">5</button>
+            <div class="kodeEksempel">
+               <div class="kodeHeader">Kodeeksempel</div>
+               <div class="outputHeader">
+                  <button onclick="leggTil()">Legg til</button>
+                  <button onclick="trekkFra()">Trekk fra</button>
+                  <button class="resetKnapp" onclick="reset10()">Reset</button>
+               </div>
+               <code class="kodeBoks">
+                  let tallA = 10;<br />
+                  function leggTil() {<br />
+                  <span class="innrykk">tallA++;<br /></span>
+                  <span class="innrykk">document.getElementById(<span class="eksStr">"teller"</span>).textContent = tallA;</span><br />
+                  } <br />
+                  function trekkFra() {<br />
+                  <span class="innrykk">tallA--;<br /></span>
+                  <span class="innrykk">document.getElementById(<span class="eksStr">"teller"</span>).textContent = tallA;</span><br />
+                  }
+               </code>
+               <div class="outputBoks">
+                  <p id="teller">10</p>
+               </div>
+            </div>
+
             <hr />
-            <h3>Utregning med Tilleggsargumet</h3>
+            <h3>Utregning med tilleggsargumet</h3>
             <p>
                I JavaScript er det ikke unormalt å definere verdien på en variabel, og like etterpå endre verdien eller legge til ytterligere verdi.
                Operatørenene <code>+=</code>, <code>-=</code>, <code>*=</code>, og <code>/=</code> er en snarvei for nettopp dette.
                <code>tallA += 1</code> henter verdien til tallA og plusser på 1, som om vi hadde skrevet
                <code>tallA = tallA + 1</code>
             </p>
-            <code>
-               let tallPluss = 5;<br />
-               let tallMinus = 5;<br />
-               let tallGange = 5;<br />
-               let tallDele = 5;<br />
-               tallPluss += 5;<br />
-               tallMinus -= 5;<br />
-               tallGange *= 5;<br />
-               tallDele /= 5;<br />
-            </code>
-            <p>Sjekk utregning: <span id="TilleggsargumetSvar"></span></p>
-            <button onclick="tallPlussKnapp()">Pluss</button>
-            <button onclick="tallMinusKnapp()">Minus</button>
-            <button onclick="tallGangeKnapp()">Gange</button>
-            <button onclick="tallDeleKnapp()">Dele</button>
+            <div class="kodeEksempel">
+               <div class="kodeHeader">Kodeeksempel</div>
+               <div class="outputHeader">
+                  <button onclick="tallPlussKnapp()">Pluss</button>
+                  <button onclick="tallMinusKnapp()">Minus</button>
+                  <button onclick="tallGangeKnapp()">Gange</button>
+                  <button onclick="tallDeleKnapp()">Dele</button>
+                  <button class="resetKnapp" onclick="resetOutput('TilleggsargumetSvar')">Reset</button>
+               </div>
+               <code class="kodeBoks">
+                  let tallA = 5;<br />
+                  tallA += 5;<br />
+                  tallA -= 5;<br />
+                  tallA *= 5;<br />
+                  tallA /= 5;<br />
+               </code>
+               <div class="outputBoks">
+                  <p id="TilleggsargumetSvar"></p>
+               </div>
+            </div>
             <hr />
             <h3>Tillegsargument + sammenkoblingsoperatør</h3>
             <p>
                Ettersom vi kan gjøre en sammenkoblingsoperasjon med <code>+</code>, kan vi kombinere det med tilleggsargumentet <code>+=</code>for en ryddigere
-               kode. Eksempel:
+               kode.
             </p>
             <div class="kodeEksempel">
-               <div class="kodeHeader">hei</div>
-               <div class="outputHeader">hei</div>
+               <div class="kodeHeader">Kodeeksempel</div>
+               <div class="outputHeader">
+                  <button onclick="tilleggsAddisjon()">Test</button>
+                  <button class="resetKnapp" onclick="resetOutput('tilleggsAddisjon')">Reset</button>
+               </div>
                <code class="kodeBoks">
                   let navnB = "Etter første del, ";<br />
                   navnB += "kommer del to.";
                </code>
-               <div class="outputBoks">hei</div>
+               <div class="outputBoks">
+                  <p id="tilleggsAddisjon"></p>
+               </div>
             </div>
-            <p><button onclick="tilleggsAddisjon()">NavnB:</button><span id="tilleggsAddisjon"></span></p>
          </section>
          <section>
             <h1>6. Escape-symboler</h1>

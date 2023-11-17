@@ -1,3 +1,10 @@
+function resetOutput(id) {
+   document.getElementById(id).textContent = "";
+}
+function reset10() {
+   document.getElementById("teller").textContent = "10";
+}
+
 const tallA = 6;
 const tallB = 3.5;
 document.getElementById("pluss").textContent = tallA + tallB;
@@ -10,15 +17,14 @@ const navnA = "kant";
 const seksKant = "Et heksagon er en " + tallA + "-" + navnA;
 document.getElementById("seksKant").textContent = seksKant;
 
-let leggTil = 5;
-function tellerPos() {
-   leggTil++;
-   document.getElementById("posTeller").textContent = leggTil;
+let tellerTall = 10;
+function leggTil() {
+   tellerTall++;
+   document.getElementById("teller").textContent = tellerTall;
 }
-let trekkFra = 5;
-function tellerNeg() {
-   trekkFra--;
-   document.getElementById("negTeller").textContent = trekkFra;
+function trekkFra() {
+   tellerTall--;
+   document.getElementById("teller").textContent = tellerTall;
 }
 
 let tallPluss = 5;

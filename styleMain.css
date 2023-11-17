@@ -12,6 +12,7 @@
    --clr-button: #0b0c13;
    --clr-aside: #1a1c29;
    --clr-code: #1f1f1f;
+   --clr-output: #101010;
 
    --clr-safir: #1fa6e2;
    --clr-akvamarin: #33c9c4;
@@ -60,41 +61,57 @@ section {
    padding-block: 1rem;
    padding-inline: 2rem;
 }
-.kodeEksempel {
-   display: grid;
-   grid-area: "kH kH oH" 1fr, "kB kB oB" 1fr, 1fr 1fr 1fr;
-
-   grid-template-rows: auto 1fr;
-   font-family: "Roboto Mono", monospace;
-   background-color: var(--clr-code);
-   border-radius: 0.5rem;
-}
-.kodeHeader {
-   grid-column: span 2;
-   background-color: red;
-   height: 20px;
-}
-
-.kodeBoks {
-   grid-column: span 2;
-   background-color: green;
-}
-.outputBoks {
-   grid-column: span 1;
-   background-color: yellow;
-}
 code {
    display: inline-block;
    font-family: "Roboto Mono", monospace;
    background-color: var(--clr-code);
    border: 1px solid var(--clr-border);
-   padding-inline: 0.25rem;
+   padding-inline: 0.5rem;
    border-radius: 0.25rem;
 }
+.kodeEksempel {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: auto 1fr;
+   grid-template-areas:
+      "koH koH ouH"
+      "koB koB ouB";
+   font-family: "Roboto Mono", monospace;
+   background-color: var(--clr-code);
+}
+.kodeHeader {
+   grid-area: koH;
+   background-color: var(--clr-button);
+   border: 1px solid var(--clr-border);
+   padding-inline: 0.5rem;
+   padding-block: 0.25rem;
+}
+.outputHeader {
+   grid-area: ouH;
+   display: flex;
+   background-color: var(--clr-button);
+   border: 1px solid var(--clr-border);
+   padding-inline: 0.5rem;
+   padding-block: 0.25rem;
+   gap: 0.5rem;
+}
+.kodeBoks {
+   grid-area: koB;
+   border-radius: 0;
+}
+.outputBoks {
+   grid-area: ouB;
+   background-color: var(--clr-output);
+   border: 1px solid var(--clr-border);
+   padding-inline: 0.5rem;
+}
+.outputBoks p {
+   margin-block: 0;
+}
+
 .innrykk {
    margin-inline-start: 2rem;
 }
-
 .testKnapp {
    font: inherit;
    background-color: var(--clr-button);
@@ -104,6 +121,9 @@ code {
    padding-block: 0.25rem;
    padding-inline: 1rem;
    margin-block: 1rem;
+}
+.resetKnapp {
+   background-color: var(--clr-rubin);
 }
 .eksVar {
    color: #569cd6;
