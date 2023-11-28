@@ -41,11 +41,10 @@ p {
    --clr-kunzitt: #b18bf4;
    --clr-ametyst: #7b77ff;
 }
-body {
+body > * {
    background-color: var(--clr-body);
    font-family: "Roboto", sans-serif;
-   font-weight: 300;
-   color: var(--clr-text);
+   font-weight: 500;
    line-height: 150%;
    padding: 1rem;
 }
@@ -54,9 +53,9 @@ body {
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: auto 1fr auto;
    grid-template-areas:
-      "head" "head" "head"
-      "main" "main" "side"
-      "foot" "foot" "foot";
+      "head head head"
+      "main main side"
+      "foot foot foot";
 }
 header {
    grid-area: head;
