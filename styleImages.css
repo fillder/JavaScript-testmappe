@@ -50,12 +50,42 @@ body > * {
 }
 body {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: auto 1fr auto;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: auto 1fr auto auto;
    grid-template-areas:
       "head head head"
       "main main side"
+      "imgs imgs side"
       "foot foot foot";
+   @media only screen and (max-width: 992px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr auto auto auto;
+      grid-template-areas:
+         "head head head"
+         "main main side"
+         "imgs imgs imgs"
+         "foot foot foot";
+   }
+   @media only screen and (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr auto auto auto auto;
+      grid-template-areas:
+         "head head"
+         "main main"
+         "side side"
+         "imgs imgs"
+         "foot foot";
+   }
+   @media only screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto auto auto auto auto auto;
+      grid-template-areas:
+         "head"
+         "main"
+         "side"
+         "imgs"
+         "foot";
+   }
 }
 header {
    grid-area: head;
@@ -73,6 +103,7 @@ footer {
    grid-area: foot;
    background-color: darkorange;
 }
+
 img {
    max-width: 100%;
    height: auto;
