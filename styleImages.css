@@ -50,7 +50,7 @@ body > * {
 }
 body {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: auto 1fr auto auto;
    grid-template-areas:
       "head head head"
@@ -66,19 +66,9 @@ body {
          "imgs imgs imgs"
          "foot foot foot";
    }
-   @media only screen and (max-width: 768px) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto 1fr auto auto auto auto;
-      grid-template-areas:
-         "head head"
-         "main main"
-         "side side"
-         "imgs imgs"
-         "foot foot";
-   }
    @media only screen and (max-width: 600px) {
       grid-template-columns: 1fr;
-      grid-template-rows: auto 1fr auto auto auto auto auto auto;
+      grid-template-rows: auto 1fr auto auto auto;
       grid-template-areas:
          "head"
          "main"
@@ -102,6 +92,19 @@ aside {
 footer {
    grid-area: foot;
    background-color: darkorange;
+}
+.imgs {
+   grid-area: imgs;
+   background-color: darkslateblue;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   flex-wrap: wrap;
+   gap: 1rem;
+}
+.bildeboks {
+   height: 200px;
+   width: 100%;
+   background-color: lightcyan;
 }
 
 img {
