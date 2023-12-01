@@ -65,7 +65,7 @@ body {
       "foot foot foot";
    @media only screen and (max-width: 992px) {
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto 1fr auto auto auto;
+      grid-template-rows: auto 1fr auto auto;
       grid-template-areas:
          "head head head"
          "main main side"
