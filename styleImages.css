@@ -13,6 +13,7 @@ body {
 }
 h1 {
    font-size: 2rem;
+   line-height: 125%;
 }
 h2 {
    font-size: 1.6rem;
@@ -22,8 +23,11 @@ h3 {
 }
 p {
    font-size: 1rem;
-   line-height: 150%;
+   line-height: 125%;
    font-weight: 500; /* 300=light, 500 = regular, 700 = medium, 800 = bold */
+}
+hr {
+   margin-block-end: 1rem;
 }
 :root {
    --clr-main: #14151f;
@@ -112,7 +116,6 @@ footer {
    width: 100%;
    background-color: lightcyan;
 }
-
 img {
    max-width: 100%;
    height: auto;
@@ -121,4 +124,35 @@ img {
    background-repeat: no-repeat;
    background-size: cover;
    shape-margin: 0.75rem;
+}
+dialog {
+   position: relative;
+   margin: auto;
+   width: 500px;
+   height: 300px;
+   padding: 1rem;
+   border-radius: 0.5rem;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+dialog::backdrop {
+   background-color: #07070b;
+   opacity: 0.4;
+}
+#hake::after {
+   content: ">";
+}
+#hake::before {
+   content: "<";
+}
+button {
+   padding-inline: 1rem;
+   padding-block: 0.5rem;
+   margin-block: 0.5rem;
+}
+#lukk {
+   position: absolute;
+   top: 0.5rem;
+   right: 1rem;
+   padding-inline: 0.5rem;
+   padding-block: 0rem;
 }
