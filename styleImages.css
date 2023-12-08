@@ -133,6 +133,7 @@ dialog {
    padding: 1rem;
    border-radius: 0.5rem;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+   transition: opacity 1s;
 }
 dialog::backdrop {
    background-color: #07070b;
@@ -155,4 +156,27 @@ button {
    right: 1rem;
    padding-inline: 0.5rem;
    padding-block: 0rem;
+}
+@keyframes slidein {
+   from {
+      opacity: 0;
+      transform: translateY(50%);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+@keyframes slideout {
+   from {
+      opacity: 1;
+      transform: translateY(0);
+   }
+   to {
+      opacity: 0;
+      transform: translateY(50%);
+   }
+}
+dialog[open] {
+   animation: slidein 1s ease-in forwards;
 }
