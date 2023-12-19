@@ -19,17 +19,17 @@ function sammenlignTall() {
    // === er en "streng likhets" operatør som sammenligner innhold og type. Eksempel: strengen "5" er ikke det samme som tallet 5.
    // innerHTML er et alternativ til textContent, som lar oss skrive HTML fremfor ren tekst. <strong></strong>-taggene styler teksten før den vises.
    if (a > b && a > c) {
-      document.querySelector("#resultat").innerHTML = "Det største tallet er <strong>Value A</strong>.";
+      document.querySelector("#resultat").innerHTML = "Det største tallet er <strong>Verdi A</strong>.";
    } else if (b > a && b > c) {
-      document.querySelector("#resultat").innerHTML = "Det største tallet er <strong>Value B</strong>.";
+      document.querySelector("#resultat").innerHTML = "Det største tallet er <strong>Verdi B</strong>.";
    } else if (c > a && c > b) {
-      document.querySelector("#resultat").innerHTML = "Det største tallet er <strong>Value C</strong>.";
+      document.querySelector("#resultat").innerHTML = "Det største tallet er <strong>Verdi C</strong>.";
    } else if (a === b && b > c) {
-      document.querySelector("#resultat").innerHTML = "<strong>Value A</strong> og <strong>Value B</strong> er størst.";
+      document.querySelector("#resultat").innerHTML = "<strong>Verdi A</strong> og <strong>Verdi B</strong> er størst.";
    } else if (a === c && a > b) {
-      document.querySelector("#resultat").innerHTML = "<strong>Value A</strong> og <strong>Value C</strong> er størst.";
+      document.querySelector("#resultat").innerHTML = "<strong>Verdi A</strong> og <strong>Verdi C</strong> er størst.";
    } else if (b === c && b > a) {
-      document.querySelector("#resultat").innerHTML = "<strong>Value B</strong> og <strong>Value C</strong> er størst.";
+      document.querySelector("#resultat").innerHTML = "<strong>Verdi B</strong> og <strong>Verdi C</strong> er størst.";
    } else {
       document.querySelector("#resultat").innerHTML = "Alle verdiene er like stor.";
    }
