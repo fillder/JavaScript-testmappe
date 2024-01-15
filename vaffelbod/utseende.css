@@ -1,0 +1,29 @@
+body {
+   background-color: darkorange;
+   color: black;
+}
+h1 {
+   font-size: 72px;
+}
+button {
+   font-size: 48px;
+}
+.beholder {
+   display: flex;
+}
+#viserGjeldendePris {
+   padding: 0 50px;
+}
+#solgtTekst {
+   color: green;
+   font-size: 60px;
+   display: none;
+}
+/*
+.prisNedKnapp .prisOppKnapp {
+    display: inline;
+} 
+.viserGjeldendePris {
+    display: inline;
+}
+*/

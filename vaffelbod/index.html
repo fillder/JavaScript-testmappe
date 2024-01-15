@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Stians Vaffelbod</title>
+      <link rel="stylesheet" href="utseende.css" />
+   </head>
+   <body>
+      <h1>Stians Vaffelbod</h1>
+      <h2 id="viserAntallKroner">0 kr</h2>
+      <div>
+         <h2 id="viserPrisIngredienser">Ingredienser</h2>
+         <ul>
+            <li>Mel</li>
+            <li>Egg</li>
+            <li>Melk</li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul>
+      </div>
+      <h2 id="viserVarebeholdning">0 Vafler</h2>
+      <div class="beholder">
+         <button id="prisNedKnapp">-</button>
+         <h2 id="viserGjeldendePris">0 kr</h2>
+         <button id="prisOppKnapp">+</button>
+      </div>
+      <button id="lageKnapp" onclick="lagVaffler()">Lag vaffel</button>
+      <!-- Denne teksten skal vises en kort stund når en vaffel selges -->
+      <h2 id="lagerVaflerTekst"></h2>
+      <script src="programmet.js"></script>
+   </body>
+</html>
