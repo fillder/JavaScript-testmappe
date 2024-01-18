@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erlings Vafele</title>
+    <link rel="stylesheet" href="utseende.css">
+</head>
+<body>
+
+    <h1>
+        <em>Erlings Vaffelbod </em>
+    </h1>
+    
+
+    <h2 id="viserAntallKroner">
+       <em> 3 kr <br> </em>
+        penger
+    </h2>
+
+    <h2 id="viserPrisIngredienser">
+        3kr <br>
+        ingredienser kost
+    </h2>
+
+    <h2 id="viserVareBeholdning">
+        0 vafel <br>
+        lager
+    </h2>
+
+
+    
+
+
+    <div class="beholder">
+
+        <button onclick="minus()">
+            -
+        </button>
+
+        <h2 id="viserGjeldendePris">
+            5 kr
+        </h2>
+
+        <button onclick="pluss()">
+            +
+        </button>
+    </div>
+
+
+
+    <button onclick="lagVaffel()">
+        Lag vaffel
+    </button>
+
+    <button onclick="selgVaffel()">
+        Selg vaffel
+    </button>
+
+<!-- Denne teksten skal vises en kort stund når en vaffel selges -->
+    <h2 id="varselTekst"></h2>
+
+    <img src="Waffle.png" alt="" width="200px">
+    
+    <div class="oppgrader">
+        <button id="upgrade1" onclick="autoMake()">
+            Auto Make
+            200kr
+        </button>
+
+        <button id="upgrade2" onclick="autoSell()">
+            Auto sell
+            500kr
+        </button>
+    </div>
+
+
+    <script src="programmet.js"></script>
+
+</body>
+</html>
