@@ -1,5 +1,3 @@
-/* Dette er en enkel if-setning med en 
-"større enn" operatør */
 function ifTest() {
    let x = 10;
    if (x > 5) {
@@ -8,11 +6,11 @@ function ifTest() {
 }
 
 function elseTest() {
-   let y = 5;
-   if (y === "5") {
-      console.log("Det er samme verdi");
+   let y = 3;
+   if (y > 5) {
+      console.log("3 er større enn 5");
    } else {
-      console.log("Det er ikke samme verdi");
+      console.log("3 er ikke større enn 5");
    }
 }
 
