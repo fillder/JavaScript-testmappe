@@ -22,3 +22,6 @@ button {
    cursor: pointer;
    margin-block: 1rem;
 }
+footer {
+   margin-block-start: 2rem;
+}

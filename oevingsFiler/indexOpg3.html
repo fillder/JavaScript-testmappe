@@ -3,28 +3,21 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="utseende.css" />
+      <link rel="stylesheet" href="styleOpg3.css" />
       <title>S&M Vaffelbod</title>
    </head>
    <body>
+      <header>
+         <h1>S&M Vaffelbod</h1>
+      </header>
       <main>
-         <div class="BeholderOversikt">
-            <h1>S&M Vaffelbod</h1>
-            <!-- Her kan du vise oversikten over spillerens penger -->
-            <h2>Du har <span id="antallPenger">X</span> penger</h2>
-            <!-- Her kan du vise hvor mye varer spilleren har på lager -->
-            <h2>Du har <span id="antallVarer">Y</span> vafler</h2>
-            <!-- Her skal det stå hvor mye det koster å lage en vaffel -->
-            <h2>Ny vare koster <span id="lagVarePris">Z</span> Kr</h2>
-         </div>
-         <div class="beholderPris">
-            <button id="prisNed">-</button>
-            <!-- Her kan det stå hvor mye varen selges for -->
-            <h2><span id="GjeldendePris">0</span> Kr</h2>
-            <button id="prisOpp">+</button>
-         </div>
-         <button id="lageVare">Lag vaffel</button>
+         <h2>Du har <span id="antallVafler">10</span> Vafler</h2>
+         <button onclick="selgVafler()">Selg vaffel</button>
+         <h3 id="varselTekst">Du har solgt en vaffel!!!</h3>
       </main>
-      <script src="programmet.js"></script>
+      <footer>
+         <p>S&M Vafler © 2024</p>
+      </footer>
+      <script src="scriptOpg3.js"></script>
    </body>
 </html>
