@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+* {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
@@ -23,15 +21,9 @@ h2 {
 button {
    font-size: 1.6rem;
    padding-inline: 1rem;
+   cursor: pointer;
 }
 .beholderPris {
    display: flex;
    align-items: center;
-}
-
-.prisNedKnapp .prisOppKnapp {
-   display: inline;
-}
-.viserGjeldendePris {
-   display: inline;
 }
