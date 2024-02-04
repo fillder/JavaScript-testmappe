@@ -4,10 +4,6 @@
    padding: 0;
    font: inherit;
 }
-img {
-   max-width: 100%;
-   display: block;
-}
 body {
    background-color: darkorange;
    color: black;
@@ -25,8 +21,4 @@ button {
    padding-inline: 1rem;
    cursor: pointer;
    margin-block: 1rem;
-}
-.beholderPris {
-   display: flex;
-   align-items: center;
 }
