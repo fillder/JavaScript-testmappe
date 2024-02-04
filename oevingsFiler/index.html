@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="utseende.css" />
+      <title>S&M Vaffelbod</title>
+   </head>
+   <body>
+      <main>
+         <div class="BeholderOversikt">
+            <h1>S&M Vaffelbod</h1>
+            <!-- Her kan du vise oversikten over spillerens penger -->
+            <h2>Du har <span id="antallPenger">X</span> penger</h2>
+            <!-- Her kan du vise hvor mye varer spilleren har på lager -->
+            <h2>Du har <span id="antallVarer">Y</span> vafler</h2>
+            <!-- Her skal det stå hvor mye det koster å lage en vaffel -->
+            <h2>Ny vare koster <span id="lagVarePris">Z</span> Kr</h2>
+         </div>
+         <div class="beholderPris">
+            <button id="prisNed">-</button>
+            <!-- Her kan det stå hvor mye varen selges for -->
+            <h2><span id="GjeldendePris">0</span> Kr</h2>
+            <button id="prisOpp">+</button>
+         </div>
+         <button id="lageVare">Lag vaffel</button>
+      </main>
+      <script src="script.js"></script>
+   </body>
+</html>
