@@ -47,3 +47,16 @@ let sell = setInterval(() => {
    }
 }, 100)
 */
+function vaffelMiksProsess(prosent) {
+   let vaffelMiksMengde = document.getElementById("vaffelMiks");
+   vaffelMiksMengde.style.backgroundPositionX = prosent + "%";
+}
+function lagMiks() {
+   document.getElementById("vaffelMiks").classList.add("vaffelMiksSteg");
+   gjeldendeMiks = parseFloat(document.getElementById("vaffelMiks").style.backgroundPositionX);
+   let nyMiks = Math.min(gjeldendeMiks + 9.09, 100); // Gå frem  9.09% = ett steg
+   vaffelMiksProsess(nyMiks);
+}
+window.onload = function () {
+   vaffelMiksProsess(0); // Start ved første bilde
+};

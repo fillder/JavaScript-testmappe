@@ -7,25 +7,39 @@
       <link rel="stylesheet" href="utseende.css" />
    </head>
    <body>
-      <h1>Stians Vaffelbod</h1>
-      <h2 id="viserAntallKroner">0 kr</h2>
-      <div>
-         <h2 id="viserPrisIngredienser">Ingredienser</h2>
-         <!-- <ul>
-            <li>Mel</li>
-            <li>Egg</li>
-            <li>Melk</li>
-            <li></li>
-            <li></li>
-            <li></li>
-         </ul> -->
-      </div>
-      <h2 id="viserVarebeholdning">0 Vafler</h2>
-      <h2 id="viserPengeBeholdning">10 kr</h2>
-      <h2 id="salgsVarsel"></h2>
-      <button id="lageKnapp" onclick="lagVaffler()">Lag vaffel</button>
-      <!-- Denne teksten skal vises en kort stund når en vaffel selges -->
-      <h2 id="lagerVaflerTekst"></h2>
+      <header>
+         <h1>Bestemors Vaffelbod</h1>
+      </header>
+      <main>
+         <section id="vaffelbod">
+            <h2>Vaffelbod</h2>
+            <div>
+               <button>Lag vaffel</button>
+               <div id="vaffelProsess">
+                  <img src="bilder/vaffelProsess.svg" alt="" />
+               </div>
+               <div id="stekeTid"></div>
+            </div>
+            <div>
+               <button id="lagVaffel" onclick="lagMiks()">Lag røre</button>
+               <div id="vaffelMiks"></div>
+               <h3>Røre</h3>
+            </div>
+         </section>
+         <section id="stats">
+            <h2>lager</h2>
+            <h3>penger: <span id="pengeLager">0</span> kr</h3>
+            <h3>røre: <span id="miksGjeldende">8</span><span id="miksTotalt">/10</span></h3>
+            <h3>vafler: <span id="vaffelLager">1</span> stk.</h3>
+            <img src="bilder/vaffelRist.svg" alt="" />
+         </section>
+         <section id="oppgraderinger">
+            <button>red</button>
+         </section>
+      </main>
+      <footer>
+         <p>Laget av Marius</p>
+      </footer>
       <script src="programmet.js"></script>
    </body>
 </html>

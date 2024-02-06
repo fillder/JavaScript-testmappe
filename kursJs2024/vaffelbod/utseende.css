@@ -1,29 +1,113 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font: inherit;
+}
+html,
 body {
-   background-color: darkorange;
-   color: black;
+   width: 100%;
+   height: 100%;
+}
+img,
+svg,
+Picture {
+   max-width: 100%;
+   height: auto;
+   vertical-align: middle;
 }
 h1 {
-   font-size: 72px;
+   font-size: 3rem;
+}
+h2 {
+   font-size: 1.4rem;
+}
+h3 {
+   font-size: 1.2rem;
+}
+body {
+   background-color: #65564f;
+   color: black;
+}
+header,
+footer {
+   background-color: #e0ddda;
+   max-width: 992px;
+   margin-inline: auto;
+}
+main {
+   display: grid;
+   max-width: 992px;
+   margin-inline: auto;
+   margin-block: 1rem;
+   gap: 1rem;
+   grid-template-columns: 3fr 2fr;
+   grid-template-rows: 1fr auto;
+   grid-template-areas:
+      "vafl side"
+      "oppg oppg";
 }
 button {
-   font-size: 48px;
+   font-size: 1.2rem;
 }
-.beholder {
-   display: flex;
+
+#vaffelbod {
+   grid-area: vafl;
+   background-color: #e0ddda;
 }
-#viserGjeldendePris {
-   padding: 0 50px;
+#stats {
+   grid-area: side;
+   background-color: #e0ddda;
 }
-#solgtTekst {
-   color: green;
-   font-size: 60px;
-   display: none;
+#oppgraderinger {
+   grid-area: oppg;
+   background-color: #e0ddda;
 }
-/*
-.prisNedKnapp .prisOppKnapp {
-    display: inline;
-} 
-.viserGjeldendePris {
-    display: inline;
+#vaffelMiks {
+   width: 160px;
+   height: 160px;
+   background-image: url("bilder/vaffelMiks.svg");
+   background-position-x: 0%;
+   background-repeat: no-repeat;
+   background-size: 1200%;
 }
-*/
+@keyframes vaffelMiksAnim {
+   0% {
+      background-position-x: 0%;
+   }
+   9.09% {
+      background-position-x: 9.09%;
+   }
+   18.18% {
+      background-position-x: 18.18%;
+   }
+   27.27% {
+      background-position-x: 27.27%;
+   }
+   36.36% {
+      background-position-x: 36.36%;
+   }
+   45.45% {
+      background-position-x: 45.45%;
+   }
+   54.54% {
+      background-position-x: 54.54%;
+   }
+   63.63% {
+      background-position-x: 63.63%;
+   }
+   72.72% {
+      background-position-x: 72.72%;
+   }
+   81.81% {
+      background-position-x: 81.81%;
+   }
+   90.90% {
+      background-position-x: 90.9%;
+   }
+   11% {
+      background-position-x: 100%;
+   }
+}
