@@ -13,24 +13,28 @@
       <main>
          <section id="vaffelbod">
             <h2>Vaffelbod</h2>
-            <div>
-               <button>Lag vaffel</button>
-               <div id="vaffelProsess">
-                  <img src="bilder/vaffelProsess.svg" alt="" />
+            <div class="vaffelFlex">
+               <div>
+                  <button onclick="startSteking()">Lag vaffel</button>
+                  <button onclick="flippVaffel()">Flipp vaffel</button>
+                  <button onclick="rensJern()">Rengjør jern</button>
+                  <div id="vaffelJern"></div>
+                  <div id="stekeTid"></div>
                </div>
-               <div id="stekeTid"></div>
-            </div>
-            <div>
-               <button id="lagVaffel" onclick="lagMiks()">Lag røre</button>
-               <div id="vaffelMiks"></div>
-               <h3>Røre</h3>
+               <div>
+                  <button onclick="lagMiks()">Lag røre</button>
+                  <button onclick="fjernGris()">Fjern søl</button>
+                  <div id="vaffelMiks"></div>
+                  <h3>Røre</h3>
+               </div>
             </div>
          </section>
          <section id="stats">
             <h2>lager</h2>
             <h3>penger: <span id="pengeLager">0</span> kr</h3>
             <h3>røre: <span id="miksGjeldende">8</span><span id="miksTotalt">/10</span></h3>
-            <h3>vafler: <span id="vaffelLager">1</span> stk.</h3>
+            <h3>vafler: <span id="vaflerTilSalgs">0</span> stk.</h3>
+            <h3>vafler: <span id="vaflerTotalt">0</span> stk.</h3>
             <img src="bilder/vaffelRist.svg" alt="" />
          </section>
          <section id="oppgraderinger">
@@ -39,6 +43,19 @@
       </main>
       <footer>
          <p>Laget av Marius</p>
+         <ol>
+            <li>Gjør vaffeljernet om til en animert sprite</li>
+            <li>Legg til og gjør prosessikonet om til en animert sprite</li>
+            <li>Legg til en knapp for å rense røre ved søl</li>
+            <li>Legg til en knapp for å kaste vaffel ved røre søl</li>
+            <li>Legg til en knapp for å "flippe" vaffel</li>
+            <li>Gråe ut/deaktiver knappene som ikke er i bruk</li>
+            <li>Endre font på header-logo</li>
+            <li>Eksporter hver vaffeltype til individuelle sprites som "spawner" på brettet når de flippes</li>
+            <li>Legg til en salgssansynlighet for hver type vaffel</li>
+            <li>Legg til en salgsanslag i minuttet basert på totalen av salgsprosest til hver vaffel</li>
+            <li>Legg til en kasteknapp på vaffler</li>
+         </ol>
       </footer>
       <script src="programmet.js"></script>
    </body>
