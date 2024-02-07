@@ -47,10 +47,12 @@ main {
    grid-template-rows: 1fr auto;
    grid-template-areas:
       "vafl side"
+      "slgB slgB"
       "oppg oppg";
 }
 button {
    font-size: 1.2rem;
+   cursor: pointer;
 }
 
 #vaffelbod {
@@ -60,6 +62,12 @@ button {
 #stats {
    grid-area: side;
    background-color: #e0ddda;
+}
+#salgsBord {
+   height: 500px;
+   grid-area: slgB;
+   background-color: #e0ddda;
+   position: relative;
 }
 #oppgraderinger {
    grid-area: oppg;
@@ -81,6 +89,36 @@ button {
    background-repeat: no-repeat;
    background-size: 800%;
 }
+#vaffelRist {
+   position: relative;
+   padding: 1rem;
+}
+#vaffelRistGrafikk {
+   position: absolute;
+   z-index: 1;
+   top: 1rem;
+   left: 1rem;
+   width: 400px;
+}
+.vaffelGrafikk {
+   position: absolute;
+   left: 0; /* Justere denne verdien for hver ny vaffel */
+}
+.vaflerTilSalgs1,
+.vaflerTilSalgs2,
+.vaflerTilSalgs3,
+.vaflerTilSalgs4,
+.vaflerTilSalgs5,
+.vaflerTilSalgs6,
+.vaflerTilSalgs7 {
+   z-index: 2;
+   width: 100px;
+   height: 100px;
+}
 ol {
    margin-inline-start: 2rem;
+}
+.deaktivert {
+   opacity: 0.4;
+   cursor: default;
 }

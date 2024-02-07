@@ -16,7 +16,7 @@
             <div class="vaffelFlex">
                <div>
                   <button onclick="startSteking()">Lag vaffel</button>
-                  <button onclick="flippVaffel()">Flipp vaffel</button>
+                  <button id="flippKnapp" class="deaktivert" onclick="flippVaffel()">Flipp vaffel</button>
                   <button onclick="rensJern()">Rengjør jern</button>
                   <div id="vaffelJern"></div>
                   <div id="stekeTid"></div>
@@ -35,7 +35,11 @@
             <h3>røre: <span id="miksGjeldende">8</span><span id="miksTotalt">/10</span></h3>
             <h3>vafler: <span id="vaflerTilSalgs">0</span> stk.</h3>
             <h3>vafler: <span id="vaflerTotalt">0</span> stk.</h3>
-            <img src="bilder/vaffelRist.svg" alt="" />
+         </section>
+         <section id="salgsBord">
+            <div id="vaffelRist">
+               <img id="vaffelRistGrafikk" src="bilder/vaffelRist.svg" alt="" />
+            </div>
          </section>
          <section id="oppgraderinger">
             <button>red</button>
