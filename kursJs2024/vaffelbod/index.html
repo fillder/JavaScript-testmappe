@@ -14,18 +14,21 @@
          <section id="vaffelbod">
             <h2>Vaffelbod</h2>
             <div class="vaffelFlex">
-               <div>
-                  <button onclick="startSteking()">Lag vaffel</button>
-                  <button id="flippKnapp" class="deaktivert" onclick="flippVaffel()">Flipp vaffel</button>
-                  <button onclick="rensJern()">Rengjør jern</button>
+               <div class="vaffelFlexBarn">
+                  <div class="vaffelFlexBarneBarn">
+                     <button onclick="startSteking()">Lag vaffel</button>
+                     <button id="flippKnapp" class="deaktivert" onclick="flippVaffel()">Flipp vaffel</button>
+                     <button class="deaktivert" onclick="rensJern()">Rengjør jern</button>
+                  </div>
                   <div id="vaffelJern"></div>
                   <div id="stekeTid"></div>
                </div>
-               <div>
-                  <button onclick="lagMiks()">Lag røre</button>
-                  <button onclick="fjernGris()">Fjern søl</button>
+               <div class="vaffelFlexBarn">
+                  <div class="vaffelFlexBarneBarn">
+                     <button onclick="lagMiks()">Lag røre</button>
+                     <button class="deaktivert" onclick="fjernGris()">Fjern søl</button>
+                  </div>
                   <div id="vaffelMiks"></div>
-                  <h3>Røre</h3>
                </div>
             </div>
          </section>
@@ -48,14 +51,10 @@
       <footer>
          <p>Laget av Marius</p>
          <ol>
-            <li>Gjør vaffeljernet om til en animert sprite</li>
             <li>Legg til og gjør prosessikonet om til en animert sprite</li>
-            <li>Legg til en knapp for å rense røre ved søl</li>
-            <li>Legg til en knapp for å kaste vaffel ved røre søl</li>
-            <li>Legg til en knapp for å "flippe" vaffel</li>
-            <li>Gråe ut/deaktiver knappene som ikke er i bruk</li>
+            <li>Legg til en funksjon for å rense røre ved søl</li>
+            <li>Legg til en funksjon for å kaste vaffel og rense vaffeljernet</li>
             <li>Endre font på header-logo</li>
-            <li>Eksporter hver vaffeltype til individuelle sprites som "spawner" på brettet når de flippes</li>
             <li>Legg til en salgssansynlighet for hver type vaffel</li>
             <li>Legg til en salgsanslag i minuttet basert på totalen av salgsprosest til hver vaffel</li>
             <li>Legg til en kasteknapp på vaffler</li>

@@ -64,7 +64,7 @@ button {
    background-color: #e0ddda;
 }
 #salgsBord {
-   height: 500px;
+   height: 350px;
    grid-area: slgB;
    background-color: #e0ddda;
    position: relative;
@@ -72,6 +72,25 @@ button {
 #oppgraderinger {
    grid-area: oppg;
    background-color: #e0ddda;
+}
+.vaffelFlex {
+   display: flex;
+   justify-content: space-around;
+}
+.vaffelFlex button {
+   padding-inline: 1rem;
+   padding-block: 0.5rem;
+}
+.vaffelFlexBarn {
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: space-between;
+}
+.vaffelFlexBarneBarn {
+   display: flex;
+   gap: 1rem;
+   flex-direction: column;
 }
 #vaffelMiks {
    width: 160px;

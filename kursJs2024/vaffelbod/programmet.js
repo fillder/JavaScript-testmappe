@@ -63,7 +63,7 @@ function flippVaffel() {
    let vaflerAlleredePaaRist = document.querySelectorAll(".vaffelGrafikk");
    if (vaflerAlleredePaaRist.length > 0) {
       // Juster den nye vaffelen basert på antall eksisterende vaffeler
-      vaflerPaaRist.style.left = `${vaflerAlleredePaaRist.length * 50}px`;
+      vaflerPaaRist.style.left = `${vaflerAlleredePaaRist.length * 25}px`;
    } else {
       // For den første vaffelen, ikke justering
       vaflerPaaRist.style.left = "0";
