@@ -8,30 +8,28 @@
    </head>
    <body>
       <header>
-         <h1><span id="spillerNavn">Bestemor</span>s Vaffelbod</h1>
+         <h1><span id="spillerNavn">Bestemors</span> Vaffelbod</h1>
          <dialog id="spillerNavnDialog">
-            <h1>Hva heter du?</h1>
+            <h1>Hva skal butikken hete?</h1>
             <hr />
-            <p>
-               Skriv inn ett navn for din butikk og deretter lagre. Dersom du ikke velger et navn heter butikken
-               "Bestemors Vaffelbod"
-            </p>
-            <label for="name">Navn (3 til 12 tegn):</label>
+            <p>Skriv inn ett navn for din butikk og deretter trykk lagre.</p>
+            <label for="name">Navn (3-12 tegn):</label>
             <input type="text" id="nyttSpillerNavn" name="butikkNavn" required minlength="3" maxlength="12" size="14" />
             <button onclick="endreButikkNavn()">Lagre</button>
             <button id="lukk" onClick="spillerNavnDialog.close()">X</button>
          </dialog>
-         <button onClick="spillerNavnDialog.showModal()">Spiller Navn</button>
+         <button onClick="spillerNavnDialog.showModal()">Butikknavn</button>
       </header>
       <main>
          <section id="vaffelbod">
             <h2>Vaffelbod</h2>
+            <hr />
             <div class="vaffelFlex">
                <div class="vaffelFlexBarn">
                   <div class="vaffelFlexBarneBarn">
-                     <button onclick="startSteking()">Lag vaffel</button>
+                     <button id="stekeKnapp" onclick="startSteking()">Lag vaffel</button>
                      <button id="flippKnapp" class="deaktivert" onclick="flippVaffel()">Flipp vaffel</button>
-                     <button class="deaktivert" onclick="rensJern()">Rengjør jern</button>
+                     <button id="rensJernKnapp" class="deaktivert" onclick="rensJern()">Rengjør jern</button>
                   </div>
                   <div id="vaffelJern"></div>
                   <div id="stekeTid"></div>
@@ -47,8 +45,9 @@
          </section>
          <section id="stats">
             <h2>lager</h2>
+            <hr />
             <h3>penger: <span id="pengeLager">0</span> kr</h3>
-            <h3>røre: <span id="miksGjeldende">8</span><span id="miksTotalt">/10</span></h3>
+            <h3>røre: <span id="miksGjeldende">0</span><span id="miksTotalt">/10</span></h3>
             <h3>vafler: <span id="vaflerTilSalgs">0</span> stk.</h3>
             <h3>vafler: <span id="vaflerTotalt">0</span> stk.</h3>
          </section>

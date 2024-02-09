@@ -31,7 +31,15 @@ body {
    background-color: #65564f;
    color: black;
 }
-header,
+header {
+   background-color: #e0ddda;
+   max-width: 992px;
+   margin-inline: auto;
+   padding-inline: 1rem;
+   padding-block: 0.5rem;
+   display: flex;
+   justify-content: space-between;
+}
 footer {
    background-color: #e0ddda;
    max-width: 992px;
@@ -44,7 +52,7 @@ main {
    margin-block: 1rem;
    gap: 1rem;
    grid-template-columns: 3fr 2fr;
-   grid-template-rows: 1fr auto;
+   grid-template-rows: 1fr auto auto;
    grid-template-areas:
       "vafl side"
       "slgB slgB"
@@ -53,15 +61,21 @@ main {
 button {
    font-size: 1.2rem;
    cursor: pointer;
+   padding-inline: 1rem;
+   padding-block: 0.5rem;
 }
 
 #vaffelbod {
    grid-area: vafl;
    background-color: #e0ddda;
+   padding-inline: 1rem;
+   padding-block: 0.5rem;
 }
 #stats {
    grid-area: side;
    background-color: #e0ddda;
+   padding-inline: 1rem;
+   padding-block: 0.5rem;
 }
 #salgsBord {
    height: 350px;
@@ -76,10 +90,6 @@ button {
 .vaffelFlex {
    display: flex;
    justify-content: space-around;
-}
-.vaffelFlex button {
-   padding-inline: 1rem;
-   padding-block: 0.5rem;
 }
 .vaffelFlexBarn {
    display: flex;
@@ -159,6 +169,9 @@ dialog button {
    padding-inline: 1rem;
    padding-block: 0.5rem;
    margin-block: 0.5rem;
+}
+hr {
+   margin-block-end: 1rem;
 }
 #lukk {
    position: absolute;
