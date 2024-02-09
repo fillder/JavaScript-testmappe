@@ -149,6 +149,8 @@ window.onload = function () {
    setInterval(selgVaffler, 1000);
 };
 
+window.onload();
+
 /*
 let sell = setInterval(() => {
    if(prod <= 0) {

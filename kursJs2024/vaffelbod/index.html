@@ -8,7 +8,20 @@
    </head>
    <body>
       <header>
-         <h1>Bestemors Vaffelbod</h1>
+         <h1><span id="spillerNavn">Bestemor</span>s Vaffelbod</h1>
+         <dialog id="spillerNavnDialog">
+            <h1>Hva heter du?</h1>
+            <hr />
+            <p>
+               Skriv inn ett navn for din butikk og deretter lagre. Dersom du ikke velger et navn heter butikken
+               "Bestemors Vaffelbod"
+            </p>
+            <label for="name">Navn (3 til 12 tegn):</label>
+            <input type="text" id="nyttSpillerNavn" name="butikkNavn" required minlength="3" maxlength="12" size="14" />
+            <button onclick="endreButikkNavn()">Lagre</button>
+            <button id="lukk" onClick="spillerNavnDialog.close()">X</button>
+         </dialog>
+         <button onClick="spillerNavnDialog.showModal()">Spiller Navn</button>
       </header>
       <main>
          <section id="vaffelbod">

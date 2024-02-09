@@ -141,3 +141,29 @@ ol {
    opacity: 0.4;
    cursor: default;
 }
+
+dialog {
+   position: relative;
+   margin: auto;
+   width: 500px;
+   height: 300px;
+   padding: 1rem;
+   border-radius: 0.5rem;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+dialog::backdrop {
+   background-color: Black;
+   opacity: 0.4;
+}
+dialog button {
+   padding-inline: 1rem;
+   padding-block: 0.5rem;
+   margin-block: 0.5rem;
+}
+#lukk {
+   position: absolute;
+   top: 0.5rem;
+   right: 1rem;
+   padding-inline: 0.5rem;
+   padding-block: 0rem;
+}

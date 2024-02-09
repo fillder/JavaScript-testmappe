@@ -76,7 +76,13 @@ function flippVaffel() {
    flippKnapp.classList.add("deaktivert");
    return; // Avslutt funksjonen hvis det ikke er noen vafler
 }
+function endreButikkNavn() {
+   let nyttButikkNavn = document.getElementById("nyttSpillerNavn").value;
+   document.getElementById("spillerNavn").textContent = nyttButikkNavn;
+}
 window.onload = function () {
    vaffelStekingProsess(0); // Start ved første bilde
    vaffelMiksProsess(0); // Start ved første bilde
+   let spillerNavn = document.getElementById("spillerNavnDialog");
+   spillerNavn.showModal();
 };
