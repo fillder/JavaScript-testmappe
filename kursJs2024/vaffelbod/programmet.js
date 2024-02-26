@@ -3,6 +3,7 @@ let gjeldendeSteg = 0;
 let vaffelMiksMengde = 0;
 let vaflerTilSalgs = 0;
 let vaflerTotalt = 0;
+let pengderTotalt = 100;
 let vaflerTilSalgsTekst = document.getElementById("vaflerTilSalgs");
 let vaflerTotaltTekst = document.getElementById("vaflerTotalt");
 let vaffelMiksTekst = document.getElementById("miksGjeldende");
@@ -22,6 +23,14 @@ function lagMiks() {
    vaffelMiksTekst.textContent = vaffelMiksMengde;
    oppdaterStats();
 }
+function reduserMiks() {
+   gjeldendeMiks = parseFloat(document.getElementById("vaffelMiks").style.backgroundPositionX);
+   let nyMiks = Math.min(gjeldendeMiks - 9.09, 100); // Gå frem  9.09% = ett steg
+   vaffelMiksProsess(nyMiks);
+   vaffelMiksMengde--;
+   vaffelMiksTekst.textContent = vaffelMiksMengde;
+}
+
 function vaffelStekingProsess(prosent) {
    let vaffelSteking = document.getElementById("vaffelJern");
    vaffelSteking.style.backgroundPositionX = prosent + "%";
@@ -50,6 +59,7 @@ function startSteking() {
          flippKnapp.disabled = false;
          flippKnapp.classList.remove("deaktivert");
       }, 1000);
+      reduserMiks();
    }
    oppdaterStats();
 }
