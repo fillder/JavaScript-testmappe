@@ -71,8 +71,10 @@ button {
    padding-inline: 1rem;
    padding-block: 0.5rem;
 }
-#stats {
+#oversikt {
    grid-area: side;
+   display: flex;
+   justify-content: space-between;
    background-color: #e0ddda;
    padding-inline: 1rem;
    padding-block: 0.5rem;

@@ -3,39 +3,72 @@ let gjeldendeSteg = 0;
 let vaffelMiksMengde = 0;
 let vaflerTilSalgs = 0;
 let vaflerTotalt = 0;
-let pengderTotalt = 100;
-let vaflerTilSalgsTekst = document.getElementById("vaflerTilSalgs");
-let vaflerTotaltTekst = document.getElementById("vaflerTotalt");
-let vaffelMiksTekst = document.getElementById("miksGjeldende");
+let pengerTotalt = 100;
+let prisMerMiks = 10;
+let vaflerTilSalgsTekst = document.getElementById("vaflerTilSalgsTekst");
+let vaflerTotaltTekst = document.getElementById("vaflerTotaltTekst");
 let flippKnapp = document.querySelector("#flippKnapp");
 let stekeKnapp = document.querySelector("#stekeKnapp");
 let rensJernKnapp = document.querySelector("#rensJernKnapp");
 
-function vaffelMiksProsess(prosent) {
-   let vaffelMiksGrafikk = document.getElementById("vaffelMiks");
+/* --- FUNKSJONER SOM STYRER VAFFELRØRE --- */
+let miksTilgjengelig = 0;
+let miksTilgjengeligTekst = document.getElementById("miksTilgjengelig");
+let miksTotalt = 10;
+let miksTotaltTekst = document.getElementById("miksTilgjengelig");
+let vaffelMiksGrafikk = document.getElementById("vaffelMiks");
+
+oppdaterStats();
+
+// Funksjon som henter grafikken til vaffelMiks og legger til parameteret %
+function lagMiksProsess(prosent) {
    vaffelMiksGrafikk.style.backgroundPositionX = prosent + "%";
 }
+// Funksjon for å lage vaffelrøre og endre animasjonen til røra.
 function lagMiks() {
-   gjeldendeMiks = parseFloat(document.getElementById("vaffelMiks").style.backgroundPositionX);
-   let nyMiks = Math.min(gjeldendeMiks + 9.09, 100); // Gå frem  9.09% = ett steg
-   vaffelMiksProsess(nyMiks);
-   vaffelMiksMengde++;
-   vaffelMiksTekst.textContent = vaffelMiksMengde;
+   let gjeldendeMiks = parseFloat(vaffelMiksGrafikk.style.backgroundPositionX);
+   let merMiks = Math.min(gjeldendeMiks + 9.09, 100);
+   if (vaffelMiksMengde <= 10) {
+      vaffelMiksMengde++;
+      pengerTotalt -= prisMerMiks;
+      lagMiksProsess(merMiks);
+   }
+   knappKontroller();
    oppdaterStats();
 }
-function reduserMiks() {
-   gjeldendeMiks = parseFloat(document.getElementById("vaffelMiks").style.backgroundPositionX);
-   let nyMiks = Math.min(gjeldendeMiks - 9.09, 100); // Gå frem  9.09% = ett steg
-   vaffelMiksProsess(nyMiks);
-   vaffelMiksMengde--;
-   vaffelMiksTekst.textContent = vaffelMiksMengde;
+function brukMiks() {
+   let gjeldendeMiks = parseFloat(vaffelMiksGrafikk.style.backgroundPositionX);
+   let mindreMiks = Math.max(gjeldendeMiks - 9.09, 0); // Bruk Math.max for å unngå negative verdier
+   if (vaffelMiksMengde >= 1) {
+      vaffelMiksMengde--;
+      lagMiksProsess(mindreMiks);
+      oppdaterStats();
+   }
 }
+
+/* --- FUNKSJONER SOM STYRER VAFFELSTEKING --- */
 
 function vaffelStekingProsess(prosent) {
    let vaffelSteking = document.getElementById("vaffelJern");
    vaffelSteking.style.backgroundPositionX = prosent + "%";
 }
-function stekVaffel() {
+// Funksjon for å starte animasjonen ved klikk på knappen
+function lagVaffel() {
+   if (!vaffelStekeAnimasjon && vaffelMiksMengde > 0) {
+      vaffelStekeAnimasjon = true;
+      vaffelStekeAnimasjon = setInterval(lagVaffelProsess, 1000); // Kall lagVaffelProsess hvert sekund
+      brukMiks();
+      // Aktiver flippknappen
+      setTimeout(function () {
+         let flippKnapp = document.querySelector("#flippKnapp");
+         flippKnapp.disabled = false;
+         flippKnapp.classList.remove("deaktivert");
+      }, 1000);
+   }
+   knappKontroller();
+   oppdaterStats();
+}
+function lagVaffelProsess() {
    gjeldendeSteg = parseFloat(document.getElementById("vaffelJern").style.backgroundPositionX);
    gjeldendeSteg += 14.2857; // Gå frem  14.2857% = ett steg
    if (gjeldendeSteg > 99) {
@@ -46,23 +79,6 @@ function stekVaffel() {
    }
    vaffelStekingProsess(gjeldendeSteg);
 }
-// Funksjon for å starte animasjonen ved klikk på knappen
-function startSteking() {
-   if (!vaffelStekeAnimasjon && vaffelMiksMengde > 0) {
-      vaffelStekeAnimasjon = true;
-      vaffelStekeAnimasjon = setInterval(stekVaffel, 1000); // Kall stekVaffel hvert sekund
-      vaffelMiksMengde--;
-      vaffelMiksTekst.textContent = vaffelMiksMengde;
-      // Aktiver flippknappen
-      setTimeout(function () {
-         let flippKnapp = document.querySelector("#flippKnapp");
-         flippKnapp.disabled = false;
-         flippKnapp.classList.remove("deaktivert");
-      }, 1000);
-      reduserMiks();
-   }
-   oppdaterStats();
-}
 
 function flippVaffel() {
    if (vaffelStekeAnimasjon) {
@@ -71,12 +87,9 @@ function flippVaffel() {
       vaffelStekingProsess(0);
    }
    vaflerTilSalgs++;
-   vaflerTilSalgsTekst.textContent = vaflerTilSalgs;
    vaflerTotalt++;
-   vaflerTotaltTekst.textContent = vaflerTotalt;
    // Beregn prosentverdien som en hel tallverdi for å finne riktig SVG-fil
    let prosentVerdi = Math.floor(gjeldendeSteg / 14.2857);
-
    let vaflerPaaRist = document.createElement("img");
    vaflerPaaRist.src = `bilder/vaffelTilSalgs${prosentVerdi}.svg`;
    vaflerPaaRist.classList.add(`vaflerTilSalgs${prosentVerdi}`, "vaffelGrafikk");
@@ -89,6 +102,7 @@ function flippVaffel() {
       // For den første vaffelen, ikke justering
       vaflerPaaRist.style.left = "0";
    }
+   oppdaterStats();
    let vaffelRist = document.getElementById("vaffelRist");
    vaffelRist.appendChild(vaflerPaaRist);
    // Deaktiver flippknappen
@@ -101,17 +115,38 @@ function endreButikkNavn() {
    document.getElementById("spillerNavn").textContent = nyttButikkNavn;
 }
 function oppdaterStats() {
+   vaflerSolgtTekst.textContent = vaflerSolgt;
+   vaflerKastetTekst.textContent = vaflerKastet;
+   vaflerTilSalgsUstektTekst.textContent = vaflerTilSalgsUstekt;
+   vaflerTilSalgsNormalTekst.textContent = vaflerTilSalgsNormal;
+   vaflerTilSalgsBrentTekst.textContent = vaflerTilSalgsBrent;
+
+   pengerTilgjengeligTekst.textContent = pengerTilgjengelig;
+   pengerTotaltTekst.textContent = pengerTotalt;
+
+   miksTotaltTekst.textContent = miksTotalt;
+   miksTilgjengeligTekst.textContent = miksTilgjengelig;
+}
+function knappKontroller() {
    if (vaffelMiksMengde > 0) {
-      stekeKnapp.classList.remove("deaktivert");
-      stekeKnapp.disabled = false;
+      lagVaffelKnapp.classList.remove("deaktivert");
+      lagVaffelKnapp.disabled = false;
    } else {
-      stekeKnapp.classList.add("deaktivert");
-      stekeKnapp.disabled = true;
+      lagVaffelKnapp.classList.add("deaktivert");
+      lagVaffelKnapp.disabled = true;
+   }
+   if (pengerTotalt > prisMerMiks) {
+      lagMiksKnapp.classList.remove("deaktivert");
+      lagMiksKnapp.disabled = false;
+   } else {
+      lagMiksKnapp.classList.add("deaktivert");
+      lagMiksKnapp.disabled = true;
    }
 }
+
 window.onload = function () {
    vaffelStekingProsess(0); // Start ved første bilde
-   vaffelMiksProsess(0); // Start ved første bilde
+   lagMiksProsess(0); // Start ved første bilde
    flippKnapp.disabled = true;
    stekeKnapp.disabled = true;
    rensJernKnapp.disabled = true;
