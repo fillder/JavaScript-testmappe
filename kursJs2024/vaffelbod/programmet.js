@@ -115,6 +115,21 @@ function endreButikkNavn() {
    document.getElementById("spillerNavn").textContent = nyttButikkNavn;
 }
 function oppdaterStats() {
+   pengerTilgjengelig;
+   miksTilgjengelig;
+   vaflerTilSalgsTekst;
+   AttraksjonTekst;
+   ettersporselTekst;
+
+   pengerTotaltTekst;
+   miksTotaltTekst;
+   vaflerTotaltTekst;
+   kastetTotaltTekst;
+   ustektTotaltTekst;
+   normalTotaltTekst;
+   brentTotaltTekst;
+   HoyestettErsporsel;
+
    vaflerSolgtTekst.textContent = vaflerSolgt;
    vaflerKastetTekst.textContent = vaflerKastet;
    vaflerTilSalgsUstektTekst.textContent = vaflerTilSalgsUstekt;
