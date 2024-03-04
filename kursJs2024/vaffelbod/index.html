@@ -27,17 +27,16 @@
             <div class="vaffelFlex">
                <div class="vaffelFlexBarn">
                   <div class="vaffelFlexBarneBarn">
-                     <button id="lagVaffelKnapp" onclick="lagVaffel()">Lag vaffel</button>
-                     <button id="flippKnapp" onclick="flippVaffel()">Flipp vaffel</button>
-         
+                     <button id="lagVaffelKnapp" onclick="lagVaffelFunksjon()">Lag vaffel</button>
+                     <button id="flippKnapp" onclick="flippVaffelFunksjon()">Flipp vaffel</button>
                   </div>
                   <div id="vaffelJern"></div>
                   <div id="stekeTid"></div>
                </div>
                <div class="vaffelFlexBarn">
                   <div class="vaffelFlexBarneBarn">
-                     <button id="lagMiksKnapp" onclick="lagMiks()">Lag røre</button>
-                     <button onclick="fjernGris()">Fjern søl</button>
+                     <button id="lagMiksKnapp" onclick="lagMiksFunksjon()">Lag røre</button>
+                     <button id="rensKnapp" onclick="fjernGrisFunksjon()">Fjern søl</button>
                   </div>
                   <div id="vaffelMiks"></div>
                </div>
@@ -47,11 +46,11 @@
             <div>
                <h2>Lager</h2>
                <hr />
-               <h3>Penger: <span id="pengerTilgjengelig"></span> kr</h3>
-               <h3>Vafelrøre: <span id="miksTilgjengelig"></span><span id="miksTotaltTekst">/10</span></h3>
+               <h3>Penger: <span id="pengerTilgjengeligTekst"></span> kr</h3>
+               <h3>Vafelrøre: <span id="miksTilgjengeligTekst"></span>/10</h3>
                <h3>Vafler: <span id="vaflerTilSalgsTekst"></span> stk.</h3>
-               <h3>Salgsprosent: <span id="AttraksjonTekst"></span>%</h3>
-               <h3>Etterspørsel: <span id="ettersporselTekst"></span>%</h3>
+               <h3>Salgsprosent: <span id="salgsprosentTekst"></span>%</h3>
+               <h3>Kunder per/min: <span id="kunderPerMinTekst"></span></h3>
             </div>
             <div>
                <h2>Stats</h2>
@@ -60,9 +59,9 @@
                <h3>Røre laget: <span id="miksTotaltTekst"></span><span id="miksTotaltTekst">/10</span></h3>
                <h3>Vafler solgt: <span id="vaflerTotaltTekst"></span> stk.</h3>
                <h3>Vafler kastet: <span id="kastetTotaltTekst"></span> stk.</h3>
-               <h3>Ustekte vafler:<span id="ustektTotaltTekst"></span> stk.</h3></h3>
-               <h3>Normale vafler:<span id="normalTotaltTekst"></span> stk.</h3></h3>
-               <h3>Brente vafler:<span id="brentTotaltTekst"></span> stk.</h3></h3>
+               <h3>Ustekte vafler: <span id="ustektTotaltTekst"></span> stk.</h3>
+               <h3>Normale vafler: <span id="normalTotaltTekst"></span> stk.</h3>
+               <h3>Brente vafler: <span id="brentTotaltTekst"></span> stk.</h3>
             </div>
          </section>
          <section id="salgsBord">

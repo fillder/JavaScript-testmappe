@@ -1,23 +1,40 @@
+// Animasjon
 let vaffelStekeAnimasjon = false; // status for om variabelen kjører
-let gjeldendeSteg = 0;
-let vaffelMiksMengde = 0;
-let vaflerTilSalgs = 0;
-let vaflerTotalt = 0;
-let pengerTotalt = 100;
-let prisMerMiks = 10;
-let vaflerTilSalgsTekst = document.getElementById("vaflerTilSalgsTekst");
-let vaflerTotaltTekst = document.getElementById("vaflerTotaltTekst");
-let flippKnapp = document.querySelector("#flippKnapp");
-let stekeKnapp = document.querySelector("#stekeKnapp");
-let rensJernKnapp = document.querySelector("#rensJernKnapp");
-
-/* --- FUNKSJONER SOM STYRER VAFFELRØRE --- */
-let miksTilgjengelig = 0;
-let miksTilgjengeligTekst = document.getElementById("miksTilgjengelig");
-let miksTotalt = 10;
-let miksTotaltTekst = document.getElementById("miksTilgjengelig");
 let vaffelMiksGrafikk = document.getElementById("vaffelMiks");
-
+let gjeldendeSteg = 0;
+// Vaffler
+let vaflerTilSalgs = 0;
+let vaflerTilSalgsStat = document.getElementById("vaflerTilSalgsTekst");
+let vaflerTotalt = 0;
+let vaflerTotaltStat = document.getElementById("vaflerTotaltTekst");
+let kastetTotalt = 0;
+let kastetTotaltStat = document.getElementById("kastetTotaltTekst");
+let ustektTotalt = 0;
+let ustektTotaltStat = document.getElementById("ustektTotaltTekst");
+let normalTotalt = 0;
+let normalTotaltStat = document.getElementById("normalTotaltTekst");
+let brentTotalt = 0;
+let brentTotaltStat = document.getElementById("brentTotaltTekst");
+// Vaffelmiks
+let prisMerMiks = 10;
+let miksTilgjengelig = 0;
+let miksTilgjengeligStat = document.getElementById("miksTilgjengeligTekst");
+// Penger
+let pengerTotalt = 100;
+let pengerTotaltStat = document.getElementById("pengerTotaltTekst");
+let pengerTilgjengelig = 100;
+let pengerTilgjengeligStat = document.getElementById("pengerTilgjengeligTekst");
+// Kunder og salg
+let kunderPerMin = 0;
+let kunderPerMinStat = document.getElementById("kunderPerMinTekst");
+let salgsprosent = 0;
+let salgsprosentStat = document.getElementById("salgsprosentTekst");
+// Knapper
+let flippVaffel = document.querySelector("#flippCaffelKnapp");
+let stekeVaffel = document.querySelector("#stekVaffelKnapp");
+let lagMiks = document.querySelector("#lagMiksKnapp");
+let rensMiks = document.querySelector("#rensMiksKnapp");
+// Funksjoner ved oppstart
 oppdaterStats();
 
 // Funksjon som henter grafikken til vaffelMiks og legger til parameteret %
@@ -25,7 +42,7 @@ function lagMiksProsess(prosent) {
    vaffelMiksGrafikk.style.backgroundPositionX = prosent + "%";
 }
 // Funksjon for å lage vaffelrøre og endre animasjonen til røra.
-function lagMiks() {
+function lagMiksFunksjon() {
    let gjeldendeMiks = parseFloat(vaffelMiksGrafikk.style.backgroundPositionX);
    let merMiks = Math.min(gjeldendeMiks + 9.09, 100);
    if (vaffelMiksMengde <= 10) {
@@ -36,7 +53,7 @@ function lagMiks() {
    knappKontroller();
    oppdaterStats();
 }
-function brukMiks() {
+function brukMiksFunksjon() {
    let gjeldendeMiks = parseFloat(vaffelMiksGrafikk.style.backgroundPositionX);
    let mindreMiks = Math.max(gjeldendeMiks - 9.09, 0); // Bruk Math.max for å unngå negative verdier
    if (vaffelMiksMengde >= 1) {
@@ -53,7 +70,7 @@ function vaffelStekingProsess(prosent) {
    vaffelSteking.style.backgroundPositionX = prosent + "%";
 }
 // Funksjon for å starte animasjonen ved klikk på knappen
-function lagVaffel() {
+function lagVaffelFunksjon() {
    if (!vaffelStekeAnimasjon && vaffelMiksMengde > 0) {
       vaffelStekeAnimasjon = true;
       vaffelStekeAnimasjon = setInterval(lagVaffelProsess, 1000); // Kall lagVaffelProsess hvert sekund
@@ -80,7 +97,7 @@ function lagVaffelProsess() {
    vaffelStekingProsess(gjeldendeSteg);
 }
 
-function flippVaffel() {
+function flippVaffelFunksjon() {
    if (vaffelStekeAnimasjon) {
       clearInterval(vaffelStekeAnimasjon);
       vaffelStekeAnimasjon = false;
@@ -115,41 +132,30 @@ function endreButikkNavn() {
    document.getElementById("spillerNavn").textContent = nyttButikkNavn;
 }
 function oppdaterStats() {
-   pengerTilgjengelig;
-   miksTilgjengelig;
-   vaflerTilSalgsTekst;
-   AttraksjonTekst;
-   ettersporselTekst;
-
-   pengerTotaltTekst;
-   miksTotaltTekst;
-   vaflerTotaltTekst;
-   kastetTotaltTekst;
-   ustektTotaltTekst;
-   normalTotaltTekst;
-   brentTotaltTekst;
-   HoyestettErsporsel;
-
-   vaflerSolgtTekst.textContent = vaflerSolgt;
-   vaflerKastetTekst.textContent = vaflerKastet;
-   vaflerTilSalgsUstektTekst.textContent = vaflerTilSalgsUstekt;
-   vaflerTilSalgsNormalTekst.textContent = vaflerTilSalgsNormal;
-   vaflerTilSalgsBrentTekst.textContent = vaflerTilSalgsBrent;
-
-   pengerTilgjengeligTekst.textContent = pengerTilgjengelig;
-   pengerTotaltTekst.textContent = pengerTotalt;
-
-   miksTotaltTekst.textContent = miksTotalt;
-   miksTilgjengeligTekst.textContent = miksTilgjengelig;
+   // Ressurser
+   pengerTilgjengeligStat.textContent = pengerTilgjengelig;
+   miksTilgjengeligStat.textContent = miksTilgjengelig;
+   vaflerTilSalgsStat.textContent = vaflerTilSalgs;
+   salgsprosentStat.textContent = salgsprosent;
+   kunderPerMinStat.textContent = kunderPerMin;
+   // Stat
+   pengerTotaltStat.textContent = pengerTotalt;
+   vaflerTotaltStat.textContent = vaflerTotalt;
+   kastetTotaltStat.textContent = kastetTotalt;
+   ustektTotaltStat.textContent = ustektTotalt;
+   normalTotaltStat.textContent = normalTotalt;
+   brentTotaltStat.textContent = brentTotalt;
 }
-function knappKontroller() {
-   if (vaffelMiksMengde > 0) {
+function vaffelKnappKontroll() {
+   if (miksTilgjengelig > 0) {
       lagVaffelKnapp.classList.remove("deaktivert");
       lagVaffelKnapp.disabled = false;
    } else {
       lagVaffelKnapp.classList.add("deaktivert");
       lagVaffelKnapp.disabled = true;
    }
+}
+function miksKnappKontroll() {
    if (pengerTotalt > prisMerMiks) {
       lagMiksKnapp.classList.remove("deaktivert");
       lagMiksKnapp.disabled = false;
@@ -162,10 +168,6 @@ function knappKontroller() {
 window.onload = function () {
    vaffelStekingProsess(0); // Start ved første bilde
    lagMiksProsess(0); // Start ved første bilde
-   flippKnapp.disabled = true;
-   stekeKnapp.disabled = true;
-   rensJernKnapp.disabled = true;
-   flippKnapp.classList.add("deaktivert");
-   stekeKnapp.classList.add("deaktivert");
-   rensJernKnapp.classList.add("deaktivert");
+   miksKnappKontroll();
+   vaffelKnappKontroll();
 };
