@@ -19,6 +19,7 @@ body {
    background-color: #ffffff;
    color: #ffffff;
    margin: 30px auto 0px;
+   padding: var(--pad-inline);
 }
 
 #xpText,
