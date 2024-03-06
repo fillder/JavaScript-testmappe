@@ -1,39 +1,39 @@
 // Animasjon
 let vaffelStekeAnimasjon = false; // status for om variabelen kjører
-let vaffelMiksGrafikk = document.getElementById("vaffelMiks");
+const vaffelMiksGrafikk = document.getElementById("vaffelMiks");
 let gjeldendeSteg = 0;
 // Vaffler
 let vaflerTilSalgs = 0;
-let vaflerTilSalgsStat = document.getElementById("vaflerTilSalgsTekst");
+const vaflerTilSalgsStat = document.getElementById("vaflerTilSalgsTekst");
 let vaflerTotalt = 0;
-let vaflerTotaltStat = document.getElementById("vaflerTotaltTekst");
+const vaflerTotaltStat = document.getElementById("vaflerTotaltTekst");
 let kastetTotalt = 0;
-let kastetTotaltStat = document.getElementById("kastetTotaltTekst");
+const kastetTotaltStat = document.getElementById("kastetTotaltTekst");
 let ustektTotalt = 0;
-let ustektTotaltStat = document.getElementById("ustektTotaltTekst");
+const ustektTotaltStat = document.getElementById("ustektTotaltTekst");
 let normalTotalt = 0;
-let normalTotaltStat = document.getElementById("normalTotaltTekst");
+const normalTotaltStat = document.getElementById("normalTotaltTekst");
 let brentTotalt = 0;
-let brentTotaltStat = document.getElementById("brentTotaltTekst");
+const brentTotaltStat = document.getElementById("brentTotaltTekst");
 // Vaffelmiks
 let prisMerMiks = 10;
 let miksTilgjengelig = 0;
-let miksTilgjengeligStat = document.getElementById("miksTilgjengeligTekst");
+const miksTilgjengeligStat = document.getElementById("miksTilgjengeligTekst");
 // Penger
 let pengerTotalt = 100;
-let pengerTotaltStat = document.getElementById("pengerTotaltTekst");
+const pengerTotaltStat = document.getElementById("pengerTotaltTekst");
 let pengerTilgjengelig = 100;
-let pengerTilgjengeligStat = document.getElementById("pengerTilgjengeligTekst");
+const pengerTilgjengeligStat = document.getElementById("pengerTilgjengeligTekst");
 // Kunder og salg
 let kunderPerMin = 0;
-let kunderPerMinStat = document.getElementById("kunderPerMinTekst");
+const kunderPerMinStat = document.getElementById("kunderPerMinTekst");
 let salgsprosent = 0;
-let salgsprosentStat = document.getElementById("salgsprosentTekst");
+const salgsprosentStat = document.getElementById("salgsprosentTekst");
 // Knapper
-let flippVaffel = document.querySelector("#flippVaffelKnapp");
-let stekVaffel = document.querySelector("#stekVaffelKnapp");
-let lagMiks = document.querySelector("#lagMiksKnapp");
-let rensMiks = document.querySelector("#rensMiksKnapp");
+const flippVaffel = document.querySelector("#flippVaffelKnapp");
+const stekVaffel = document.querySelector("#stekVaffelKnapp");
+const lagMiks = document.querySelector("#lagMiksKnapp");
+const rensMiks = document.querySelector("#rensMiksKnapp");
 // Funksjoner ved oppstart
 oppdaterStats();
 
