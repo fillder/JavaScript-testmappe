@@ -1,3 +1,8 @@
+:root {
+   --pad-small: 0.5rem 1rem;
+   --clr-red: blue;
+}
+
 *,
 *::before,
 *::after {
@@ -35,6 +40,7 @@ header {
    background-color: #e0ddda;
    max-width: 992px;
    margin-inline: auto;
+   /*  */
    padding-inline: 1rem;
    padding-block: 0.5rem;
    display: flex;
@@ -61,23 +67,20 @@ main {
 button {
    font-size: 1.2rem;
    cursor: pointer;
-   padding-inline: 1rem;
-   padding-block: 0.5rem;
+   padding: var(--pad-small);
 }
 
 #vaffelbod {
    grid-area: vafl;
    background-color: #e0ddda;
-   padding-inline: 1rem;
-   padding-block: 0.5rem;
+   padding: var(--pad-small);
 }
 #oversikt {
    grid-area: side;
    display: flex;
    justify-content: space-between;
    background-color: #e0ddda;
-   padding-inline: 1rem;
-   padding-block: 0.5rem;
+   padding: var(--pad-small);
 }
 #salgsBord {
    height: 350px;
