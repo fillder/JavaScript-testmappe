@@ -93,7 +93,7 @@ function stekVaffelFunksjon() {
 }
 function stekVaffelProsess() {
    gjeldendeSteg = parseFloat(document.getElementById("vaffelJern").style.backgroundPositionX);
-   gjeldendeSteg += 14.2857; // Gå frem  14.2857% = ett steg
+   gjeldendeSteg += 8.3333; // Gå frem  8.3333% = ett steg
    if (gjeldendeSteg > 99) {
       // Stopp når vi når det siste bildet
       vaffelStekeAnimasjon = false;

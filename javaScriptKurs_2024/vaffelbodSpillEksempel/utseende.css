@@ -118,10 +118,10 @@ button {
 #vaffelJern {
    width: 120px;
    height: 120px;
-   background-image: url("bilder/vaffelJern.svg");
+   background-image: url("bilder/vaffelJern_v2.svg");
    background-position-x: 0%;
    background-repeat: no-repeat;
-   background-size: 800%;
+   background-size: 1300%;
 }
 #vaffelRist {
    position: relative;
