@@ -77,13 +77,13 @@ main {
    padding: var(--pad-large);
    display: flex;
    align-items: center;
-   animation: 2s ease-in-out 1s infinite alternate avatarMovement;
+   animation: 2s ease-in-out 1s infinite alternate avatarBreathing;
 }
 #typewriterAvatar {
    /* border: 2px solid pink; */
 }
 
-@keyframes avatarMovement {
+@keyframes avatar {
    0% {
       margin-block-start: 1rem;
       transform: rotate(2deg);
@@ -95,5 +95,23 @@ main {
    100% {
       margin-block-start: -1rem;
       transform: rotate(2deg);
+   }
+}
+
+@keyframes avatarBreathing {
+   0% {
+      transform: scale(1) rotate(1deg);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+      margin-block-start: 1rem;
+   }
+   50% {
+      transform: scale(1.025) rotate(-1deg);
+      box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
+      margin-block-start: -1rem;
+   }
+   100% {
+      transform: scale(1) rotate(1deg);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+      margin-block-start: 1rem;
    }
 }
