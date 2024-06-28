@@ -21,6 +21,19 @@ body {
    margin: 30px auto 0px;
    padding: var(--pad-inline);
 }
+#controls,
+#stats {
+   border: 1px solid #0a0a23;
+   padding: 5px;
+   color: #0a0a23;
+}
+#monsterStats {
+   display: none;
+   border: 1px solid #0a0a23;
+   padding: var(--pad-medium);
+   color: #ffffff;
+   background-color: #c70d0d;
+}
 #xpText,
 #healthText,
 #goldText {
