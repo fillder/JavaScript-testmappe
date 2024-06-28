@@ -8,7 +8,7 @@ function simpleTypewriter(text, typewriter) {
       if (i < text.length) {
          typewriter.textContent += text.charAt(i);
          i++;
-         setTimeout(type, 100); // Adjust the delay as needed
+         setTimeout(type, 100);
       }
    }
    type();
