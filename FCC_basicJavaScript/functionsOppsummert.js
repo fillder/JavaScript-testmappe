@@ -1,8 +1,8 @@
-/* ------------------ // ------------------ */
-/* -------------- // ---- // -------------- */
-/* ----------- // Funksjoner // ----------- */
-/* ------------- // ---- // --------------- */
-/* ----------------- // ------------------- */
+/* ------------------ // ------------------ 
+   -------------- // ---- // -------------- 
+   ----------- // Funksjoner // ----------- 
+   ------------- // ---- // --------------- 
+   ----------------- // ------------------- */
 
 /* 16) Vi initialiserer/lager en funksjon med å skrive "function" etterfulgt av funksjonens navn og to parenteser
    17) For å kalle/kjøre en funksjon, skriver vi kun navnet på funksjonen etterfulgt av parenteser
@@ -28,11 +28,11 @@ const sum = addTwoNumbers(5, 10);
 // Når vi printer verdien av sum får vi lagret verdi, som er resultatet av mattestykke, altså 15.
 console.log(sum);
 
-/* ---------------- // ---------------- */
-/* ------------- // - // -------------- */
-/* ----------- // Scope // ------------ */
-/* ------------ // - // --------------- */
-/* -------------- // ------------------ */
+/* ----------------- // ----------------
+   -------------- // - // -------------- 
+   ------------ // Scope // ------------
+   ------------- // - // ---------------
+   --------------- // ------------------ */
 
 /* 1.  Begrepet "Scope" kan sies å bestemme en kodes tilgjengelighet
       2.  Dersom en variabel, funksjon eller loop skrives selvstendig, uten å være innlemmet i en annen kode, har de en "global scope" eller "global tilgjengelighet" 
@@ -56,3 +56,15 @@ function getName() {
 console.log(getName()); // "Camper cat"
 const capturedReturnValue = getName();
 console.log(capturedReturnValue); // "Camper cat"
+
+/* ---------------- // ---------------- 
+   ------------- // -- // ------------- 
+   ----------- // Return // ----------- 
+   ------------- // -- // -------------
+   ---------------- // ---------------- */
+
+function padRow(name) {
+   const test = "Testing";
+   console.log("This works!");
+   return test;
+}
