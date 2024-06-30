@@ -1,3 +1,9 @@
+/* ---------------- // ----------------- */
+/* ------------- // -- // -------------- */
+/* ----------- // Arrays // ------------ */
+/* ------------- // -- // -------------- */
+/* ---------------- // ----------------- */
+
 // nummer og strenger er primitive datatyper, det vil si de kun kan holde en verdi om gangen
 let profession = "teacher";
 let age = 30;
@@ -31,12 +37,6 @@ let pushed = cities.push();
    16)   Vi kan gi en varabel verdien av data vi popper ut fra et array direkte */
 let popped = cities.pop();
 console.log(popped);
-
-/* ---------------- // --------------- */
-/* ------------- // - // ------------- */
-/* ----------- // ---- // ------------ */
-/* ------------ // - // -------------- */
-/* -------------- // ----------------- */
 
 // Vi starter et tomt Array som en variabel med to hakeparentes
 let byer = [];
