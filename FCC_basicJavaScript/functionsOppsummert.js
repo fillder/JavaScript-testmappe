@@ -63,7 +63,15 @@ console.log(capturedReturnValue); // "Camper cat"
    ------------- // -- // -------------
    ---------------- // ---------------- */
 
-function padRow(name) {
+/* 1) En sekundær-rolle til return, er å stoppe funksjonen fra å kjøre 
+   2) Dersom vi prøver å skrive noe under return, gråes det ut, fordi funkjsonen aldri kommer til å kjøre det*/
+function thisDoesNotWork() {
+   const test = "Testing";
+   return test;
+   console.log("This does not work!");
+}
+
+function thisWorks() {
    const test = "Testing";
    console.log("This works!");
    return test;
