@@ -46,7 +46,7 @@ for (const row of rows) {
 /* 12) En "fluktsekvens" (escape sequence) er et begrep for kodesnutter vi bruker for å utføre spesielle handlinger, og kan brukes som en del av en sammenkobling
    13) "\n" er en fluktsekvens for å bytte linje og kan brukes for å sammenkoble strenger over flere linjer. eksempel:  */
 
-for (let i = 0; i < count; i = i + 1) {
+for (let i = 0; i < count; i++) {
    /* 14) Koden dytter verdien av character (#) inn i et array, like mange ganger som verdien av "i", for hver iterasjon
       15) Vi legger til "+1" for å unngå å returnere "0" første iterasjon, da arrays bruker 0 indeksering */
    rows.push(character.repeat(i + 1));

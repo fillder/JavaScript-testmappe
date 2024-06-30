@@ -76,3 +76,30 @@ function thisWorks() {
    console.log("This works!");
    return test;
 }
+
+// Som vist lengre opp, kan return brukes for å gjennomføre mattematiske regnestykker
+function addOneTo(a) {
+   const result = a + 1;
+   return result;
+}
+/* Et annet bruksområde er å bruke det som et "standard"-svar; så lenge if-betingelsen ikke er "true", vil den returnere "false"
+   Dette kaller vi en tidlig "exit", fordi koden stoppes, når den har funnet svaret.*/
+function isEven(num) {
+   if (num % 2 === 0) return true;
+   return false;
+}
+// Det kan bemerkes at dette har identisk funksjon til en else-betingelse med samme svar
+function isEven(num) {
+   if (num % 2 === 0) {
+      return true;
+   } else {
+      return false;
+   }
+}
+
+function newPadRow(rowNumber, rowCount) {
+   return character.repeat(rowNumber);
+}
+for (let i = 0; i < count; i = i + 1) {
+   rows.push(padRow(i + 1, count));
+}
