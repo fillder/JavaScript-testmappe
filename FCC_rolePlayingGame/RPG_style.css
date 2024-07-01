@@ -29,6 +29,7 @@ body {
 }
 #monsterStats {
    display: none;
+   justify-content: space-between;
    border: 1px solid #0a0a23;
    padding: var(--pad-medium);
    color: #ffffff;
