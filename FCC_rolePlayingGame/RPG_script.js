@@ -22,6 +22,11 @@ const weapons = [
    { name: "claw hammer", power: 50 },
    { name: "sword", power: 100 },
 ];
+const monsters = [
+   { name: "slime", level: 2, health: 15 },
+   { name: "fanged beast", level: 8, health: 60 },
+   { name: "dragon", level: 20, health: 300 },
+];
 const locations = [
    {
       name: "town square",
@@ -41,6 +46,12 @@ const locations = [
       buttonFunctions: [fightSlime, fightBeast, goTown],
       text: "You enter the cave. You see some monsters.",
    },
+   {
+      name: "fight",
+      buttonText: ["Attack", "Dodge", "Run"],
+      buttonFunctions: [attack, dodge, goTown],
+      text: "You are fighting a monster.",
+   },
 ];
 
 // initialize buttons
@@ -57,21 +68,40 @@ function update(location) {
    button3.onclick = location.buttonFunctions[2];
    text.innerText = location.text;
 }
-
 function goTown() {
    update(locations[0]);
 }
-
 function goStore() {
    update(locations[1]);
 }
-
 function goCave() {
    update(locations[2]);
 }
+function goFight() {
+   update(locations[3]);
+   // Bruker verdien til en variabel for å hente riktig indeksert monster sine stats
+   monsterHealth = monsters[fighting].health;
+   monsterName.innerText = monsters[fighting].name;
+   monsterHealthText.innerText = monsterHealth;
+   monsterStats.style.display = "block";
+}
+function attack() {
+   // Bruker verdien til en variabel for å hente riktig indeksert monster sitt navn
+   text.innerText = "The " + monsters[fighting].name + " attacks.";
+}
+function dodge() {}
 
+function fightSlime() {
+   fighting = 0;
+   goFight();
+}
+function fightBeast() {
+   fighting = 1;
+   goFight();
+}
 function fightDragon() {
-   console.log("Fighting dragon.");
+   fighting = 2;
+   goFight();
 }
 
 function buyHealth() {
@@ -106,14 +136,14 @@ function buyWeapon() {
       button2.onclick = sellWeapon();
    }
 }
-
-function fightSlime() {}
-
-function fightBeast() {}
-
 function sellWeapon() {
    if (inventory.length > 1) {
       gold += 15;
       goldText.innerText = gold;
+      let currentWeapon = inventory.shift();
+      text.innerText = "You sold a " + currentWeapon + ".";
+      text.innerText += " In your inventory you have: " + inventory;
+   } else {
+      text.innerText = "Don't sell your only weapon!";
    }
 }
