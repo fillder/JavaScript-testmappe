@@ -42,8 +42,14 @@ function padRow(rowNumber, rowCount) {
 }
 
 // Generate the rows for the pattern
+let inverted = true;
+
 for (let i = 1; i <= totalRows; i++) {
-   patternRows.push(padRow(i, totalRows));
+   if (inverted) {
+      patternRows.unshift(padRow(i, totalRows));
+   } else {
+      patternRows.push(padRow(i, totalRows));
+   }
 }
 
 // Construct the final pattern string

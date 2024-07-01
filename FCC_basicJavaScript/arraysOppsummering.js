@@ -53,3 +53,13 @@ let sisteBy = byer.pop();
 // lager vi en ny variabel med verdien til .push derimot, returnerer den ikke en by, men antallet verdier i arrayet da variabelen ble laget, som er "2" etter at "Tromsø" ble lagt til.
 byer.push("Tromsø");
 let nyBy = byer.push();
+
+// 17) .unshift er en metode vi kan bruke for å introdusere tall i starten av et Array, altså det motsatte av .push()
+const numbers = [1, 2, 3];
+const unshifted = numbers.unshift(0);
+console.log(numbers);
+console.log(unshifted);
+
+// 18) .shift er en metode vi kan bruke for å fjerne første element i et Array, altså det motsatte av .pop()
+const shifted = numbers.shift();
+console.log(shifted);

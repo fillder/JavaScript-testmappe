@@ -103,3 +103,20 @@ function newPadRow(rowNumber, rowCount) {
 for (let i = 0; i < count; i = i + 1) {
    rows.push(padRow(i + 1, count));
 }
+
+/*
+let classScore = [92, 88, 12, 77, 57, 100, 67, 38, 97, 89]
+let students = classScore.length
+let totalScore = 0
+
+function getAverage(scores) {
+  for (let i = 1; i <= students; i++) {
+  const popped = classScore.pop();
+  totalScore += popped;
+  console.log(totalScore)
+}
+  return totalScore / students
+}
+
+console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
+console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]));*/
