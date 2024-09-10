@@ -1,0 +1,28 @@
+.rod {
+    background-color: brown;
+}
+.gul {
+    background-color: burlywood;
+}
+.gronn {
+    background-color: darkolivegreen;
+}
+.blaa {
+    background-color: cadetblue;
+}
+body {
+    display: flex;
+    height: 600px;
+    width: 100%;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+}
+.rod,
+.gul,
+.gronn,
+.blaa {
+    height: 100%;
+    width: 100%;
+}

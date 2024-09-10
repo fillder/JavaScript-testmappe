@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@font-face {
+    font-family: 'Hexagonas';
+    font-weight: 500; 
+    src: url('fonter/hexagonas-webfont.woff2') format('woff2') 
+         url('fonter/hexagonas-webfont.woff') format('woff'); 
+}
+@font-face {
+    font-family: 'Hexagonas';
+    font-weight: 300; 
+    src: url('fonter/hexagonaslight-webfont.woff2') format('woff2') 
+         url('fonter/hexagonaslight-webfont.woff') format('woff'); 
+}
+* {margin: 0; text-align: center;}
+
+
+
+h1 {
+    font-family: 'Hexagonas-web', sans-serif;
+    font-weight: 500; 
+    font-size: 3rem;
+} 
+p {
+    font-family: 'Hexagonas-web', sans-serif;
+    font-weight: 300; 
+    font-size: 2rem;
+} 
+h3 {
+    font-family: 'Bungee Spice', cursive;
+}

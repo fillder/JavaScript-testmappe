@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="flexStyle.css" />
+		<title>Gøy med Flex</title>
+	</head>
+	<body>
+		<main>
+			<h1>Flex layout</h1>
+			<h2>Eksempler på horisontal justering</h2>
+			<code>
+				<span class="name">display</span>: <span class="atr">flex</span>; <br />
+				<span class="name">justify-content</span>: <span class="atr">space-between</span>;
+			</code>
+			<div class="flex justify spaceBetween">
+				<div class="safir"></div>
+				<div class="akvamarin"></div>
+				<div class="amazonitt"></div>
+				<div class="smaragd"></div>
+				<div class="citrin"></div>
+				<div class="spessartin"></div>
+				<div class="rubin"></div>
+				<div class="thulitt"></div>
+				<div class="kunzitt"></div>
+			</div>
+			<code>
+				<span class="name">display</span>: <span class="atr">flex</span>; <br />
+				<span class="name">justify-content</span>: <span class="atr">space-around</span>;
+			</code>
+			<div class="flex justify space-around">
+				<div class="safir"></div>
+				<div class="akvamarin"></div>
+				<div class="amazonitt"></div>
+				<div class="smaragd"></div>
+				<div class="citrin"></div>
+				<div class="spessartin"></div>
+				<div class="rubin"></div>
+				<div class="thulitt"></div>
+				<div class="kunzitt"></div>
+			</div>
+			<code>
+				<span class="name">display</span>: <span class="atr">flex</span>; <br />
+				<span class="name">justify-content</span>: <span class="atr">space-evenly</span>;
+			</code>
+			<div class="flex justify space-evenly">
+				<div class="safir"></div>
+				<div class="akvamarin"></div>
+				<div class="amazonitt"></div>
+				<div class="smaragd"></div>
+				<div class="citrin"></div>
+				<div class="spessartin"></div>
+				<div class="rubin"></div>
+				<div class="thulitt"></div>
+				<div class="kunzitt"></div>
+			</div>
+			<code>
+				<span class="name">display</span>: <span class="atr">flex</span>; <br />
+				<span class="name">justify-content</span>: <span class="atr">center</span>;
+			</code>
+			<div class="flex justify center">
+				<div class="safir"></div>
+				<div class="akvamarin"></div>
+				<div class="amazonitt"></div>
+				<div class="smaragd"></div>
+				<div class="citrin"></div>
+				<div class="spessartin"></div>
+				<div class="rubin"></div>
+				<div class="thulitt"></div>
+				<div class="kunzitt"></div>
+			</div>
+			<code>
+				<span class="name">display</span>: <span class="atr">flex</span>; <br />
+				<span class="name">justify-content</span>: <span class="atr">left</span>;<br />
+				eller <span class="name">justify-content</span>: <span class="atr">start</span>;<br />
+				eller <span class="name">justify-content</span>: <span class="atr">flex-start</span>;
+			</code>
+			<div class="flex justify baseline">
+				<div class="safir"></div>
+				<div class="akvamarin"></div>
+				<div class="amazonitt"></div>
+				<div class="smaragd"></div>
+				<div class="citrin"></div>
+				<div class="spessartin"></div>
+				<div class="rubin"></div>
+				<div class="thulitt"></div>
+				<div class="kunzitt"></div>
+			</div>
+			<code>
+				<span class="name">display</span>: <span class="atr">flex</span>; <br />
+				<span class="name">justify-content</span>: <span class="atr">right</span>;<br />
+				eller <span class="name">justify-content</span>: <span class="atr">end</span>;<br />
+				eller <span class="name">justify-content</span>: <span class="atr">flex-end</span>;
+			</code>
+			<div class="flex justify end">
+				<div class="safir"></div>
+				<div class="akvamarin"></div>
+				<div class="amazonitt"></div>
+				<div class="smaragd"></div>
+				<div class="citrin"></div>
+				<div class="spessartin"></div>
+				<div class="rubin"></div>
+				<div class="thulitt"></div>
+				<div class="kunzitt"></div>
+			</div>
+			<h2>Eksempler på vertikal justering</h2>
+			<div id="alignEksempler">
+				<div>
+					<code>
+						<span class="name">display</span>: <span class="atr">flex</span>; <br />
+						<span class="name">align-content</span>: <span class="atr">center</span>;<br />
+					</code>
+					<div class="flex alignCenter">
+						<div class="safir"></div>
+						<div class="akvamarin"></div>
+						<div class="amazonitt"></div>
+						<div class="smaragd"></div>
+						<div class="citrin"></div>
+						<div class="spessartin"></div>
+						<div class="rubin"></div>
+						<div class="thulitt"></div>
+						<div class="kunzitt"></div>
+					</div>
+				</div>
+				<div>
+					<code>
+						<span class="name">display</span>: <span class="atr">flex</span>; <br />
+						<span class="name">align-content</span>: <span class="atr">end</span>;<br />
+					</code>
+					<div class="flex alignEnd">
+						<div class="safir"></div>
+						<div class="akvamarin"></div>
+						<div class="amazonitt"></div>
+						<div class="smaragd"></div>
+						<div class="citrin"></div>
+						<div class="spessartin"></div>
+						<div class="rubin"></div>
+						<div class="thulitt"></div>
+						<div class="kunzitt"></div>
+					</div>
+				</div>
+				<div>
+					<code>
+						<span class="name">display</span>: <span class="atr">flex</span>; <br />
+						<span class="name">align-items</span>: <span class="atr">start</span>;<br />
+					</code>
+					<div class="flex alignStart">
+						<div class="safir"></div>
+						<div class="akvamarin"></div>
+						<div class="amazonitt"></div>
+						<div class="smaragd"></div>
+						<div class="citrin"></div>
+						<div class="spessartin"></div>
+						<div class="rubin"></div>
+						<div class="thulitt"></div>
+						<div class="kunzitt"></div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

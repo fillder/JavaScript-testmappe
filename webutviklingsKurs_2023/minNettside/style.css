@@ -1,0 +1,9 @@
+body {
+    background-color: darkolivegreen;
+}
+
+img {
+    display: block;
+    margin-inline: auto;
+    border: 5px solid red;
+}
