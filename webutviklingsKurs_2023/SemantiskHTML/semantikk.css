@@ -1,0 +1,25 @@
+body {
+	max-width: 1200px;
+	background-color: darkslategrey;
+	margin-inline: auto;
+}
+
+header {
+	width: fit-content;
+}
+nav {
+	display: flex;
+	gap: 1rem;
+}
+main {
+	max-width: 1000px;
+	background-color: cadetblue;
+	border: 2px solid lightblue;
+}
+footer {
+	text-align: center;
+}
+section {
+	padding-inline: 1rem;
+	padding-block: 0.5rem;
+}
