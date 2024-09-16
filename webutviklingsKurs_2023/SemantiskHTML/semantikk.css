@@ -1,25 +1,73 @@
-body {
-	max-width: 1200px;
-	background-color: darkslategrey;
-	margin-inline: auto;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font: inherit;
 }
-
+body {
+	background-color: darkslategray;
+}
+body > * {
+	max-width: 1200px;
+	margin-inline: auto;
+	line-height: 125%;
+}
+img,
+video {
+	display: block;
+	width: 100%;
+}
+h1 {
+	font-size: 3rem;
+	color: white;
+	margin-block: 1rem;
+}
+h2 {
+	font-size: 2rem;
+	margin-block: 1rem;
+}
+p {
+	margin-block: 1rem;
+}
 header {
-	width: fit-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: slategrey;
+	background-image: url(images/DJI_0529.JPG);
+	background-position: center;
+	background-size: cover;
+	aspect-ratio: 3/1;
+	padding-block: 2rem;
 }
 nav {
 	display: flex;
+	height: 50px;
+	justify-content: space-around;
+	align-items: center;
+	background-color: lightseagreen;
 	gap: 1rem;
 }
 main {
-	max-width: 1000px;
 	background-color: cadetblue;
-	border: 2px solid lightblue;
 }
 footer {
 	text-align: center;
+	background-color: slategrey;
+	padding-block: 2rem;
 }
 section {
-	padding-inline: 1rem;
-	padding-block: 0.5rem;
+	padding-inline: 2rem;
+	padding-block: 1rem;
+}
+.bildeGalleri {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+  }
+.bildeGalleri img {
+	flex-basis: 100px;
+	flex-grow: 1;
+	width: 300px;
+	height: 200px;
+	object-fit: cover;
 }
