@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+h1{
+	font-size: 2rem;
+}
+p{
+	max-width: 80ch;
+	line-height: 125%;
+}
+img,
+video,
+svg{
+   max-width: 100%;
+   height: auto;
+   vertical-align: middle;
+} 
+body {
+	max-width: 100%;
+	background-color: darkslategray;
+}
+div {
+	height: fit-content;
+	border: 10px solid lightskyblue;
+	outline: 20px solid lightcoral;
+	background-color: slategray; 
+}
