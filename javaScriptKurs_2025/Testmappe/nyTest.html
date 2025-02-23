@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		body {
+			background-color: purple;
+		}
+		#knappTo {
+			display: none;
+		}
+	</style>
+	<body>
+		<button id="knappEn" onclick="byttFarge()">Bytt farge</button>
+		<button id="knappTo" onclick="byttTilbake()">Bytt tilbake</button>
+	</body>
+	<script>
+		function byttFarge() {
+			document.body.style.backgroundColor = "orange";
+			document.getElementById("knappEn").style.display = "none";
+			document.getElementById("knappTo").style.display = "block";
+		}
+		function byttTilbake() {
+			document.body.style.backgroundColor = "purple";
+			document.getElementById("knappTo").style.display = "none";
+			document.getElementById("knappEn").style.display = "block";
+		}
+	</script>
+</html>

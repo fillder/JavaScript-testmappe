@@ -1,9 +1,9 @@
-let penger = 10;
+/*let penger = 10;
 let varer = 0;
 const pengerTekstRef = document.getElementById("pengerTekst");
 const varerTekstRef = document.getElementById("varerTekst");
-const lagVareRef = document.getElementById("lagVareKnapp");
-const selgVareRef = document.getElementById("selgVareKnapp");
+const lagVareKnapp = document.getElementById("lagVareKnapp");
+const selgVareKnapp = document.getElementById("selgVareKnapp");
 
 function selgVare() {
 	if (varer >= 1) {
@@ -24,25 +24,42 @@ function lagVare() {
 function sjekkBeholdning() {
 	pengerTekstRef.textContent = penger;
 	varerTekstRef.textContent = varer;
-	if (penger >= 1) {
-		lagVareRef.removeAttribute("disabled");
-	} else {
-		lagVareRef.toggleAttribute("disabled");
-	}
-	if (varer >= 1) {
-		selgVareRef.removeAttribute("disabled");
-	} else {
-		selgVareRef.toggleAttribute("disabled");
-	}
+
+	lagVareKnapp.disabled = !(penger >= 1);
+	selgVareKnapp.disabled = !(varer >= 1);
+	//knappen deaktiveres hvis penger IKKE er mer eller det samme som 1
 }
 sjekkBeholdning();
+*/
+let penger = 10;
+let varer = 0;
+const pengerTekst = document.getElementById("pengerTekst");
+const varerTekst = document.getElementById("varerTekst");
+const lagVareKnapp = document.getElementById("lagVareKnapp");
+const selgVareKnapp = document.getElementById("selgVareKnapp");
 
-const fargetBoksRef = document.getElementById("fargetBoks");
-
-function byttFarge() {
-	const red = Math.floor(Math.random() * 255) + 1;
-	const green = Math.floor(Math.random() * 255) + 1;
-	const blue = Math.floor(Math.random() * 255) + 1;
-
-	fargetBoksRef.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
+function selgVare() {
+	if (varer >= 1) {
+		varer--;
+		penger++;
+	}
+	oppdaterUI();
 }
+
+function lagVare() {
+	if (penger >= 1) {
+		varer++;
+		penger--;
+	}
+	oppdaterUI();
+}
+
+function oppdaterUI() {
+	pengerTekst.textContent = penger;
+	varerTekst.textContent = varer;
+
+	lagVareKnapp.disabled = !(penger >= 1);
+	selgVareKnapp.disabled = !(varer >= 1);
+	//knappen deaktiveres hvis penger IKKE er mer eller det samme som 1
+}
+oppdaterUI();

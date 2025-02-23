@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		#feilmeldingTekst {
+			visibility: hidden;
+		}
+	</style>
+	<body>
+		<p id="varerTekst">10</p>
+		<p id="feilmeldingTekst">feilmelding</p>
+		<button onclick="selgVare()">Selg vare</button>
+		<button onclick="tips()">Tips</button>
+	</body>
+	<script>
+		let varer = 10;
+		const varerTekst = document.getElementById("varerTekst");
+		const feilmeldingTekst = document.getElementById("feilmeldingTekst");
+
+		function selgVare() {
+			if (varer >= 1) {
+				varer--;
+				varerTekst.textContent = varer;
+			}
+		}
+		function tips() {
+			if (varer >= 1) {
+				feilmeldingTekst.style.color = "green";
+				feilmeldingTekst.textContent = "Du har varer du kan selge!";
+			} else {
+				feilmeldingTekst.style.color = "red";
+				feilmeldingTekst.textContent = "Du har ikke noen varer igjen!";
+			}
+			feilmeldingTekst.style.visibility = "visible";
+			setTimeout(function () {
+				feilmeldingTekst.style.visibility = "hidden";
+			}, 2000);
+		}
+	</script>
+</html>
