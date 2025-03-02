@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<p>Timer: <span id="timerTekst">0</span></p>
+		<button onclick="startTimer()">Start timer</button>
+		<button onclick="resetTimer()">Reset timer</button>
+	</body>
+	<script>
+		let timer = 0;
+		let aktivertTimer;
+
+		function startTimer() {
+			if (aktivertTimer) {
+				console.log("Timeren kjører allerede!");
+				return;
+			}
+			aktivertTimer = setInterval(timerTick, 1000);
+		}
+		function timerTick() {
+			timer++;
+			timerTekst.textContent = timer;
+		}
+		function stoppTimer() {
+			if (aktivertTimer) {
+				clearInterval(aktivertTimer);
+				timer = 0;
+				aktivertTimer = null;
+				console.log("Timer stoppet!");
+			} else {
+				console.log("Ingen aktiv timer å stoppe.");
+			}
+		}
+	</script>
+</html>
