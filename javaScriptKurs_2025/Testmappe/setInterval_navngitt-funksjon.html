@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Timer: <span id="timerUI">0</span></p>
+  </body>
+  <script>
+    let timer = 0;
+    const timerUI = document.getElementById("timerUI");
+
+    function startTimer() {
+      timer = timer + 1;
+      timerUI.textContent = timer;
+    }
+
+    setInterval(startTimer, 1000);
+  </script>
+</html>

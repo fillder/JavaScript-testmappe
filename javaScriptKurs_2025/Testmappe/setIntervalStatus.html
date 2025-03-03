@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="timerStatus"></p>
+    <p>Timer: <span id="timerUI">0</span></p>
+    <button onclick="startTimer()">Start timer</button>
+    <button onclick="resetTimer()">Reset timer</button>
+  </body>
+  <script>
+    let timer = 0;
+    let aktivTimer = null;
+    const timerUI = document.getElementById("timerUI");
+    const timerStatus = document.getElementById("timerStatus");
+
+    function startTimer() {
+      if (aktivTimer) {
+        timerStatus.textContent = "Timeren kjører allerede!";
+        return;
+      }
+      aktivTimer = setInterval(timerTick, 1000);
+    }
+    function timerTick() {
+      timer++;
+      timerUI.textContent = timer;
+    }
+    function resetTimer() {
+      if (aktivTimer) {
+        clearInterval(aktivTimer);
+        timer = 0;
+        aktivTimer = null;
+        timerUI.textContent = timer;
+        timerStatus.textContent = "Timer stoppet!";
+      } else {
+        timerStatus.textContent = "Ingen aktiv timer å stoppe.";
+      }
+    }
+  </script>
+</html>
