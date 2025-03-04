@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<button onclick="stekTreVafler()">Stek 3 vafler!</button>
-		<button onclick="stekSeksVafler()">Stek 6 vafler!</button>
-		<p>Status: <span id="stekeStatus">Klar til å steke!</span></p>
-		<p>Antall vafler: <span id="vaflerTekst">0</span></p>
-	</body>
-	<script>
-		let antallVafler = 0;
-		let bestilling = 0;
-		const vaflerTekst = document.getElementById("vaflerTekst");
-		const stekeStatus = document.getElementById("stekeStatus");
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="stekTreVafler()">Stek 3 vafler!</button>
+    <button onclick="stekSeksVafler()">Stek 6 vafler!</button>
+    <p>Status: <span id="stekeStatus">Klar til å steke!</span></p>
+    <p>Antall vafler: <span id="vaflerTekst">0</span></p>
+  </body>
+  <script>
+    let antallVafler = 0;
+    let bestilling = 0;
+    const vaflerTekst = document.getElementById("vaflerTekst");
+    const stekeStatus = document.getElementById("stekeStatus");
 
-		for (let i = 1; i <= 5; i++) {
-			console.log(i);
-		}
-		function stekTreVafler() {
-			bestilling = 3;
-			stekVafler(bestilling);
-		}
-		function stekSeksVafler() {
-			bestilling = 6;
-			stekVafler(bestilling);
-		}
-		function stekVafler(bestilling) {
-			for (let i = 1; i <= bestilling; i++) {
-				stekeStatus.textContent = `Steker ${bestilling} vafler`;
-
-				setTimeout(() => {
-					stekeStatus.textContent = "Vaflene er ferdigstekt!";
-					antallVafler += 1;
-					vaflerTekst.textContent = antallVafler;
-				}, 1000 * bestilling); // Vent litt lengre for hver vafler
-			}
-		}
-	</script>
+    for (let i = 1; i <= 5; i++) {
+      console.log(i);
+    }
+    function stekTreVafler() {
+      bestilling = 3;
+      stekVafler();
+    }
+    function stekSeksVafler() {
+      bestilling = 6;
+      stekVafler();
+    }
+    function stekVafler() {
+      stekeStatus.textContent = `Steker ${bestilling} vafler`;
+      for (let i = 1; i <= bestilling; i++) {
+        setTimeout(() => {
+          stekeStatus.textContent = "Vaflene er ferdigstekt!";
+          antallVafler += 1;
+          vaflerTekst.textContent = antallVafler;
+        }, 1000 * bestilling); // Vent litt lengre for hver vafler
+      }
+    }
+  </script>
 </html>

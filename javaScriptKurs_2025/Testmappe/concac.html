@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concactinating Eksempel</title>
+  </head>
+  <body>
+    <p>Steker <span id="tekstElm1"></span> vafler</p>
+    <p id="tekstElm2"></p>
+    <p id="tekstElm3"></p>
+    <p id="tekstElm4"></p>
+  </body>
+  <script>
+    let bestillinger = 6;
+    const tekstElm1 = document.getElementById("tekstElm1");
+    const tekstElm2 = document.getElementById("tekstElm2");
+    const tekstElm3 = document.getElementById("tekstElm3");
+    const tekstElm4 = document.getElementById("tekstElm4");
+
+    tekstElm1.textContent = bestillinger;
+    // Krever at brukes span for å få tilleggstekst
+
+    tekstElm2.textContent = "Steker 6 vafler";
+    // Er ikke dynamisk
+
+    tekstElm3.textContent = "Steker " + bestillinger + " vafler";
+    // Krever at vi legger til mellomrom i strengverdien
+
+    tekstElm4.textContent = `Steker ${bestillinger} vafler`;
+    // Krever backtick (``), ikke anførselstegn
+  </script>
+</html>
