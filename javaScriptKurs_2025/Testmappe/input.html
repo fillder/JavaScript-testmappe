@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="inputFelt">Bytt Navn</label>
+    <input type="text" name="inputFelt" id="inputFelt" />
+    <button onclick="byttNavn()">Bekreft</button>
+    <h1><span id="butikkNavn">Ola Normanns</span> Vaffelbod</h1>
+  </body>
+  <script>
+    const inputFelt = document.getElementById("inputFelt");
+    const butikkNavn = document.getElementById("butikkNavn");
+
+    function byttNavn() {
+      butikkNavn.textContent = inputFelt.value;
+      inputFelt.value = "";
+    }
+  </script>
+</html>
