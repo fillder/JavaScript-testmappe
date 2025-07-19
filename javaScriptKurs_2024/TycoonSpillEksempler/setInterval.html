@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Timer: <span id="timerText">0</span></p>
+    <button onclick="timerStart()">Start timer</button>
+</body>
+<script>
+    let timer = 0
+    const timerText = document.getElementById("timerText")
+    
+    function timerStart() {
+        timer = 0
+        clearInterval
+        setInterval(timerTick, 1000)  // Riktig: Sender funksjonsreferansen
+    }
+    function timerTick() {
+        timer++
+        timerText.textContent = timer
+    }
+</script>
+</html>

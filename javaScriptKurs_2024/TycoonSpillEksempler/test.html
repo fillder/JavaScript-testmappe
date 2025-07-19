@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="antallPengerTekst"></p>
+    <p id="antallVafflerTekst"></p>
+    <button id="knappTekst" onclick="bliRik()">Bli Rik</button> 
+</body>
+<script>
+    let penger = 10;
+    let antallVaffler = 0
+    const antallPengerTekst = document.getElementById("antallPengerTekst");
+    const antallVafflerTekst = document.getElementById("antallVafflerTekst");
+
+    function bliRik() {
+        penger++;
+        updateUI()
+    }
+    function updateUI() {
+        antallPengerTekst.textContent = penger;
+        antallVafflerTekst.textContent = antallVaffler;
+    }
+    updateUI()
+</script>
+</html>

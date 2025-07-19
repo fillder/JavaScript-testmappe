@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        cursor: not-allowed;
+    }
+</style>
+<body>
+    <h1>Jons brokkolibutikk</h1>
+    <h2>Antall brokkolier på lager: <span id="viserAntallBrokkolier"></span></h2>
+    <h2>Antall kroner: <span id="viserAntallKroner"></span></h2>
+    <button onclick="selgBrokkoli()">Selg brokkoli</button>
+
+    <script>
+        let antallBrokkolier = 10
+        let butikkAapen = false
+        let antallKroner = 0
+
+        function selgBrokkoli(){
+            if (antallBrokkolier >= 1 || butikkAapen == true) {
+                antallBrokkolier = antallBrokkolier - 1;
+                antallKroner = antallKroner + 20;
+            }
+            console.log("Butikken er ikke åpen")
+            updateUI()
+        }
+
+        function updateUI(){
+            document.getElementById("viserAntallBrokkolier").textContent = antallBrokkolier;
+            document.getElementById("viserAntallKroner").textContent = antallKroner;
+        }
+        updateUI()
+    </script>
+</body>
+</html>

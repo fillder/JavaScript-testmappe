@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+      background-color: rgb(128, 0, 128);
+    }
+  </style>
+  <body>
+    <button id="knappEn" onclick="byttFarge()">Bytt farge</button>
+  </body>
+  <script>
+function byttFarge() {
+    console.log("funksjonen kjører");
+    const bodyStyle = getComputedStyle(document.body);
+    
+    if (bodyStyle.backgroundColor === "rgb(128, 0, 128)") {
+        document.body.style.backgroundColor = "rgb(255, 165, 0)";
+        console.log("if kjører");
+    } 
+    else if (bodyStyle.backgroundColor === "rgb(255, 165, 0)") {
+        document.body.style.backgroundColor = "rgb(128, 0, 128)";
+    }
+}
+  </script>
+</html>
