@@ -8,47 +8,59 @@
   <style>
     body {
       border: 2px black solid;
-      width: 375px;
-      height: 375px;
+      width: 800px;
+      height: 300px;
     }
     section {
-      /* display: flex; */
+      display: flex;
     }
-    div {
+    .inndeling {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .farge {
       width: 25px;
       height: 25px;
     }
-    #rod {
+    .rod {
       background-color: #ec4f28;
+      width: 200px;
     }
-    #oransje {
+    .oransje {
       background-color: #e68d2f;
     }
-    #gul {
+    .gul {
       background-color: #e6ce2f;
     }
-    #gronn {
+    .gronn {
       background-color: #839e53;
     }
-    #blå {
+    .blå {
       background-color: #1fa6e2;
     }
-    #indigo {
+    .indigo {
       background-color: #7b77ff;
     }
-    #fiolett {
+    .fiolett {
       background-color: #c973af;
     }
   </style>
   <body>
     <section>
-      <div id="rod"></div>
-      <div id="oransje"></div>
-      <div id="gul"></div>
-      <div id="gronn"></div>
-      <div id="blå"></div>
-      <div id="indigo"></div>
-      <div id="fiolett"></div>
+      <img src="https://picsum.photos/600/300" />
+      <div class="inndeling">
+        <div class="farge rod"></div>
+      </div>
+      <div class="inndeling">
+        <div class="farge oransje"></div>
+        <div class="farge gul"></div>
+      </div>
+      <div class="inndeling">
+        <div class="farge gronn"></div>
+        <div class="farge blå"></div>
+        <div class="farge indigo"></div>
+        <div class="farge fiolett"></div>
+      </div>
     </section>
   </body>
 </html>
