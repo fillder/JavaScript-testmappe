@@ -1,0 +1,20 @@
+a {
+  margin-block: 1rem;
+}
+#lenkeMedStil {
+  display: block;
+  width: 150px;
+  padding-block: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(233, 233, 233);
+  border-radius: 0.25rem;
+  border: grey 2px solid;
+}
+button {
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  width: 150px;
+  cursor: pointer;
+}

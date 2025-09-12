@@ -6,17 +6,17 @@
     <title>Document</title>
   </head>
   <style>
+    article {
+      overflow: hidden;
+    }
     body {
       border: 2px black solid;
-      width: 800px;
-      height: 300px;
+      width: 500px;
+      height: 400px;
+      overflow: scroll;
     }
     section {
       display: flex;
-    }
-    .inndeling {
-      display: flex;
-      flex-wrap: wrap;
     }
     .farge {
       width: 25px;
@@ -24,7 +24,6 @@
     }
     .rod {
       background-color: #ec4f28;
-      width: 200px;
     }
     .oransje {
       background-color: #e68d2f;
@@ -46,21 +45,17 @@
     }
   </style>
   <body>
-    <section>
+    <article>
       <img src="https://picsum.photos/600/300" />
-      <div class="inndeling">
-        <div class="farge rod"></div>
-      </div>
-      <div class="inndeling">
-        <div class="farge oransje"></div>
-        <div class="farge gul"></div>
-      </div>
-      <div class="inndeling">
-        <div class="farge gronn"></div>
-        <div class="farge blå"></div>
-        <div class="farge indigo"></div>
-        <div class="farge fiolett"></div>
-      </div>
+    </article>
+    <section>
+      <div class="farge rod"></div>
+      <div class="farge oransje"></div>
+      <div class="farge gul"></div>
+      <div class="farge gronn"></div>
+      <div class="farge blå"></div>
+      <div class="farge indigo"></div>
+      <div class="farge fiolett"></div>
     </section>
   </body>
 </html>
