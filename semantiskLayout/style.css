@@ -10,16 +10,19 @@ img {
 }
 
 .flexbeholder {
-  /* display: flex; */
-  /* border: 3px red solid; */
-  /* gap: 50px; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  display: flex;
+  max-width: 1300px;
+  height: 800px;
+  border: 3px red solid;
+  margin-inline: auto;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .child {
   flex-basis: 500px;
-  /* border: 3px solid blue; */
+  border: 3px solid blue;
   flex-grow: 0;
   flex-shrink: 1;
   /* margin-left: 3rem;
@@ -33,4 +36,14 @@ h1 {
 }
 p {
   max-width: 80ch;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: lightblue;
+}
+h2 {
+  margin-block-end: 20px;
 }
