@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    img {
+      background-color: grey;
+      width: 300px;
+      height: 200px;
+    }
+  </style>
+  <body>
+    <button onclick="metode1()">inkrement ++</button>
+    <button onclick="metode2()">inkrement --</button>
+
+
+    <p id="metode1">50</p>
+    <p id="metode2">50</p>
+    <p id="metode3">50</p>
+    <p id="metode4">50</p>
+  </body>
+  <script>
+    let teller1 = 50;
+    let teller2 = 50;
+    let teller3 = 50;
+    let teller4 = 50;
+    
+    function metode1() {
+      teller1 ++;
+      document.getElementById("tellerTekst").textContent = teller1;
+    }
+    function metode2() {
+      teller2--;
+      document.getElementById("tellerTekst").textContent = teller2;
+    }
+  </script>
+</html>
